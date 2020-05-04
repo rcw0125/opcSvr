@@ -1,0 +1,29 @@
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\bin\Debug\opc.exe.config
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\obj\Debug\opc.exe
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\obj\Debug\opc.pdb
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\bin\Debug\dll\OPCDAAuto.dll
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\bin\Debug\opc.exe
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\bin\Debug\opc.pdb
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\bin\Debug\Interop.OPCAutomation.dll
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\obj\Debug\opc.Form1.resources
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\obj\Debug\opc.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\opc_mes\opc\bin\Debug\opc.exe.config
+D:\opc_mes\opc\obj\Debug\opc.exe
+D:\opc_mes\opc\obj\Debug\opc.pdb
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\bin\Debug\dll\OPCDAAuto.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\bin\Debug\opc.exe.config
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\bin\Debug\opc.exe
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\bin\Debug\opc.pdb
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\bin\Debug\Interop.OPCAutomation.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\obj\Debug\opc.Form1.resources
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\obj\Debug\opc.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\obj\Debug\opc.exe
+C:\Documents and Settings\Administrator\桌面\opcSvr\opc_mes\opc\obj\Debug\opc.pdb

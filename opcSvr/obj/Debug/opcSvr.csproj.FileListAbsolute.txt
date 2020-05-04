@@ -1,0 +1,22 @@
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\opcSvr\opcSvr\bin\opcSvr.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\opcSvr\opcSvr\bin\opcSvr.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\opcSvr\opcSvr\obj\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\opcSvr\opcSvr\obj\Debug\opcSvr.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\opcSvr\opcSvr\obj\Debug\opcSvr.pdb
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcSvr\bin\opcSvr.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcSvr\bin\opcSvr.pdb
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcSvr\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcSvr\obj\Debug\opcSvr.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcSvr\obj\Debug\opcSvr.pdb
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcSvr\bin\Newtonsoft.Json.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcSvr\bin\Rcw.Method.dll
+H:\opcSvr\opcSvr\bin\opcSvr.dll.config
+H:\opcSvr\opcSvr\bin\opcSvr.dll
+H:\opcSvr\opcSvr\bin\opcSvr.pdb
+H:\opcSvr\opcSvr\bin\Newtonsoft.Json.dll
+H:\opcSvr\opcSvr\bin\Rcw.Method.dll
+H:\opcSvr\opcSvr\obj\Debug\opcSvr.csprojAssemblyReference.cache
+H:\opcSvr\opcSvr\obj\Debug\opcSvr.csproj.CoreCompileInputs.cache
+H:\opcSvr\opcSvr\obj\Debug\opcSvr.csproj.CopyComplete
+H:\opcSvr\opcSvr\obj\Debug\opcSvr.dll
+H:\opcSvr\opcSvr\obj\Debug\opcSvr.pdb

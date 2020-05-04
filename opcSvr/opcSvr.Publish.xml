@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\opcweb" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/opcSvr.dll" publishTime="04/08/2020 09:46:44" />
+    <file relUrl="bin/Newtonsoft.Json.dll" publishTime="04/07/2020 16:08:25" />
+    <file relUrl="Global.asax" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="Site.Master" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="Styles/Site.css" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="dll/Rcw.Method.dll" publishTime="04/07/2020 16:13:02" />
+    <file relUrl="About.aspx" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="opcWS.asmx" publishTime="03/31/2020 17:49:14" />
+    <file relUrl="bin/Rcw.Method.dll" publishTime="04/07/2020 16:13:02" />
+    <file relUrl="bin/opcSvr.pdb" publishTime="04/08/2020 09:46:44" />
+    <file relUrl="Account/Login.aspx" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="Default.aspx" publishTime="04/02/2020 16:38:11" />
+    <file relUrl="Account/ChangePasswordSuccess.aspx" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="Account/Register.aspx" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="Account/Web.config" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="dll/Newtonsoft.Json.dll" publishTime="04/07/2020 16:08:25" />
+    <file relUrl="Account/ChangePassword.aspx" publishTime="03/31/2020 17:37:35" />
+    <file relUrl="Web.config" publishTime="04/08/2020 09:46:52" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="03/31/2020 17:37:35" />
+  </publishProfile>
+</publishData>

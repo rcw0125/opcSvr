@@ -1,0 +1,24 @@
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcBase\bin\Debug\dll\OPCDAAuto.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcBase\bin\Debug\opcBase.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcBase\bin\Debug\opcBase.pdb
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcBase\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcBase\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcBase\obj\Debug\opcBase.dll
+C:\Documents and Settings\Administrator\桌面\opcSvr\opcBase\obj\Debug\opcBase.pdb
+H:\opcSvr\opcBase\bin\Debug\dll\OPCDAAuto.dll
+H:\opcSvr\opcBase\bin\Debug\opcBase.dll
+H:\opcSvr\opcBase\bin\Debug\opcBase.pdb
+H:\opcSvr\opcBase\bin\Debug\Oracle.ManagedDataAccess.dll
+H:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CoreCompileInputs.cache
+H:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CopyComplete
+H:\opcSvr\opcBase\obj\Debug\opcBase.dll
+H:\opcSvr\opcBase\obj\Debug\opcBase.pdb
+I:\opcSvr\opcBase\bin\Debug\dll\OPCDAAuto.dll
+I:\opcSvr\opcBase\bin\Debug\opcBase.dll
+I:\opcSvr\opcBase\bin\Debug\opcBase.pdb
+I:\opcSvr\opcBase\bin\Debug\Oracle.ManagedDataAccess.dll
+I:\opcSvr\opcBase\obj\Debug\opcBase.csprojAssemblyReference.cache
+I:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CoreCompileInputs.cache
+I:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CopyComplete
+I:\opcSvr\opcBase\obj\Debug\opcBase.dll
+I:\opcSvr\opcBase\obj\Debug\opcBase.pdb

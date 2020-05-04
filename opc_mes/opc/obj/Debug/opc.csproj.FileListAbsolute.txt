@@ -1,0 +1,14 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\obj\Debug\opc.Form1.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\obj\Debug\opc.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\obj\Debug\opc.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\bin\Debug\opc.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\bin\Debug\opc.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\bin\Debug\Interop.OPCAutomation.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\obj\Debug\opc.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\obj\Debug\opc.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\bin\Debug\opc.exe.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\opc\opc\bin\Debug\dll\OPCDAAuto.dll
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\bin\Debug\opc.exe.config
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\obj\Debug\opc.exe
+C:\Documents and Settings\Administrator\桌面\opc_mes\opc\obj\Debug\opc.pdb
