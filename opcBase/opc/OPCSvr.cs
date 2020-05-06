@@ -143,6 +143,7 @@ namespace opcBase
                     if (item.scanrate > 0)
                     {
                         OPCItem myItem = KepGroup.OPCItems.AddItem(item.name, item.id);
+                        myItem.ClientHandle = item.id;
                         item.itmHandleServer = myItem.ServerHandle;
                     }
                     else
@@ -170,24 +171,61 @@ namespace opcBase
             //项目实际不需要，数据变化触发的操作
             for (int i = 1; i < NumItems + 1; i++)
             {
-                readval(ClientHandles.GetValue(i).ToString(), ItemValues.GetValue(i).ToString());
+                readval(ClientHandles.GetValue(i).ToString(), ItemValues.GetValue(i));
             }
         }
-        public void readval(string i, string val)
+        public void readval(string i, object val)
         {
             try
             {
-                L1tag curitem = listTag.Find(o => o.id == Convert.ToInt16(i));
-                //如果扫描周期小于1，按事件采集的，则不向数据库插入数据
-                if (curitem.scanrate < 1)
+
+                if (i == "78")
+                {
+                    if (Convert.ToInt32(val) == 1)
+                    {
+                        ccm5dabaoshenggang.GetInstance().calData(1);
+                    }                   
+                }
+
+                if (i == "87")
+                {
+                    if (Convert.ToInt32(val) == 1)
+                    {
+                        ccm5dabaoshenggang.GetInstance().calData(0);
+                    }
+                }
+
+                if (val == null)
                 {
                     return;
                 }
-                if ((DateTime.Now - curitem.lasttime).TotalSeconds >= curitem.scanrate)
+                L1tag curitem = listTag.Find(o => o.id == Convert.ToInt16(i));
+                if (curitem.datatype == 0)
                 {
-                    curitem.lasttime = DateTime.Now;
+                    savedata(Convert.ToInt16(i), Convert.ToInt32(val));
+                }
+                else
+                {
                     savedata(Convert.ToInt16(i), Math.Round(Convert.ToDouble(val), 3));
                 }
+                ////如果扫描周期小于1，按事件采集的，则不向数据库插入数据
+                //if (curitem.scanrate < 1)
+                //{
+                //    return;
+                //}
+                //if ((DateTime.Now - curitem.lasttime).TotalSeconds >= curitem.scanrate)
+                //{
+                //    curitem.lasttime = DateTime.Now;
+                //    if (curitem.datatype == 0)
+                //    {
+                //        savedata(Convert.ToInt16(i), Convert.ToInt32(val));
+                //    }
+                //    else
+                //    {
+                //        savedata(Convert.ToInt16(i), Math.Round(Convert.ToDouble(val), 3));
+                //    }
+                    
+                //}
             }
             catch (Exception ex)
             {

@@ -17,7 +17,6 @@ I:\opcSvr\opcBase\bin\Debug\dll\OPCDAAuto.dll
 I:\opcSvr\opcBase\bin\Debug\opcBase.dll
 I:\opcSvr\opcBase\bin\Debug\opcBase.pdb
 I:\opcSvr\opcBase\bin\Debug\Oracle.ManagedDataAccess.dll
-I:\opcSvr\opcBase\obj\Debug\opcBase.csprojAssemblyReference.cache
 I:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CoreCompileInputs.cache
 I:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CopyComplete
 I:\opcSvr\opcBase\obj\Debug\opcBase.dll

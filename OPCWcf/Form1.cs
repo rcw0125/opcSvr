@@ -11,8 +11,7 @@ using opcBase;
 namespace OPCWcf
 {
     public partial class Form1 : Form
-    {
-        
+    {       
         public Form1()
         {
             Control.CheckForIllegalCrossThreadCalls = false;
@@ -47,11 +46,11 @@ namespace OPCWcf
         dabaoshenggang dabaoshenggang5 = new dabaoshenggang();
          private void Form1_Load(object sender, EventArgs e)
         {
-
+            setupDbsg();
             setupMqhs();
             setCasterWeightInfo();
             setCasterinfo();
-            setupDbsg();
+           
             DateTime dt = DateTime.Now;
             label22.Text = dt.ToString("yyyy-MM-dd HH:mm:ss");
             //服务运行中
@@ -60,16 +59,38 @@ namespace OPCWcf
             //激活两个timer
             timer_mqhs.Enabled = true;
             timer_sll.Enabled = true;
-            timer_dabaoshenggang.Enabled = true;
+            //timer_dabaoshenggang.Enabled = true;
 
         }
-                   
-         /// <summary>
-         /// 根据变量ID获取变量的值
-         /// </summary>
-         /// <param name="id"></param>
-         /// <returns></returns>
-         public double getVal(int id)
+
+        public void setupDbsg()
+        {
+            ccm5dabaoshenggang.GetInstance().valid_status = ladleweightwz;
+            //dabaoshenggang5.valid_status = ladleweightwz;
+            //dabaoshenggang5.valid_tundishweight = ladleweightwz + 1;
+            //dabaoshenggang5.valid_ladelweight = ladleweightwz + 2;
+            //dabaoshenggang5.valid_A_weight = ladleweightwz + 3;
+            //dabaoshenggang5.valid_B_weight = ladleweightwz + 4;
+            //dabaoshenggang5.valid_genzongzhi1 = ladleweightwz + 5;
+            //dabaoshenggang5.valid_genzongzhi2 = ladleweightwz + 6;
+            //dabaoshenggang5.valid_genzongzhi3 = ladleweightwz + 7;
+            //dabaoshenggang5.valid_genzongzhi4 = ladleweightwz + 8;
+            ccm5dabaoshenggang.GetInstance().valid_tundishweight = ladleweightwz + 1;
+            ccm5dabaoshenggang.GetInstance().valid_ladelweight = ladleweightwz + 2;
+            ccm5dabaoshenggang.GetInstance().valid_A_weight = ladleweightwz + 3;
+            ccm5dabaoshenggang.GetInstance().valid_B_weight = ladleweightwz + 4;
+            ccm5dabaoshenggang.GetInstance().valid_genzongzhi1 = ladleweightwz + 5;
+            ccm5dabaoshenggang.GetInstance().valid_genzongzhi2 = ladleweightwz + 6;
+            ccm5dabaoshenggang.GetInstance().valid_genzongzhi3 = ladleweightwz + 7;
+            ccm5dabaoshenggang.GetInstance().valid_genzongzhi4 = ladleweightwz + 8;
+        }
+
+        /// <summary>
+        /// 根据变量ID获取变量的值
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public double getVal(int id)
          {
             try
             {
@@ -277,7 +298,7 @@ namespace OPCWcf
 
             if (getVal(ladleweightwz) > 0.1)
             {
-                textBox33.Text = "已开浇";
+                textBox33.Text = "浇注中";
             }
             else
             {
@@ -295,30 +316,17 @@ namespace OPCWcf
             textBox25.Text = getVal(ladleweightwz + 7).ToString();
             textBox26.Text = getVal(ladleweightwz + 8).ToString();
 
-            textBox27.Text = dabaoshenggang5.status;
-            textBox32.Text = dabaoshenggang5.tundishweight.ToString();
-            textBox34.Text = dabaoshenggang5.genzongzhi1.ToString();
-            textBox35.Text = dabaoshenggang5.genzongzhi2.ToString();
-            textBox36.Text = dabaoshenggang5.genzongzhi3.ToString();
-            textBox37.Text = dabaoshenggang5.genzongzhi4.ToString();
-            textBox38.Text = dabaoshenggang5.dabaobi.ToString();
+            textBox27.Text = ccm5dabaoshenggang.GetInstance().status;
+            textBox32.Text = ccm5dabaoshenggang.GetInstance().tundishweight.ToString();
+            textBox34.Text = ccm5dabaoshenggang.GetInstance().genzongzhi1.ToString();
+            textBox35.Text = ccm5dabaoshenggang.GetInstance().genzongzhi2.ToString();
+            textBox36.Text = ccm5dabaoshenggang.GetInstance().genzongzhi3.ToString();
+            textBox37.Text = ccm5dabaoshenggang.GetInstance().genzongzhi4.ToString();
+            textBox38.Text = ccm5dabaoshenggang.GetInstance().dabaobi;
 
 
         }
-        public void setupDbsg()
-        {
-            dabaoshenggang5.valid_status = ladleweightwz;
-            dabaoshenggang5.valid_tundishweight= ladleweightwz+1;
-            dabaoshenggang5.valid_ladelweight = ladleweightwz + 2;
-            dabaoshenggang5.valid_A_weight = ladleweightwz + 3;
-            dabaoshenggang5.valid_B_weight = ladleweightwz + 4;
-            dabaoshenggang5.valid_genzongzhi1 = ladleweightwz + 5;
-            dabaoshenggang5.valid_genzongzhi2 = ladleweightwz + 6;
-            dabaoshenggang5.valid_genzongzhi3 = ladleweightwz + 7;
-            dabaoshenggang5.valid_genzongzhi4 = ladleweightwz + 8;
-
-
-        }
+       
 
          private void timer_mqhs_Tick(object sender, EventArgs e)
          {
@@ -542,6 +550,14 @@ namespace OPCWcf
             
             }
            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (getVal(ladleweightwz) > 0.1)
+            {
+                ccm5dabaoshenggang.GetInstance().calData(1);
+            }
         }
     }
 }
