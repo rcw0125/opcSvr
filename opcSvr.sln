@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyService", "windows服务\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Win服务", "Win服务", "{E291032B-ABA1-4285-B692-C3D78C483678}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBGL", "设备管理（去重项）\SBGL\SBGL.csproj", "{514D850E-3856-47E1-8F4D-EA437E03DEBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,18 @@ Global
 		{82E08A07-6B66-477D-A50A-9B8FD038A66F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{82E08A07-6B66-477D-A50A-9B8FD038A66F}.Release|x86.ActiveCfg = Release|Any CPU
 		{82E08A07-6B66-477D-A50A-9B8FD038A66F}.Release|x86.Build.0 = Release|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Debug|x86.Build.0 = Debug|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Release|x86.ActiveCfg = Release|Any CPU
+		{514D850E-3856-47E1-8F4D-EA437E03DEBA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
