@@ -243,7 +243,7 @@ namespace OPCWcf
              listMqhs.Add(bof2);
              listMqhs.Add(bof3);
              listMqhs.Add(bof4);       
-             bof1.bofid = "S21";
+             bof1.bofid = "S22";
              bof1.tqcount = 0;
              bof1.tqsk = 0;
              bof1.tqflag = 0;
@@ -255,7 +255,7 @@ namespace OPCWcf
              bof1.co5id = mqhswz + 20;
              bof1.co8id = mqhswz + 21;
 
-             bof2.bofid = "S22";
+             bof2.bofid = "S21";
              bof2.tqcount = 0;
              bof2.tqsk = 0;
              bof2.tqflag = 0;
