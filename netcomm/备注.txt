@@ -1,0 +1,3 @@
+1.进度条
+2.backgroundWorker后台进程
+3.INotifyPropertyChanged， BindingList<ipinfo>：数据变化时，自动通知界面变化。数据必须绑定到BindingList<ipinfo>

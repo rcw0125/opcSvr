@@ -1,0 +1,9 @@
+I:\opcSvr\netcomm\bin\Debug\netcomm.exe
+I:\opcSvr\netcomm\bin\Debug\netcomm.pdb
+I:\opcSvr\netcomm\obj\Debug\netcomm.csprojAssemblyReference.cache
+I:\opcSvr\netcomm\obj\Debug\netcomm.Properties.Resources.resources
+I:\opcSvr\netcomm\obj\Debug\netcomm.csproj.GenerateResource.cache
+I:\opcSvr\netcomm\obj\Debug\netcomm.csproj.CoreCompileInputs.cache
+I:\opcSvr\netcomm\obj\Debug\netcomm.exe
+I:\opcSvr\netcomm\obj\Debug\netcomm.pdb
+I:\opcSvr\netcomm\obj\Debug\netcomm.Form1.resources
