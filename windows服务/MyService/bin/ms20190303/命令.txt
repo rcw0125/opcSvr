@@ -1,0 +1,4 @@
+1.管理员打开cmd
+2.cd C:\Windows\Microsoft.NET\Framework\v4.0.30319（或cd C:\Windows\Microsoft.NET\Framework\v2.0.50727）
+3.安装，输入 InstallUtil.exe c:\windows\ms\MyService.exe 回车
+4.卸载很简单，管理员打开cmd， 直接输入 sc delete MyService便可

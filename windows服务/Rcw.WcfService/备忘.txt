@@ -1,0 +1,7 @@
+添加dllSystem.ServiceModel.Web  
+
+
+访问地址
+http://localhost:1111/Service1/testwcf
+帮助地址
+http://192.168.2.224:1111/Service1/help

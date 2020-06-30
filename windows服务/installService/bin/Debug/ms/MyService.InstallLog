@@ -1,0 +1,134 @@
+﻿正在安装程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在安装服务 MyService...
+正在安装程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在安装服务 MyService...
+正在日志 Application 中创建 EventLog 源 MyService...
+正在安装程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在安装服务 MyService...
+已成功安装服务 MyService。
+正在日志 Application 中创建 EventLog 源 MyService...
+查看日志文件的内容以获得 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe 程序集的进度。
+该文件位于 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog。
+正在提交程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在卸载程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在移除 EventLog 源 MyService。
+在卸载 System.Diagnostics.EventLogInstaller 安装程序的过程中发生异常。
+System.Security.SecurityException: 不允许所请求的注册表访问权。
+在卸载的过程中发生异常。将忽略该异常并继续卸载。但是，在卸载完成之后应用程序可能未完全卸载。
+正在卸载程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在移除 EventLog 源 MyService。
+在卸载 System.Diagnostics.EventLogInstaller 安装程序的过程中发生异常。
+System.Security.SecurityException: 不允许所请求的注册表访问权。
+在卸载的过程中发生异常。将忽略该异常并继续卸载。但是，在卸载完成之后应用程序可能未完全卸载。
+正在卸载程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在移除 EventLog 源 MyService。
+正在从系统中移除服务 MyService...
+已成功地从系统中移除服务 MyService。
+正在安装程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在安装服务 MyService...
+已成功安装服务 MyService。
+正在日志 Application 中创建 EventLog 源 MyService...
+查看日志文件的内容以获得 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe 程序集的进度。
+该文件位于 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog。
+正在提交程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在卸载程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在移除 EventLog 源 MyService。
+在卸载 System.Diagnostics.EventLogInstaller 安装程序的过程中发生异常。
+System.Security.SecurityException: 不允许所请求的注册表访问权。
+在卸载的过程中发生异常。将忽略该异常并继续卸载。但是，在卸载完成之后应用程序可能未完全卸载。
+正在卸载程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在移除 EventLog 源 MyService。
+正在从系统中移除服务 MyService...
+已成功地从系统中移除服务 MyService。
+正在安装程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在安装服务 MyService...
+已成功安装服务 MyService。
+正在日志 Application 中创建 EventLog 源 MyService...
+查看日志文件的内容以获得 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe 程序集的进度。
+该文件位于 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog。
+正在提交程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在卸载程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在移除 EventLog 源 MyService。
+正在从系统中移除服务 MyService...
+已成功地从系统中移除服务 MyService。
+正在安装程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在安装服务 MyService...
+已成功安装服务 MyService。
+正在日志 Application 中创建 EventLog 源 MyService...
+查看日志文件的内容以获得 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe 程序集的进度。
+该文件位于 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog。
+正在提交程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在安装程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在安装服务 MyService...
+已成功安装服务 MyService。
+正在日志 Application 中创建 EventLog 源 MyService...
+查看日志文件的内容以获得 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe 程序集的进度。
+该文件位于 I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog。
+正在提交程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在卸载程序集“I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe”。
+受影响的参数是:
+   assemblypath = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.exe
+   logfile = I:\2019归档\1、MES系统\MES服务监控\windows服务48.9\installService\bin\Debug\ms\MyService.InstallLog
+正在移除 EventLog 源 MyService。
+正在从系统中移除服务 MyService...
+已成功地从系统中移除服务 MyService。
+尝试停止服务 MyService。

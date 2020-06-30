@@ -1,0 +1,2 @@
+C:\Users\rcw\source\repos\Rcw.net\windows服务\Rcw.WcfService\obj\Debug\Rcw.WcfService.csprojAssemblyReference.cache
+C:\Users\rcw\source\repos\Rcw.net\windows服务\Rcw.WcfService\obj\Debug\Rcw.WcfService.csproj.CoreCompileInputs.cache
