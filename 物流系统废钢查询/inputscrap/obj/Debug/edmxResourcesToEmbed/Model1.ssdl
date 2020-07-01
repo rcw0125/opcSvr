@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="M_MEASURE_T">
+    <Key>
+      <PropertyRef Name="MATCHID" />
+    </Key>
+    <Property Name="MATCHID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="CARNO" Type="varchar2" MaxLength="20" />
+    <Property Name="CARTYPE" Type="varchar2" MaxLength="20" />
+    <Property Name="RFIDID" Type="varchar2" MaxLength="40" />
+    <Property Name="ICID" Type="varchar2" MaxLength="20" />
+    <Property Name="OPERATYPE" Type="varchar2" MaxLength="20" />
+    <Property Name="PLANID" Type="varchar2" MaxLength="20" />
+    <Property Name="TASKCODE" Type="varchar2" MaxLength="20" />
+    <Property Name="MATERIALCODE" Type="varchar2" MaxLength="40" />
+    <Property Name="MATERIALNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="MATERIALSPECCODE" Type="varchar2" MaxLength="20" />
+    <Property Name="MATERIALSPEC" Type="varchar2" MaxLength="100" />
+    <Property Name="SHIPCODE" Type="varchar2" MaxLength="20" />
+    <Property Name="SHIP" Type="varchar2" MaxLength="100" />
+    <Property Name="SOURCECODE" Type="varchar2" MaxLength="40" />
+    <Property Name="SOURCENAME" Type="varchar2" MaxLength="100" />
+    <Property Name="SOURCETIME" Type="date" />
+    <Property Name="SOURCEPLACE" Type="varchar2" MaxLength="100" />
+    <Property Name="TARGETCODE" Type="varchar2" MaxLength="40" />
+    <Property Name="TARGETNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="TARGETTIME" Type="date" />
+    <Property Name="TARGETPLACE" Type="varchar2" MaxLength="100" />
+    <Property Name="BASKET" Type="varchar2" MaxLength="60" />
+    <Property Name="PLANWEIGHT" Type="number" Precision="38" Scale="0" />
+    <Property Name="PLANMATERIALCOUNT" Type="number" Precision="38" Scale="0" />
+    <Property Name="MATERIALCOUNT" Type="number" Precision="38" Scale="0" />
+    <Property Name="PLANCARCOUNT" Type="number" Precision="38" Scale="0" />
+    <Property Name="GROSS" Type="number" Precision="38" Scale="0" />
+    <Property Name="GROSSTIME" Type="date" />
+    <Property Name="GROSSWEIGHID" Type="varchar2" MaxLength="20" />
+    <Property Name="GROSSWEIGH" Type="varchar2" MaxLength="100" />
+    <Property Name="GROSSOPERACODE" Type="varchar2" MaxLength="20" />
+    <Property Name="GROSSOPERANAME" Type="varchar2" MaxLength="20" />
+    <Property Name="GROSSGROUPNO" Type="number" Precision="38" Scale="0" />
+    <Property Name="GROSSSERIAL" Type="number" Precision="38" Scale="0" />
+    <Property Name="GROSSSPEED" Type="number" Precision="38" Scale="0" />
+    <Property Name="GROSSLOGID" Type="varchar2" MaxLength="20" />
+    <Property Name="TARE" Type="number" Precision="38" Scale="0" />
+    <Property Name="TARETIME" Type="date" />
+    <Property Name="TAREWEIGHID" Type="varchar2" MaxLength="20" />
+    <Property Name="TAREWEIGH" Type="varchar2" MaxLength="100" />
+    <Property Name="TAREOPERACODE" Type="varchar2" MaxLength="20" />
+    <Property Name="TAREOPERANAME" Type="varchar2" MaxLength="20" />
+    <Property Name="TAREGROUPNO" Type="number" Precision="38" Scale="0" />
+    <Property Name="TARESERIAL" Type="number" Precision="38" Scale="0" />
+    <Property Name="TARELOGID" Type="varchar2" MaxLength="20" />
+    <Property Name="TARESPEED" Type="number" Precision="38" Scale="0" />
+    <Property Name="DEDUCTION" Type="number" Precision="38" Scale="0" />
+    <Property Name="DEDUCTIONTIME" Type="date" />
+    <Property Name="DEDUCTIONCODE" Type="varchar2" MaxLength="20" />
+    <Property Name="DEDUCTIONNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="DEDUCTIONOPERACODE" Type="varchar2" MaxLength="20" />
+    <Property Name="DEDUCTIONOPERANAME" Type="varchar2" MaxLength="100" />
+    <Property Name="SUTTLE" Type="number" Precision="38" Scale="0" />
+    <Property Name="SUTTLETIME" Type="date" />
+    <Property Name="SUTTLEWEIGHID" Type="varchar2" MaxLength="20" />
+    <Property Name="SUTTLEWEIGH" Type="varchar2" MaxLength="100" />
+    <Property Name="SUTTLEOPERACODE" Type="varchar2" MaxLength="20" />
+    <Property Name="SUTTLEOPERANAME" Type="varchar2" MaxLength="20" />
+    <Property Name="MATCHIDB" Type="varchar2" MaxLength="20" />
+    <Property Name="SUTTLEB" Type="number" Precision="10" Scale="3" />
+    <Property Name="GROSSB" Type="number" Precision="38" Scale="0" />
+    <Property Name="GROSSTIMEB" Type="date" />
+    <Property Name="GROSSWEIGHIDB" Type="varchar2" MaxLength="20" />
+    <Property Name="GROSSWEIGHB" Type="varchar2" MaxLength="100" />
+    <Property Name="GROSSOPERACODEB" Type="varchar2" MaxLength="20" />
+    <Property Name="GROSSOPERANAMEB" Type="varchar2" MaxLength="20" />
+    <Property Name="GROSSGROUPNOB" Type="number" Precision="38" Scale="0" />
+    <Property Name="GROSSSERIALB" Type="number" Precision="38" Scale="0" />
+    <Property Name="GROSSSPEEDB" Type="number" Precision="38" Scale="0" />
+    <Property Name="GROSSLOGIDB" Type="varchar2" MaxLength="20" />
+    <Property Name="TAREB" Type="number" Precision="38" Scale="0" />
+    <Property Name="TARETIMEB" Type="date" />
+    <Property Name="TAREWEIGHIDB" Type="varchar2" MaxLength="20" />
+    <Property Name="TAREWEIGHB" Type="varchar2" MaxLength="100" />
+    <Property Name="TAREOPERACODEB" Type="varchar2" MaxLength="20" />
+    <Property Name="TAREOPERANAMEB" Type="varchar2" MaxLength="20" />
+    <Property Name="TAREGROUPNOB" Type="number" Precision="38" Scale="0" />
+    <Property Name="TARESERIALB" Type="number" Precision="38" Scale="0" />
+    <Property Name="TARELOGIDB" Type="varchar2" MaxLength="20" />
+    <Property Name="TARESPEEDB" Type="number" Precision="38" Scale="0" />
+    <Property Name="BATCHCODE" Type="varchar2" MaxLength="20" />
+    <Property Name="BFLAG" Type="number" Precision="38" Scale="0" />
+    <Property Name="PRINTGROSSNUM" Type="number" Precision="38" Scale="0" />
+    <Property Name="PRINTSUTTLENUM" Type="number" Precision="38" Scale="0" />
+    <Property Name="USERMEMO" Type="varchar2" MaxLength="200" />
+    <Property Name="SYSMEMO" Type="varchar2" MaxLength="200" />
+    <Property Name="VALIDFLAG" Type="number" Precision="38" Scale="0" />
+    <Property Name="VALIDFLAGTIME" Type="date" />
+    <Property Name="VALIDFLAGOPERANAME" Type="varchar2" MaxLength="40" />
+    <Property Name="RECORDTYPE" Type="number" Precision="38" Scale="0" />
+    <Property Name="CREATEDATE" Type="date" />
+    <Property Name="UPTIME" Type="date" />
+    <Property Name="UPTIMESTAMP" Type="timestamp" Precision="6" />
+    <Property Name="DECUTIONTYPEBAK" Type="varchar2" MaxLength="2" />
+    <Property Name="MOTORCADENAME" Type="varchar2" MaxLength="100" />
+    <Property Name="MOTORCADECODE" Type="varchar2" MaxLength="40" />
+    <Property Name="DEDUCTIONTYPE" Type="number" Precision="10" Scale="3" />
+    <Property Name="MEMO1" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO2" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO3" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO4" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO5" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO6" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO7" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO8" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO9" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO10" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO11" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO12" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO13" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO14" Type="varchar2" MaxLength="200" />
+    <Property Name="MEMO15" Type="varchar2" MaxLength="200" />
+    <Property Name="DEDUCTION2" Type="number" Precision="10" Scale="3" />
+    <Property Name="UPDATENCFLAG" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRINTCOUNT" Type="number" Precision="38" Scale="0" />
+    <Property Name="UPDATENCDATE" Type="date" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="M_MEASURE_T" EntityType="Self.M_MEASURE_T" Schema="XTGT_DEV_USER" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

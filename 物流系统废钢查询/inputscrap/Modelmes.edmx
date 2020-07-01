@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CLF_BASE_DATA">
+          <Key>
+            <PropertyRef Name="TREATNO" />
+          </Key>
+          <Property Name="GUID" Type="varchar2" MaxLength="250" />
+          <Property Name="NAME" Type="varchar2" MaxLength="250" />
+          <Property Name="TREATNO" Type="varchar2" MaxLength="250" Nullable="false" />
+          <Property Name="HEATID" Type="varchar2" MaxLength="250" />
+          <Property Name="PREHEATID" Type="varchar2" MaxLength="250" />
+          <Property Name="STEELGRADEINDEX" Type="varchar2" MaxLength="250" />
+          <Property Name="STEELGRADE" Type="varchar2" MaxLength="250" />
+          <Property Name="LADLENO" Type="varchar2" MaxLength="250" />
+          <Property Name="HEADFURNACE" Type="varchar2" MaxLength="250" />
+          <Property Name="ASSISTANT" Type="varchar2" MaxLength="250" />
+          <Property Name="SECONDHAND" Type="varchar2" MaxLength="250" />
+          <Property Name="PRODUCTIONDATE" Type="date" />
+          <Property Name="LOCKED" Type="number" Precision="5" Scale="0" />
+          <Property Name="SHIFT" Type="varchar2" MaxLength="250" />
+          <Property Name="TEAM" Type="varchar2" MaxLength="250" />
+          <Property Name="NC_CONFIRM_FLAG" Type="number" Precision="10" Scale="0" />
+        </EntityType>
+        <EntityType Name="CLF_HEAT_GEARS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar2" MaxLength="250" Nullable="false" />
+          <Property Name="NAME" Type="varchar2" MaxLength="250" />
+          <Property Name="TREATNO" Type="varchar2" MaxLength="250" />
+          <Property Name="HEATID" Type="varchar2" MaxLength="250" />
+          <Property Name="GEARS" Type="number" Precision="10" Scale="0" />
+          <Property Name="LOGTIME" Type="date" />
+        </EntityType>
+        <EntityType Name="CLF_HEAT_GEARS_ITEM">
+          <Key>
+            <PropertyRef Name="TREATNO" />
+          </Key>
+          <Property Name="GUID" Type="varchar2" MaxLength="50" />
+          <Property Name="NAME" Type="varchar2" MaxLength="50" />
+          <Property Name="TREATNO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="HEATID" Type="varchar2" MaxLength="50" />
+          <Property Name="GEARS1" Type="varchar2" MaxLength="50" />
+          <Property Name="TIME1" Type="varchar2" MaxLength="50" />
+          <Property Name="GEARS2" Type="varchar2" MaxLength="50" />
+          <Property Name="TIME2" Type="varchar2" MaxLength="50" />
+          <Property Name="GEARS3" Type="varchar2" MaxLength="50" />
+          <Property Name="TIME3" Type="varchar2" MaxLength="50" />
+          <Property Name="GEARS4" Type="varchar2" MaxLength="50" />
+          <Property Name="TIME4" Type="varchar2" MaxLength="50" />
+          <Property Name="TOTALTIME" Type="varchar2" MaxLength="50" />
+          <Property Name="PRODUCTIONTIME" Type="varchar2" MaxLength="50" />
+          <Property Name="HEATCOUNT" Type="number" Precision="10" Scale="0" />
+          <Property Name="HEAD" Type="varchar2" MaxLength="50" />
+          <Property Name="TEAM" Type="varchar2" MaxLength="50" />
+          <Property Name="STEELGRADE" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CLF_LADLE_WEIGHT">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar2" MaxLength="250" Nullable="false" />
+          <Property Name="NAME" Type="varchar2" MaxLength="250" />
+          <Property Name="LFID" Type="number" Precision="5" Scale="0" />
+          <Property Name="WEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="STATUS" Type="number" Precision="5" Scale="0" />
+          <Property Name="LADLENO" Type="varchar2" MaxLength="250" />
+          <Property Name="LOG_TIME" Type="date" />
+          <Property Name="HEATID" Type="varchar2" MaxLength="250" />
+          <Property Name="GROSSWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="TAREWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="KZWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="CCMGROSSWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="CCMTAREWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="CCMLASTTAREWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="AREA" Type="varchar2" MaxLength="10" />
+          <Property Name="CCMINPUTAREWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="LFJYWEIGHT" Type="number" Precision="10" Scale="3" />
+        </EntityType>
+        <EntityType Name="CLF_PROCESS_SATUS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar2" MaxLength="250" Nullable="false" />
+          <Property Name="NAME" Type="varchar2" MaxLength="250" />
+          <Property Name="TREATNO" Type="varchar2" MaxLength="250" />
+          <Property Name="HEATID" Type="varchar2" MaxLength="250" />
+          <Property Name="STATUS" Type="number" Precision="5" Scale="0" />
+          <Property Name="CHANGE_TIME" Type="date" />
+          <Property Name="C_TS" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TS_INSCRAP">
+          <Key>
+            <PropertyRef Name="LOGTIME" />
+          </Key>
+          <Property Name="LOGTIME" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="WEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="INWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="HSWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="ZCWEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="STWEIGHT" Type="number" Precision="10" Scale="3" />
+        </EntityType>
+        <EntityContainer Name="Model1StoreContainer">
+          <EntitySet Name="CLF_BASE_DATA" EntityType="Self.CLF_BASE_DATA" Schema="XGMES" store:Type="Tables" />
+          <EntitySet Name="CLF_HEAT_GEARS" EntityType="Self.CLF_HEAT_GEARS" Schema="XGMES" store:Type="Tables" />
+          <EntitySet Name="CLF_HEAT_GEARS_ITEM" EntityType="Self.CLF_HEAT_GEARS_ITEM" Schema="XGMES" store:Type="Tables" />
+          <EntitySet Name="CLF_LADLE_WEIGHT" EntityType="Self.CLF_LADLE_WEIGHT" Schema="XGMES" store:Type="Tables" />
+          <EntitySet Name="CLF_PROCESS_SATUS" EntityType="Self.CLF_PROCESS_SATUS" Schema="XGMES" store:Type="Tables" />
+          <EntitySet Name="TS_INSCRAP" EntityType="Self.TS_INSCRAP" Schema="XGMES" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TS_INSCRAP">
+          <Key>
+            <PropertyRef Name="LOGTIME" />
+          </Key>
+          <Property Name="LOGTIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="INWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="HSWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="ZCWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="STWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+        </EntityType>
+        <EntityContainer Name="Entities_mes" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TS_INSCRAP" EntityType="Self.TS_INSCRAP" />
+          <EntitySet Name="CLF_BASE_DATA" EntityType="Model1.CLF_BASE_DATA" />
+          <EntitySet Name="CLF_HEAT_GEARS" EntityType="Model1.CLF_HEAT_GEARS" />
+          <EntitySet Name="CLF_PROCESS_SATUS" EntityType="Model1.CLF_PROCESS_SATUS" />
+          <EntitySet Name="CLF_HEAT_GEARS_ITEM" EntityType="Model1.CLF_HEAT_GEARS_ITEM" />
+          <EntitySet Name="CLF_LADLE_WEIGHT" EntityType="Model1.CLF_LADLE_WEIGHT" />
+        </EntityContainer>
+        <EntityType Name="CLF_BASE_DATA">
+          <Key>
+            <PropertyRef Name="TREATNO" />
+          </Key>
+          <Property Name="GUID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TREATNO" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="PREHEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="STEELGRADEINDEX" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="STEELGRADE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="LADLENO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="HEADFURNACE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ASSISTANT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SECONDHAND" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="PRODUCTIONDATE" Type="DateTime" />
+          <Property Name="LOCKED" Type="Int16" />
+          <Property Name="SHIFT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TEAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NC_CONFIRM_FLAG" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CLF_HEAT_GEARS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TREATNO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="GEARS" Type="Int32" />
+          <Property Name="LOGTIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="CLF_PROCESS_SATUS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TREATNO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="Int16" />
+          <Property Name="CHANGE_TIME" Type="DateTime" />
+          <Property Name="C_TS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CLF_HEAT_GEARS_ITEM">
+          <Key>
+            <PropertyRef Name="TREATNO" />
+          </Key>
+          <Property Name="GUID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TREATNO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HEATID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GEARS1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TIME1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GEARS2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TIME2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GEARS3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TIME3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GEARS4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TIME4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TOTALTIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PRODUCTIONTIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HEATCOUNT" Type="Int32" />
+          <Property Name="HEAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TEAM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STEELGRADE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CLF_LADLE_WEIGHT">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="LFID" Type="Int16" />
+          <Property Name="WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="STATUS" Type="Int16" />
+          <Property Name="LADLENO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="LOG_TIME" Type="DateTime" />
+          <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="GROSSWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="TAREWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="KZWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="CCMGROSSWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="CCMTAREWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="CCMLASTTAREWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="AREA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CCMINPUTAREWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="LFJYWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Entities_mes">
+          <EntitySetMapping Name="TS_INSCRAP">
+            <EntityTypeMapping TypeName="Model1.TS_INSCRAP">
+              <MappingFragment StoreEntitySet="TS_INSCRAP">
+                <ScalarProperty Name="STWEIGHT" ColumnName="STWEIGHT" />
+                <ScalarProperty Name="ZCWEIGHT" ColumnName="ZCWEIGHT" />
+                <ScalarProperty Name="HSWEIGHT" ColumnName="HSWEIGHT" />
+                <ScalarProperty Name="INWEIGHT" ColumnName="INWEIGHT" />
+                <ScalarProperty Name="LOGTIME" ColumnName="LOGTIME" />
+                <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLF_BASE_DATA">
+            <EntityTypeMapping TypeName="Model1.CLF_BASE_DATA">
+              <MappingFragment StoreEntitySet="CLF_BASE_DATA">
+                <ScalarProperty Name="NC_CONFIRM_FLAG" ColumnName="NC_CONFIRM_FLAG" />
+                <ScalarProperty Name="TEAM" ColumnName="TEAM" />
+                <ScalarProperty Name="SHIFT" ColumnName="SHIFT" />
+                <ScalarProperty Name="LOCKED" ColumnName="LOCKED" />
+                <ScalarProperty Name="PRODUCTIONDATE" ColumnName="PRODUCTIONDATE" />
+                <ScalarProperty Name="SECONDHAND" ColumnName="SECONDHAND" />
+                <ScalarProperty Name="ASSISTANT" ColumnName="ASSISTANT" />
+                <ScalarProperty Name="HEADFURNACE" ColumnName="HEADFURNACE" />
+                <ScalarProperty Name="LADLENO" ColumnName="LADLENO" />
+                <ScalarProperty Name="STEELGRADE" ColumnName="STEELGRADE" />
+                <ScalarProperty Name="STEELGRADEINDEX" ColumnName="STEELGRADEINDEX" />
+                <ScalarProperty Name="PREHEATID" ColumnName="PREHEATID" />
+                <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+                <ScalarProperty Name="TREATNO" ColumnName="TREATNO" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLF_HEAT_GEARS">
+            <EntityTypeMapping TypeName="Model1.CLF_HEAT_GEARS">
+              <MappingFragment StoreEntitySet="CLF_HEAT_GEARS">
+                <ScalarProperty Name="LOGTIME" ColumnName="LOGTIME" />
+                <ScalarProperty Name="GEARS" ColumnName="GEARS" />
+                <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+                <ScalarProperty Name="TREATNO" ColumnName="TREATNO" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLF_PROCESS_SATUS">
+            <EntityTypeMapping TypeName="Model1.CLF_PROCESS_SATUS">
+              <MappingFragment StoreEntitySet="CLF_PROCESS_SATUS">
+                <ScalarProperty Name="C_TS" ColumnName="C_TS" />
+                <ScalarProperty Name="CHANGE_TIME" ColumnName="CHANGE_TIME" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+                <ScalarProperty Name="TREATNO" ColumnName="TREATNO" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLF_HEAT_GEARS_ITEM">
+            <EntityTypeMapping TypeName="Model1.CLF_HEAT_GEARS_ITEM">
+              <MappingFragment StoreEntitySet="CLF_HEAT_GEARS_ITEM">
+                <ScalarProperty Name="STEELGRADE" ColumnName="STEELGRADE" />
+                <ScalarProperty Name="TEAM" ColumnName="TEAM" />
+                <ScalarProperty Name="HEAD" ColumnName="HEAD" />
+                <ScalarProperty Name="HEATCOUNT" ColumnName="HEATCOUNT" />
+                <ScalarProperty Name="PRODUCTIONTIME" ColumnName="PRODUCTIONTIME" />
+                <ScalarProperty Name="TOTALTIME" ColumnName="TOTALTIME" />
+                <ScalarProperty Name="TIME4" ColumnName="TIME4" />
+                <ScalarProperty Name="GEARS4" ColumnName="GEARS4" />
+                <ScalarProperty Name="TIME3" ColumnName="TIME3" />
+                <ScalarProperty Name="GEARS3" ColumnName="GEARS3" />
+                <ScalarProperty Name="TIME2" ColumnName="TIME2" />
+                <ScalarProperty Name="GEARS2" ColumnName="GEARS2" />
+                <ScalarProperty Name="TIME1" ColumnName="TIME1" />
+                <ScalarProperty Name="GEARS1" ColumnName="GEARS1" />
+                <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+                <ScalarProperty Name="TREATNO" ColumnName="TREATNO" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLF_LADLE_WEIGHT">
+            <EntityTypeMapping TypeName="Model1.CLF_LADLE_WEIGHT">
+              <MappingFragment StoreEntitySet="CLF_LADLE_WEIGHT">
+                <ScalarProperty Name="LFJYWEIGHT" ColumnName="LFJYWEIGHT" />
+                <ScalarProperty Name="CCMINPUTAREWEIGHT" ColumnName="CCMINPUTAREWEIGHT" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="CCMLASTTAREWEIGHT" ColumnName="CCMLASTTAREWEIGHT" />
+                <ScalarProperty Name="CCMTAREWEIGHT" ColumnName="CCMTAREWEIGHT" />
+                <ScalarProperty Name="CCMGROSSWEIGHT" ColumnName="CCMGROSSWEIGHT" />
+                <ScalarProperty Name="KZWEIGHT" ColumnName="KZWEIGHT" />
+                <ScalarProperty Name="TAREWEIGHT" ColumnName="TAREWEIGHT" />
+                <ScalarProperty Name="GROSSWEIGHT" ColumnName="GROSSWEIGHT" />
+                <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+                <ScalarProperty Name="LOG_TIME" ColumnName="LOG_TIME" />
+                <ScalarProperty Name="LADLENO" ColumnName="LADLENO" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+                <ScalarProperty Name="LFID" ColumnName="LFID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

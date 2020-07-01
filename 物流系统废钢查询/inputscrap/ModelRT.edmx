@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="XGDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CCM5_GrossWeight">
+          <Key>
+            <PropertyRef Name="aa_id" />
+          </Key>
+          <Property Name="aa_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GrossWeight" Type="float" />
+          <Property Name="AreaID" Type="char" MaxLength="512" />
+          <Property Name="MeasureTime" Type="datetime" />
+          <Property Name="Permit_Delete_Flag" Type="int" />
+          <Property Name="GrossWeightB" Type="float" />
+          <Property Name="TareWeight" Type="float" />
+        </EntityType>
+        <EntityContainer Name="XGDBModelStoreContainer">
+          <EntitySet Name="CCM5_GrossWeight" EntityType="Self.CCM5_GrossWeight" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="XGDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CCM5_GrossWeight">
+          <Key>
+            <PropertyRef Name="aa_id" />
+          </Key>
+          <Property Name="aa_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GrossWeight" Type="Double" />
+          <Property Name="AreaID" Type="String" MaxLength="512" FixedLength="true" Unicode="false" />
+          <Property Name="MeasureTime" Type="DateTime" Precision="3" />
+          <Property Name="Permit_Delete_Flag" Type="Int32" />
+          <Property Name="GrossWeightB" Type="Double" />
+          <Property Name="TareWeight" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="XGDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CCM5_GrossWeight" EntityType="Self.CCM5_GrossWeight" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="XGDBModelStoreContainer" CdmEntityContainer="XGDBEntities">
+          <EntitySetMapping Name="CCM5_GrossWeight">
+            <EntityTypeMapping TypeName="XGDBModel.CCM5_GrossWeight">
+              <MappingFragment StoreEntitySet="CCM5_GrossWeight">
+                <ScalarProperty Name="TareWeight" ColumnName="TareWeight" />
+                <ScalarProperty Name="aa_id" ColumnName="aa_id" />
+                <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="MeasureTime" ColumnName="MeasureTime" />
+                <ScalarProperty Name="Permit_Delete_Flag" ColumnName="Permit_Delete_Flag" />
+                <ScalarProperty Name="GrossWeightB" ColumnName="GrossWeightB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

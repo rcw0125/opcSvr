@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="cmsdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="dt_ems">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tg_chanliang" Type="float" />
+          <Property Name="tg_shuihao" Type="float" />
+          <Property Name="tg_dianhao" Type="float" />
+          <Property Name="tg_jiaolumeiqi" Type="float" />
+          <Property Name="tg_zhuanlumeiqi" Type="float" />
+          <Property Name="tg_danqi" Type="float" />
+          <Property Name="tg_yangqi" Type="float" />
+          <Property Name="tg_yaqi" Type="float" />
+          <Property Name="tg_zhengqiwaigong" Type="float" />
+          <Property Name="tg_meiqihuishou" Type="float" />
+          <Property Name="bxg_chanliang" Type="float" />
+          <Property Name="bxg_shuihao" Type="float" />
+          <Property Name="bxg_dianhao" Type="float" />
+          <Property Name="bxg_jiaolumeiqi" Type="float" />
+          <Property Name="bxg_zhuanlumeiqi" Type="float" />
+          <Property Name="bxg_danqi" Type="float" />
+          <Property Name="bxg_yangqi" Type="float" />
+          <Property Name="bxg_yaqi" Type="float" />
+          <Property Name="bxg_zhengqiwaigong" Type="float" />
+          <Property Name="logtime" Type="nvarchar" MaxLength="50" />
+          <Property Name="bxg_flag" Type="int" />
+          <Property Name="dl_zhengqiwaigong" Type="float" />
+        </EntityType>
+        <EntityType Name="dt_ems_config">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="xuhao" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="zhibiao_sc" Type="nvarchar" MaxLength="50" />
+          <Property Name="zhibiao_cw" Type="nvarchar" MaxLength="50" />
+          <Property Name="danjia" Type="float" />
+          <Property Name="diansun" Type="float" />
+        </EntityType>
+        <EntityType Name="dt_ems_day">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="xuhao" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="zhibiao_sc" Type="nvarchar" MaxLength="50" />
+          <Property Name="zhibiao_cw" Type="nvarchar" MaxLength="50" />
+          <Property Name="yongliang" Type="float" />
+          <Property Name="danjia" Type="float" />
+          <Property Name="logtime" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="cmsdbModelStoreContainer">
+          <EntitySet Name="dt_ems" EntityType="Self.dt_ems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dt_ems_config" EntityType="Self.dt_ems_config" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dt_ems_day" EntityType="Self.dt_ems_day" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="cmsdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="dt_ems">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tg_chanliang" Type="Double" />
+          <Property Name="tg_shuihao" Type="Double" />
+          <Property Name="tg_dianhao" Type="Double" />
+          <Property Name="tg_jiaolumeiqi" Type="Double" />
+          <Property Name="tg_zhuanlumeiqi" Type="Double" />
+          <Property Name="tg_danqi" Type="Double" />
+          <Property Name="tg_yangqi" Type="Double" />
+          <Property Name="tg_yaqi" Type="Double" />
+          <Property Name="tg_meiqihuishou" Type="Double" />
+          <Property Name="bxg_chanliang" Type="Double" />
+          <Property Name="bxg_shuihao" Type="Double" />
+          <Property Name="bxg_dianhao" Type="Double" />
+          <Property Name="bxg_jiaolumeiqi" Type="Double" />
+          <Property Name="bxg_zhuanlumeiqi" Type="Double" />
+          <Property Name="bxg_danqi" Type="Double" />
+          <Property Name="bxg_yangqi" Type="Double" />
+          <Property Name="bxg_yaqi" Type="Double" />
+          <Property Name="logtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bxg_flag" Type="Int32" />
+          <Property Name="tg_zhengqiwaigong" Type="Double" />
+          <Property Name="bxg_zhengqiwaigong" Type="Double" />
+          <Property Name="dl_zhengqiwaigong" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="cmsdbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="dt_ems" EntityType="Self.dt_ems" />
+          <EntitySet Name="dt_ems_config" EntityType="cmsdbModel.dt_ems_config" />
+          <EntitySet Name="dt_ems_day" EntityType="cmsdbModel.dt_ems_day" />
+        </EntityContainer>
+        <EntityType Name="dt_ems_config">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="xuhao" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="zhibiao_sc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="zhibiao_cw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="danjia" Type="Double" />
+          <Property Name="diansun" Type="Double" />
+        </EntityType>
+        <EntityType Name="dt_ems_day">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="xuhao" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="zhibiao_sc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="zhibiao_cw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="yongliang" Type="Double" />
+          <Property Name="danjia" Type="Double" />
+          <Property Name="logtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="cmsdbModelStoreContainer" CdmEntityContainer="cmsdbEntities">
+          <EntitySetMapping Name="dt_ems">
+            <EntityTypeMapping TypeName="cmsdbModel.dt_ems">
+              <MappingFragment StoreEntitySet="dt_ems">
+                <ScalarProperty Name="dl_zhengqiwaigong" ColumnName="dl_zhengqiwaigong" />
+                <ScalarProperty Name="bxg_zhengqiwaigong" ColumnName="bxg_zhengqiwaigong" />
+                <ScalarProperty Name="tg_zhengqiwaigong" ColumnName="tg_zhengqiwaigong" />
+                <ScalarProperty Name="bxg_flag" ColumnName="bxg_flag" />
+                <ScalarProperty Name="logtime" ColumnName="logtime" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tg_chanliang" ColumnName="tg_chanliang" />
+                <ScalarProperty Name="tg_shuihao" ColumnName="tg_shuihao" />
+                <ScalarProperty Name="tg_dianhao" ColumnName="tg_dianhao" />
+                <ScalarProperty Name="tg_jiaolumeiqi" ColumnName="tg_jiaolumeiqi" />
+                <ScalarProperty Name="tg_zhuanlumeiqi" ColumnName="tg_zhuanlumeiqi" />
+                <ScalarProperty Name="tg_danqi" ColumnName="tg_danqi" />
+                <ScalarProperty Name="tg_yangqi" ColumnName="tg_yangqi" />
+                <ScalarProperty Name="tg_yaqi" ColumnName="tg_yaqi" />
+                <ScalarProperty Name="tg_meiqihuishou" ColumnName="tg_meiqihuishou" />
+                <ScalarProperty Name="bxg_chanliang" ColumnName="bxg_chanliang" />
+                <ScalarProperty Name="bxg_shuihao" ColumnName="bxg_shuihao" />
+                <ScalarProperty Name="bxg_dianhao" ColumnName="bxg_dianhao" />
+                <ScalarProperty Name="bxg_jiaolumeiqi" ColumnName="bxg_jiaolumeiqi" />
+                <ScalarProperty Name="bxg_zhuanlumeiqi" ColumnName="bxg_zhuanlumeiqi" />
+                <ScalarProperty Name="bxg_danqi" ColumnName="bxg_danqi" />
+                <ScalarProperty Name="bxg_yangqi" ColumnName="bxg_yangqi" />
+                <ScalarProperty Name="bxg_yaqi" ColumnName="bxg_yaqi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dt_ems_config">
+            <EntityTypeMapping TypeName="cmsdbModel.dt_ems_config">
+              <MappingFragment StoreEntitySet="dt_ems_config">
+                <ScalarProperty Name="diansun" ColumnName="diansun" />
+                <ScalarProperty Name="danjia" ColumnName="danjia" />
+                <ScalarProperty Name="zhibiao_cw" ColumnName="zhibiao_cw" />
+                <ScalarProperty Name="zhibiao_sc" ColumnName="zhibiao_sc" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="xuhao" ColumnName="xuhao" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dt_ems_day">
+            <EntityTypeMapping TypeName="cmsdbModel.dt_ems_day">
+              <MappingFragment StoreEntitySet="dt_ems_day">
+                <ScalarProperty Name="logtime" ColumnName="logtime" />
+                <ScalarProperty Name="danjia" ColumnName="danjia" />
+                <ScalarProperty Name="yongliang" ColumnName="yongliang" />
+                <ScalarProperty Name="zhibiao_cw" ColumnName="zhibiao_cw" />
+                <ScalarProperty Name="zhibiao_sc" ColumnName="zhibiao_sc" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="xuhao" ColumnName="xuhao" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

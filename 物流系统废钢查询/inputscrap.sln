@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inputscrap", "inputscrap\inputscrap.csproj", "{0243E283-7CA8-46F6-98B0-AFDEB11EB273}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0243E283-7CA8-46F6-98B0-AFDEB11EB273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0243E283-7CA8-46F6-98B0-AFDEB11EB273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0243E283-7CA8-46F6-98B0-AFDEB11EB273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0243E283-7CA8-46F6-98B0-AFDEB11EB273}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00AD0148-7017-489F-936F-80ECCB359AED}
+	EndGlobalSection
+EndGlobal

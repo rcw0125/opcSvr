@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cmsdbModelStoreContainer" CdmEntityContainer="cmsdbEntities">
+    <EntitySetMapping Name="dt_ems">
+      <EntityTypeMapping TypeName="cmsdbModel.dt_ems">
+        <MappingFragment StoreEntitySet="dt_ems">
+          <ScalarProperty Name="dl_zhengqiwaigong" ColumnName="dl_zhengqiwaigong" />
+          <ScalarProperty Name="bxg_zhengqiwaigong" ColumnName="bxg_zhengqiwaigong" />
+          <ScalarProperty Name="tg_zhengqiwaigong" ColumnName="tg_zhengqiwaigong" />
+          <ScalarProperty Name="bxg_flag" ColumnName="bxg_flag" />
+          <ScalarProperty Name="logtime" ColumnName="logtime" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tg_chanliang" ColumnName="tg_chanliang" />
+          <ScalarProperty Name="tg_shuihao" ColumnName="tg_shuihao" />
+          <ScalarProperty Name="tg_dianhao" ColumnName="tg_dianhao" />
+          <ScalarProperty Name="tg_jiaolumeiqi" ColumnName="tg_jiaolumeiqi" />
+          <ScalarProperty Name="tg_zhuanlumeiqi" ColumnName="tg_zhuanlumeiqi" />
+          <ScalarProperty Name="tg_danqi" ColumnName="tg_danqi" />
+          <ScalarProperty Name="tg_yangqi" ColumnName="tg_yangqi" />
+          <ScalarProperty Name="tg_yaqi" ColumnName="tg_yaqi" />
+          <ScalarProperty Name="tg_meiqihuishou" ColumnName="tg_meiqihuishou" />
+          <ScalarProperty Name="bxg_chanliang" ColumnName="bxg_chanliang" />
+          <ScalarProperty Name="bxg_shuihao" ColumnName="bxg_shuihao" />
+          <ScalarProperty Name="bxg_dianhao" ColumnName="bxg_dianhao" />
+          <ScalarProperty Name="bxg_jiaolumeiqi" ColumnName="bxg_jiaolumeiqi" />
+          <ScalarProperty Name="bxg_zhuanlumeiqi" ColumnName="bxg_zhuanlumeiqi" />
+          <ScalarProperty Name="bxg_danqi" ColumnName="bxg_danqi" />
+          <ScalarProperty Name="bxg_yangqi" ColumnName="bxg_yangqi" />
+          <ScalarProperty Name="bxg_yaqi" ColumnName="bxg_yaqi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dt_ems_config">
+      <EntityTypeMapping TypeName="cmsdbModel.dt_ems_config">
+        <MappingFragment StoreEntitySet="dt_ems_config">
+          <ScalarProperty Name="diansun" ColumnName="diansun" />
+          <ScalarProperty Name="danjia" ColumnName="danjia" />
+          <ScalarProperty Name="zhibiao_cw" ColumnName="zhibiao_cw" />
+          <ScalarProperty Name="zhibiao_sc" ColumnName="zhibiao_sc" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="xuhao" ColumnName="xuhao" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dt_ems_day">
+      <EntityTypeMapping TypeName="cmsdbModel.dt_ems_day">
+        <MappingFragment StoreEntitySet="dt_ems_day">
+          <ScalarProperty Name="logtime" ColumnName="logtime" />
+          <ScalarProperty Name="danjia" ColumnName="danjia" />
+          <ScalarProperty Name="yongliang" ColumnName="yongliang" />
+          <ScalarProperty Name="zhibiao_cw" ColumnName="zhibiao_cw" />
+          <ScalarProperty Name="zhibiao_sc" ColumnName="zhibiao_sc" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="xuhao" ColumnName="xuhao" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cmsdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="dt_ems">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tg_chanliang" Type="float" />
+    <Property Name="tg_shuihao" Type="float" />
+    <Property Name="tg_dianhao" Type="float" />
+    <Property Name="tg_jiaolumeiqi" Type="float" />
+    <Property Name="tg_zhuanlumeiqi" Type="float" />
+    <Property Name="tg_danqi" Type="float" />
+    <Property Name="tg_yangqi" Type="float" />
+    <Property Name="tg_yaqi" Type="float" />
+    <Property Name="tg_zhengqiwaigong" Type="float" />
+    <Property Name="tg_meiqihuishou" Type="float" />
+    <Property Name="bxg_chanliang" Type="float" />
+    <Property Name="bxg_shuihao" Type="float" />
+    <Property Name="bxg_dianhao" Type="float" />
+    <Property Name="bxg_jiaolumeiqi" Type="float" />
+    <Property Name="bxg_zhuanlumeiqi" Type="float" />
+    <Property Name="bxg_danqi" Type="float" />
+    <Property Name="bxg_yangqi" Type="float" />
+    <Property Name="bxg_yaqi" Type="float" />
+    <Property Name="bxg_zhengqiwaigong" Type="float" />
+    <Property Name="logtime" Type="nvarchar" MaxLength="50" />
+    <Property Name="bxg_flag" Type="int" />
+    <Property Name="dl_zhengqiwaigong" Type="float" />
+  </EntityType>
+  <EntityType Name="dt_ems_config">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="xuhao" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="zhibiao_sc" Type="nvarchar" MaxLength="50" />
+    <Property Name="zhibiao_cw" Type="nvarchar" MaxLength="50" />
+    <Property Name="danjia" Type="float" />
+    <Property Name="diansun" Type="float" />
+  </EntityType>
+  <EntityType Name="dt_ems_day">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="xuhao" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="zhibiao_sc" Type="nvarchar" MaxLength="50" />
+    <Property Name="zhibiao_cw" Type="nvarchar" MaxLength="50" />
+    <Property Name="yongliang" Type="float" />
+    <Property Name="danjia" Type="float" />
+    <Property Name="logtime" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="cmsdbModelStoreContainer">
+    <EntitySet Name="dt_ems" EntityType="Self.dt_ems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dt_ems_config" EntityType="Self.dt_ems_config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dt_ems_day" EntityType="Self.dt_ems_day" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="M_MEASURE_T">
+          <Key>
+            <PropertyRef Name="MATCHID" />
+          </Key>
+          <Property Name="MATCHID" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="CARNO" Type="varchar2" MaxLength="20" />
+          <Property Name="CARTYPE" Type="varchar2" MaxLength="20" />
+          <Property Name="RFIDID" Type="varchar2" MaxLength="40" />
+          <Property Name="ICID" Type="varchar2" MaxLength="20" />
+          <Property Name="OPERATYPE" Type="varchar2" MaxLength="20" />
+          <Property Name="PLANID" Type="varchar2" MaxLength="20" />
+          <Property Name="TASKCODE" Type="varchar2" MaxLength="20" />
+          <Property Name="MATERIALCODE" Type="varchar2" MaxLength="40" />
+          <Property Name="MATERIALNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="MATERIALSPECCODE" Type="varchar2" MaxLength="20" />
+          <Property Name="MATERIALSPEC" Type="varchar2" MaxLength="100" />
+          <Property Name="SHIPCODE" Type="varchar2" MaxLength="20" />
+          <Property Name="SHIP" Type="varchar2" MaxLength="100" />
+          <Property Name="SOURCECODE" Type="varchar2" MaxLength="40" />
+          <Property Name="SOURCENAME" Type="varchar2" MaxLength="100" />
+          <Property Name="SOURCETIME" Type="date" />
+          <Property Name="SOURCEPLACE" Type="varchar2" MaxLength="100" />
+          <Property Name="TARGETCODE" Type="varchar2" MaxLength="40" />
+          <Property Name="TARGETNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="TARGETTIME" Type="date" />
+          <Property Name="TARGETPLACE" Type="varchar2" MaxLength="100" />
+          <Property Name="BASKET" Type="varchar2" MaxLength="60" />
+          <Property Name="PLANWEIGHT" Type="number" Precision="38" Scale="0" />
+          <Property Name="PLANMATERIALCOUNT" Type="number" Precision="38" Scale="0" />
+          <Property Name="MATERIALCOUNT" Type="number" Precision="38" Scale="0" />
+          <Property Name="PLANCARCOUNT" Type="number" Precision="38" Scale="0" />
+          <Property Name="GROSS" Type="number" Precision="38" Scale="0" />
+          <Property Name="GROSSTIME" Type="date" />
+          <Property Name="GROSSWEIGHID" Type="varchar2" MaxLength="20" />
+          <Property Name="GROSSWEIGH" Type="varchar2" MaxLength="100" />
+          <Property Name="GROSSOPERACODE" Type="varchar2" MaxLength="20" />
+          <Property Name="GROSSOPERANAME" Type="varchar2" MaxLength="20" />
+          <Property Name="GROSSGROUPNO" Type="number" Precision="38" Scale="0" />
+          <Property Name="GROSSSERIAL" Type="number" Precision="38" Scale="0" />
+          <Property Name="GROSSSPEED" Type="number" Precision="38" Scale="0" />
+          <Property Name="GROSSLOGID" Type="varchar2" MaxLength="20" />
+          <Property Name="TARE" Type="number" Precision="38" Scale="0" />
+          <Property Name="TARETIME" Type="date" />
+          <Property Name="TAREWEIGHID" Type="varchar2" MaxLength="20" />
+          <Property Name="TAREWEIGH" Type="varchar2" MaxLength="100" />
+          <Property Name="TAREOPERACODE" Type="varchar2" MaxLength="20" />
+          <Property Name="TAREOPERANAME" Type="varchar2" MaxLength="20" />
+          <Property Name="TAREGROUPNO" Type="number" Precision="38" Scale="0" />
+          <Property Name="TARESERIAL" Type="number" Precision="38" Scale="0" />
+          <Property Name="TARELOGID" Type="varchar2" MaxLength="20" />
+          <Property Name="TARESPEED" Type="number" Precision="38" Scale="0" />
+          <Property Name="DEDUCTION" Type="number" Precision="38" Scale="0" />
+          <Property Name="DEDUCTIONTIME" Type="date" />
+          <Property Name="DEDUCTIONCODE" Type="varchar2" MaxLength="20" />
+          <Property Name="DEDUCTIONNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="DEDUCTIONOPERACODE" Type="varchar2" MaxLength="20" />
+          <Property Name="DEDUCTIONOPERANAME" Type="varchar2" MaxLength="100" />
+          <Property Name="SUTTLE" Type="number" Precision="38" Scale="0" />
+          <Property Name="SUTTLETIME" Type="date" />
+          <Property Name="SUTTLEWEIGHID" Type="varchar2" MaxLength="20" />
+          <Property Name="SUTTLEWEIGH" Type="varchar2" MaxLength="100" />
+          <Property Name="SUTTLEOPERACODE" Type="varchar2" MaxLength="20" />
+          <Property Name="SUTTLEOPERANAME" Type="varchar2" MaxLength="20" />
+          <Property Name="MATCHIDB" Type="varchar2" MaxLength="20" />
+          <Property Name="SUTTLEB" Type="number" Precision="10" Scale="3" />
+          <Property Name="GROSSB" Type="number" Precision="38" Scale="0" />
+          <Property Name="GROSSTIMEB" Type="date" />
+          <Property Name="GROSSWEIGHIDB" Type="varchar2" MaxLength="20" />
+          <Property Name="GROSSWEIGHB" Type="varchar2" MaxLength="100" />
+          <Property Name="GROSSOPERACODEB" Type="varchar2" MaxLength="20" />
+          <Property Name="GROSSOPERANAMEB" Type="varchar2" MaxLength="20" />
+          <Property Name="GROSSGROUPNOB" Type="number" Precision="38" Scale="0" />
+          <Property Name="GROSSSERIALB" Type="number" Precision="38" Scale="0" />
+          <Property Name="GROSSSPEEDB" Type="number" Precision="38" Scale="0" />
+          <Property Name="GROSSLOGIDB" Type="varchar2" MaxLength="20" />
+          <Property Name="TAREB" Type="number" Precision="38" Scale="0" />
+          <Property Name="TARETIMEB" Type="date" />
+          <Property Name="TAREWEIGHIDB" Type="varchar2" MaxLength="20" />
+          <Property Name="TAREWEIGHB" Type="varchar2" MaxLength="100" />
+          <Property Name="TAREOPERACODEB" Type="varchar2" MaxLength="20" />
+          <Property Name="TAREOPERANAMEB" Type="varchar2" MaxLength="20" />
+          <Property Name="TAREGROUPNOB" Type="number" Precision="38" Scale="0" />
+          <Property Name="TARESERIALB" Type="number" Precision="38" Scale="0" />
+          <Property Name="TARELOGIDB" Type="varchar2" MaxLength="20" />
+          <Property Name="TARESPEEDB" Type="number" Precision="38" Scale="0" />
+          <Property Name="BATCHCODE" Type="varchar2" MaxLength="20" />
+          <Property Name="BFLAG" Type="number" Precision="38" Scale="0" />
+          <Property Name="PRINTGROSSNUM" Type="number" Precision="38" Scale="0" />
+          <Property Name="PRINTSUTTLENUM" Type="number" Precision="38" Scale="0" />
+          <Property Name="USERMEMO" Type="varchar2" MaxLength="200" />
+          <Property Name="SYSMEMO" Type="varchar2" MaxLength="200" />
+          <Property Name="VALIDFLAG" Type="number" Precision="38" Scale="0" />
+          <Property Name="VALIDFLAGTIME" Type="date" />
+          <Property Name="VALIDFLAGOPERANAME" Type="varchar2" MaxLength="40" />
+          <Property Name="RECORDTYPE" Type="number" Precision="38" Scale="0" />
+          <Property Name="CREATEDATE" Type="date" />
+          <Property Name="UPTIME" Type="date" />
+          <Property Name="UPTIMESTAMP" Type="timestamp" Precision="6" />
+          <Property Name="DECUTIONTYPEBAK" Type="varchar2" MaxLength="2" />
+          <Property Name="MOTORCADENAME" Type="varchar2" MaxLength="100" />
+          <Property Name="MOTORCADECODE" Type="varchar2" MaxLength="40" />
+          <Property Name="DEDUCTIONTYPE" Type="number" Precision="10" Scale="3" />
+          <Property Name="MEMO1" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO2" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO3" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO4" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO5" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO6" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO7" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO8" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO9" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO10" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO11" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO12" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO13" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO14" Type="varchar2" MaxLength="200" />
+          <Property Name="MEMO15" Type="varchar2" MaxLength="200" />
+          <Property Name="DEDUCTION2" Type="number" Precision="10" Scale="3" />
+          <Property Name="UPDATENCFLAG" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRINTCOUNT" Type="number" Precision="38" Scale="0" />
+          <Property Name="UPDATENCDATE" Type="date" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="M_MEASURE_T" EntityType="Self.M_MEASURE_T" Schema="XTGT_DEV_USER" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="M_MEASURE_T">
+          <Key>
+            <PropertyRef Name="MATCHID" />
+          </Key>
+          <Property Name="MATCHID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CARNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CARTYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RFIDID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ICID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OPERATYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PLANID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TASKCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIALCODE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIALNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIALSPECCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIALSPEC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SHIPCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SHIP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SOURCECODE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="SOURCENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SOURCETIME" Type="DateTime" />
+          <Property Name="SOURCEPLACE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TARGETCODE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="TARGETNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TARGETTIME" Type="DateTime" />
+          <Property Name="TARGETPLACE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BASKET" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="PLANWEIGHT" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PLANMATERIALCOUNT" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="MATERIALCOUNT" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PLANCARCOUNT" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="GROSS" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="GROSSTIME" Type="DateTime" />
+          <Property Name="GROSSWEIGHID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="GROSSWEIGH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GROSSOPERACODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="GROSSOPERANAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="GROSSGROUPNO" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="GROSSSERIAL" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="GROSSSPEED" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="GROSSLOGID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TARE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="TARETIME" Type="DateTime" />
+          <Property Name="TAREWEIGHID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TAREWEIGH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TAREOPERACODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TAREOPERANAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TAREGROUPNO" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="TARESERIAL" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="TARELOGID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TARESPEED" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="DEDUCTION" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="DEDUCTIONTIME" Type="DateTime" />
+          <Property Name="DEDUCTIONCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DEDUCTIONNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DEDUCTIONOPERACODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DEDUCTIONOPERANAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SUTTLE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="SUTTLETIME" Type="DateTime" />
+          <Property Name="SUTTLEWEIGHID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SUTTLEWEIGH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SUTTLEOPERACODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SUTTLEOPERANAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MATCHIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SUTTLEB" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="GROSSB" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="GROSSTIMEB" Type="DateTime" />
+          <Property Name="GROSSWEIGHIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="GROSSWEIGHB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GROSSOPERACODEB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="GROSSOPERANAMEB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="GROSSGROUPNOB" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="GROSSSERIALB" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="GROSSSPEEDB" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="GROSSLOGIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TAREB" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="TARETIMEB" Type="DateTime" />
+          <Property Name="TAREWEIGHIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TAREWEIGHB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TAREOPERACODEB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TAREOPERANAMEB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TAREGROUPNOB" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="TARESERIALB" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="TARELOGIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TARESPEEDB" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="BATCHCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BFLAG" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PRINTGROSSNUM" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PRINTSUTTLENUM" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="USERMEMO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SYSMEMO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="VALIDFLAG" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="VALIDFLAGTIME" Type="DateTime" />
+          <Property Name="VALIDFLAGOPERANAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="RECORDTYPE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="CREATEDATE" Type="DateTime" />
+          <Property Name="UPTIME" Type="DateTime" />
+          <Property Name="UPTIMESTAMP" Type="DateTime" Precision="6" />
+          <Property Name="DECUTIONTYPEBAK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="MOTORCADENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MOTORCADECODE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="DEDUCTIONTYPE" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="MEMO1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO6" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO7" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO8" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO9" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO10" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO11" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO12" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO13" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO14" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MEMO15" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DEDUCTION2" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="UPDATENCFLAG" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRINTCOUNT" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="UPDATENCDATE" Type="DateTime" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="M_MEASURE_T" EntityType="Self.M_MEASURE_T" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="M_MEASURE_T">
+            <EntityTypeMapping TypeName="Model.M_MEASURE_T">
+              <MappingFragment StoreEntitySet="M_MEASURE_T">
+                <ScalarProperty Name="MATCHID" ColumnName="MATCHID" />
+                <ScalarProperty Name="CARNO" ColumnName="CARNO" />
+                <ScalarProperty Name="CARTYPE" ColumnName="CARTYPE" />
+                <ScalarProperty Name="RFIDID" ColumnName="RFIDID" />
+                <ScalarProperty Name="ICID" ColumnName="ICID" />
+                <ScalarProperty Name="OPERATYPE" ColumnName="OPERATYPE" />
+                <ScalarProperty Name="PLANID" ColumnName="PLANID" />
+                <ScalarProperty Name="TASKCODE" ColumnName="TASKCODE" />
+                <ScalarProperty Name="MATERIALCODE" ColumnName="MATERIALCODE" />
+                <ScalarProperty Name="MATERIALNAME" ColumnName="MATERIALNAME" />
+                <ScalarProperty Name="MATERIALSPECCODE" ColumnName="MATERIALSPECCODE" />
+                <ScalarProperty Name="MATERIALSPEC" ColumnName="MATERIALSPEC" />
+                <ScalarProperty Name="SHIPCODE" ColumnName="SHIPCODE" />
+                <ScalarProperty Name="SHIP" ColumnName="SHIP" />
+                <ScalarProperty Name="SOURCECODE" ColumnName="SOURCECODE" />
+                <ScalarProperty Name="SOURCENAME" ColumnName="SOURCENAME" />
+                <ScalarProperty Name="SOURCETIME" ColumnName="SOURCETIME" />
+                <ScalarProperty Name="SOURCEPLACE" ColumnName="SOURCEPLACE" />
+                <ScalarProperty Name="TARGETCODE" ColumnName="TARGETCODE" />
+                <ScalarProperty Name="TARGETNAME" ColumnName="TARGETNAME" />
+                <ScalarProperty Name="TARGETTIME" ColumnName="TARGETTIME" />
+                <ScalarProperty Name="TARGETPLACE" ColumnName="TARGETPLACE" />
+                <ScalarProperty Name="BASKET" ColumnName="BASKET" />
+                <ScalarProperty Name="PLANWEIGHT" ColumnName="PLANWEIGHT" />
+                <ScalarProperty Name="PLANMATERIALCOUNT" ColumnName="PLANMATERIALCOUNT" />
+                <ScalarProperty Name="MATERIALCOUNT" ColumnName="MATERIALCOUNT" />
+                <ScalarProperty Name="PLANCARCOUNT" ColumnName="PLANCARCOUNT" />
+                <ScalarProperty Name="GROSS" ColumnName="GROSS" />
+                <ScalarProperty Name="GROSSTIME" ColumnName="GROSSTIME" />
+                <ScalarProperty Name="GROSSWEIGHID" ColumnName="GROSSWEIGHID" />
+                <ScalarProperty Name="GROSSWEIGH" ColumnName="GROSSWEIGH" />
+                <ScalarProperty Name="GROSSOPERACODE" ColumnName="GROSSOPERACODE" />
+                <ScalarProperty Name="GROSSOPERANAME" ColumnName="GROSSOPERANAME" />
+                <ScalarProperty Name="GROSSGROUPNO" ColumnName="GROSSGROUPNO" />
+                <ScalarProperty Name="GROSSSERIAL" ColumnName="GROSSSERIAL" />
+                <ScalarProperty Name="GROSSSPEED" ColumnName="GROSSSPEED" />
+                <ScalarProperty Name="GROSSLOGID" ColumnName="GROSSLOGID" />
+                <ScalarProperty Name="TARE" ColumnName="TARE" />
+                <ScalarProperty Name="TARETIME" ColumnName="TARETIME" />
+                <ScalarProperty Name="TAREWEIGHID" ColumnName="TAREWEIGHID" />
+                <ScalarProperty Name="TAREWEIGH" ColumnName="TAREWEIGH" />
+                <ScalarProperty Name="TAREOPERACODE" ColumnName="TAREOPERACODE" />
+                <ScalarProperty Name="TAREOPERANAME" ColumnName="TAREOPERANAME" />
+                <ScalarProperty Name="TAREGROUPNO" ColumnName="TAREGROUPNO" />
+                <ScalarProperty Name="TARESERIAL" ColumnName="TARESERIAL" />
+                <ScalarProperty Name="TARELOGID" ColumnName="TARELOGID" />
+                <ScalarProperty Name="TARESPEED" ColumnName="TARESPEED" />
+                <ScalarProperty Name="DEDUCTION" ColumnName="DEDUCTION" />
+                <ScalarProperty Name="DEDUCTIONTIME" ColumnName="DEDUCTIONTIME" />
+                <ScalarProperty Name="DEDUCTIONCODE" ColumnName="DEDUCTIONCODE" />
+                <ScalarProperty Name="DEDUCTIONNAME" ColumnName="DEDUCTIONNAME" />
+                <ScalarProperty Name="DEDUCTIONOPERACODE" ColumnName="DEDUCTIONOPERACODE" />
+                <ScalarProperty Name="DEDUCTIONOPERANAME" ColumnName="DEDUCTIONOPERANAME" />
+                <ScalarProperty Name="SUTTLE" ColumnName="SUTTLE" />
+                <ScalarProperty Name="SUTTLETIME" ColumnName="SUTTLETIME" />
+                <ScalarProperty Name="SUTTLEWEIGHID" ColumnName="SUTTLEWEIGHID" />
+                <ScalarProperty Name="SUTTLEWEIGH" ColumnName="SUTTLEWEIGH" />
+                <ScalarProperty Name="SUTTLEOPERACODE" ColumnName="SUTTLEOPERACODE" />
+                <ScalarProperty Name="SUTTLEOPERANAME" ColumnName="SUTTLEOPERANAME" />
+                <ScalarProperty Name="MATCHIDB" ColumnName="MATCHIDB" />
+                <ScalarProperty Name="SUTTLEB" ColumnName="SUTTLEB" />
+                <ScalarProperty Name="GROSSB" ColumnName="GROSSB" />
+                <ScalarProperty Name="GROSSTIMEB" ColumnName="GROSSTIMEB" />
+                <ScalarProperty Name="GROSSWEIGHIDB" ColumnName="GROSSWEIGHIDB" />
+                <ScalarProperty Name="GROSSWEIGHB" ColumnName="GROSSWEIGHB" />
+                <ScalarProperty Name="GROSSOPERACODEB" ColumnName="GROSSOPERACODEB" />
+                <ScalarProperty Name="GROSSOPERANAMEB" ColumnName="GROSSOPERANAMEB" />
+                <ScalarProperty Name="GROSSGROUPNOB" ColumnName="GROSSGROUPNOB" />
+                <ScalarProperty Name="GROSSSERIALB" ColumnName="GROSSSERIALB" />
+                <ScalarProperty Name="GROSSSPEEDB" ColumnName="GROSSSPEEDB" />
+                <ScalarProperty Name="GROSSLOGIDB" ColumnName="GROSSLOGIDB" />
+                <ScalarProperty Name="TAREB" ColumnName="TAREB" />
+                <ScalarProperty Name="TARETIMEB" ColumnName="TARETIMEB" />
+                <ScalarProperty Name="TAREWEIGHIDB" ColumnName="TAREWEIGHIDB" />
+                <ScalarProperty Name="TAREWEIGHB" ColumnName="TAREWEIGHB" />
+                <ScalarProperty Name="TAREOPERACODEB" ColumnName="TAREOPERACODEB" />
+                <ScalarProperty Name="TAREOPERANAMEB" ColumnName="TAREOPERANAMEB" />
+                <ScalarProperty Name="TAREGROUPNOB" ColumnName="TAREGROUPNOB" />
+                <ScalarProperty Name="TARESERIALB" ColumnName="TARESERIALB" />
+                <ScalarProperty Name="TARELOGIDB" ColumnName="TARELOGIDB" />
+                <ScalarProperty Name="TARESPEEDB" ColumnName="TARESPEEDB" />
+                <ScalarProperty Name="BATCHCODE" ColumnName="BATCHCODE" />
+                <ScalarProperty Name="BFLAG" ColumnName="BFLAG" />
+                <ScalarProperty Name="PRINTGROSSNUM" ColumnName="PRINTGROSSNUM" />
+                <ScalarProperty Name="PRINTSUTTLENUM" ColumnName="PRINTSUTTLENUM" />
+                <ScalarProperty Name="USERMEMO" ColumnName="USERMEMO" />
+                <ScalarProperty Name="SYSMEMO" ColumnName="SYSMEMO" />
+                <ScalarProperty Name="VALIDFLAG" ColumnName="VALIDFLAG" />
+                <ScalarProperty Name="VALIDFLAGTIME" ColumnName="VALIDFLAGTIME" />
+                <ScalarProperty Name="VALIDFLAGOPERANAME" ColumnName="VALIDFLAGOPERANAME" />
+                <ScalarProperty Name="RECORDTYPE" ColumnName="RECORDTYPE" />
+                <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+                <ScalarProperty Name="UPTIME" ColumnName="UPTIME" />
+                <ScalarProperty Name="UPTIMESTAMP" ColumnName="UPTIMESTAMP" />
+                <ScalarProperty Name="DECUTIONTYPEBAK" ColumnName="DECUTIONTYPEBAK" />
+                <ScalarProperty Name="MOTORCADENAME" ColumnName="MOTORCADENAME" />
+                <ScalarProperty Name="MOTORCADECODE" ColumnName="MOTORCADECODE" />
+                <ScalarProperty Name="DEDUCTIONTYPE" ColumnName="DEDUCTIONTYPE" />
+                <ScalarProperty Name="MEMO1" ColumnName="MEMO1" />
+                <ScalarProperty Name="MEMO2" ColumnName="MEMO2" />
+                <ScalarProperty Name="MEMO3" ColumnName="MEMO3" />
+                <ScalarProperty Name="MEMO4" ColumnName="MEMO4" />
+                <ScalarProperty Name="MEMO5" ColumnName="MEMO5" />
+                <ScalarProperty Name="MEMO6" ColumnName="MEMO6" />
+                <ScalarProperty Name="MEMO7" ColumnName="MEMO7" />
+                <ScalarProperty Name="MEMO8" ColumnName="MEMO8" />
+                <ScalarProperty Name="MEMO9" ColumnName="MEMO9" />
+                <ScalarProperty Name="MEMO10" ColumnName="MEMO10" />
+                <ScalarProperty Name="MEMO11" ColumnName="MEMO11" />
+                <ScalarProperty Name="MEMO12" ColumnName="MEMO12" />
+                <ScalarProperty Name="MEMO13" ColumnName="MEMO13" />
+                <ScalarProperty Name="MEMO14" ColumnName="MEMO14" />
+                <ScalarProperty Name="MEMO15" ColumnName="MEMO15" />
+                <ScalarProperty Name="DEDUCTION2" ColumnName="DEDUCTION2" />
+                <ScalarProperty Name="UPDATENCFLAG" ColumnName="UPDATENCFLAG" />
+                <ScalarProperty Name="PRINTCOUNT" ColumnName="PRINTCOUNT" />
+                <ScalarProperty Name="UPDATENCDATE" ColumnName="UPDATENCDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

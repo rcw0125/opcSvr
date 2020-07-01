@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TS_INSCRAP">
+    <Key>
+      <PropertyRef Name="LOGTIME" />
+    </Key>
+    <Property Name="LOGTIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="INWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="HSWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="ZCWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="STWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+  </EntityType>
+  <EntityContainer Name="Entities_mes" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TS_INSCRAP" EntityType="Self.TS_INSCRAP" />
+    <EntitySet Name="CLF_BASE_DATA" EntityType="Model1.CLF_BASE_DATA" />
+    <EntitySet Name="CLF_HEAT_GEARS" EntityType="Model1.CLF_HEAT_GEARS" />
+    <EntitySet Name="CLF_PROCESS_SATUS" EntityType="Model1.CLF_PROCESS_SATUS" />
+    <EntitySet Name="CLF_HEAT_GEARS_ITEM" EntityType="Model1.CLF_HEAT_GEARS_ITEM" />
+    <EntitySet Name="CLF_LADLE_WEIGHT" EntityType="Model1.CLF_LADLE_WEIGHT" />
+  </EntityContainer>
+  <EntityType Name="CLF_BASE_DATA">
+    <Key>
+      <PropertyRef Name="TREATNO" />
+    </Key>
+    <Property Name="GUID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TREATNO" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PREHEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="STEELGRADEINDEX" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="STEELGRADE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LADLENO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="HEADFURNACE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ASSISTANT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SECONDHAND" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PRODUCTIONDATE" Type="DateTime" />
+    <Property Name="LOCKED" Type="Int16" />
+    <Property Name="SHIFT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TEAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NC_CONFIRM_FLAG" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CLF_HEAT_GEARS">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TREATNO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="GEARS" Type="Int32" />
+    <Property Name="LOGTIME" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="CLF_PROCESS_SATUS">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TREATNO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="CHANGE_TIME" Type="DateTime" />
+    <Property Name="C_TS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CLF_HEAT_GEARS_ITEM">
+    <Key>
+      <PropertyRef Name="TREATNO" />
+    </Key>
+    <Property Name="GUID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TREATNO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HEATID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GEARS1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIME1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GEARS2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIME2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GEARS3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIME3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GEARS4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIME4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTALTIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRODUCTIONTIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HEATCOUNT" Type="Int32" />
+    <Property Name="HEAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TEAM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STEELGRADE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CLF_LADLE_WEIGHT">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LFID" Type="Int16" />
+    <Property Name="WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="STATUS" Type="Int16" />
+    <Property Name="LADLENO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LOG_TIME" Type="DateTime" />
+    <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="GROSSWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="TAREWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="KZWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CCMGROSSWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CCMTAREWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CCMLASTTAREWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="AREA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CCMINPUTAREWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="LFJYWEIGHT" Type="Decimal" Precision="10" Scale="3" />
+  </EntityType>
+</Schema>

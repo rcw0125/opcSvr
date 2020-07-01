@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Entities_mes">
+    <EntitySetMapping Name="TS_INSCRAP">
+      <EntityTypeMapping TypeName="Model1.TS_INSCRAP">
+        <MappingFragment StoreEntitySet="TS_INSCRAP">
+          <ScalarProperty Name="STWEIGHT" ColumnName="STWEIGHT" />
+          <ScalarProperty Name="ZCWEIGHT" ColumnName="ZCWEIGHT" />
+          <ScalarProperty Name="HSWEIGHT" ColumnName="HSWEIGHT" />
+          <ScalarProperty Name="INWEIGHT" ColumnName="INWEIGHT" />
+          <ScalarProperty Name="LOGTIME" ColumnName="LOGTIME" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLF_BASE_DATA">
+      <EntityTypeMapping TypeName="Model1.CLF_BASE_DATA">
+        <MappingFragment StoreEntitySet="CLF_BASE_DATA">
+          <ScalarProperty Name="NC_CONFIRM_FLAG" ColumnName="NC_CONFIRM_FLAG" />
+          <ScalarProperty Name="TEAM" ColumnName="TEAM" />
+          <ScalarProperty Name="SHIFT" ColumnName="SHIFT" />
+          <ScalarProperty Name="LOCKED" ColumnName="LOCKED" />
+          <ScalarProperty Name="PRODUCTIONDATE" ColumnName="PRODUCTIONDATE" />
+          <ScalarProperty Name="SECONDHAND" ColumnName="SECONDHAND" />
+          <ScalarProperty Name="ASSISTANT" ColumnName="ASSISTANT" />
+          <ScalarProperty Name="HEADFURNACE" ColumnName="HEADFURNACE" />
+          <ScalarProperty Name="LADLENO" ColumnName="LADLENO" />
+          <ScalarProperty Name="STEELGRADE" ColumnName="STEELGRADE" />
+          <ScalarProperty Name="STEELGRADEINDEX" ColumnName="STEELGRADEINDEX" />
+          <ScalarProperty Name="PREHEATID" ColumnName="PREHEATID" />
+          <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+          <ScalarProperty Name="TREATNO" ColumnName="TREATNO" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLF_HEAT_GEARS">
+      <EntityTypeMapping TypeName="Model1.CLF_HEAT_GEARS">
+        <MappingFragment StoreEntitySet="CLF_HEAT_GEARS">
+          <ScalarProperty Name="LOGTIME" ColumnName="LOGTIME" />
+          <ScalarProperty Name="GEARS" ColumnName="GEARS" />
+          <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+          <ScalarProperty Name="TREATNO" ColumnName="TREATNO" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLF_PROCESS_SATUS">
+      <EntityTypeMapping TypeName="Model1.CLF_PROCESS_SATUS">
+        <MappingFragment StoreEntitySet="CLF_PROCESS_SATUS">
+          <ScalarProperty Name="C_TS" ColumnName="C_TS" />
+          <ScalarProperty Name="CHANGE_TIME" ColumnName="CHANGE_TIME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+          <ScalarProperty Name="TREATNO" ColumnName="TREATNO" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLF_HEAT_GEARS_ITEM">
+      <EntityTypeMapping TypeName="Model1.CLF_HEAT_GEARS_ITEM">
+        <MappingFragment StoreEntitySet="CLF_HEAT_GEARS_ITEM">
+          <ScalarProperty Name="STEELGRADE" ColumnName="STEELGRADE" />
+          <ScalarProperty Name="TEAM" ColumnName="TEAM" />
+          <ScalarProperty Name="HEAD" ColumnName="HEAD" />
+          <ScalarProperty Name="HEATCOUNT" ColumnName="HEATCOUNT" />
+          <ScalarProperty Name="PRODUCTIONTIME" ColumnName="PRODUCTIONTIME" />
+          <ScalarProperty Name="TOTALTIME" ColumnName="TOTALTIME" />
+          <ScalarProperty Name="TIME4" ColumnName="TIME4" />
+          <ScalarProperty Name="GEARS4" ColumnName="GEARS4" />
+          <ScalarProperty Name="TIME3" ColumnName="TIME3" />
+          <ScalarProperty Name="GEARS3" ColumnName="GEARS3" />
+          <ScalarProperty Name="TIME2" ColumnName="TIME2" />
+          <ScalarProperty Name="GEARS2" ColumnName="GEARS2" />
+          <ScalarProperty Name="TIME1" ColumnName="TIME1" />
+          <ScalarProperty Name="GEARS1" ColumnName="GEARS1" />
+          <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+          <ScalarProperty Name="TREATNO" ColumnName="TREATNO" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLF_LADLE_WEIGHT">
+      <EntityTypeMapping TypeName="Model1.CLF_LADLE_WEIGHT">
+        <MappingFragment StoreEntitySet="CLF_LADLE_WEIGHT">
+          <ScalarProperty Name="LFJYWEIGHT" ColumnName="LFJYWEIGHT" />
+          <ScalarProperty Name="CCMINPUTAREWEIGHT" ColumnName="CCMINPUTAREWEIGHT" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="CCMLASTTAREWEIGHT" ColumnName="CCMLASTTAREWEIGHT" />
+          <ScalarProperty Name="CCMTAREWEIGHT" ColumnName="CCMTAREWEIGHT" />
+          <ScalarProperty Name="CCMGROSSWEIGHT" ColumnName="CCMGROSSWEIGHT" />
+          <ScalarProperty Name="KZWEIGHT" ColumnName="KZWEIGHT" />
+          <ScalarProperty Name="TAREWEIGHT" ColumnName="TAREWEIGHT" />
+          <ScalarProperty Name="GROSSWEIGHT" ColumnName="GROSSWEIGHT" />
+          <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+          <ScalarProperty Name="LOG_TIME" ColumnName="LOG_TIME" />
+          <ScalarProperty Name="LADLENO" ColumnName="LADLENO" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="LFID" ColumnName="LFID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

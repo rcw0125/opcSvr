@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cmsdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="dt_ems">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tg_chanliang" Type="Double" />
+    <Property Name="tg_shuihao" Type="Double" />
+    <Property Name="tg_dianhao" Type="Double" />
+    <Property Name="tg_jiaolumeiqi" Type="Double" />
+    <Property Name="tg_zhuanlumeiqi" Type="Double" />
+    <Property Name="tg_danqi" Type="Double" />
+    <Property Name="tg_yangqi" Type="Double" />
+    <Property Name="tg_yaqi" Type="Double" />
+    <Property Name="tg_meiqihuishou" Type="Double" />
+    <Property Name="bxg_chanliang" Type="Double" />
+    <Property Name="bxg_shuihao" Type="Double" />
+    <Property Name="bxg_dianhao" Type="Double" />
+    <Property Name="bxg_jiaolumeiqi" Type="Double" />
+    <Property Name="bxg_zhuanlumeiqi" Type="Double" />
+    <Property Name="bxg_danqi" Type="Double" />
+    <Property Name="bxg_yangqi" Type="Double" />
+    <Property Name="bxg_yaqi" Type="Double" />
+    <Property Name="logtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bxg_flag" Type="Int32" />
+    <Property Name="tg_zhengqiwaigong" Type="Double" />
+    <Property Name="bxg_zhengqiwaigong" Type="Double" />
+    <Property Name="dl_zhengqiwaigong" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="cmsdbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dt_ems" EntityType="Self.dt_ems" />
+    <EntitySet Name="dt_ems_config" EntityType="cmsdbModel.dt_ems_config" />
+    <EntitySet Name="dt_ems_day" EntityType="cmsdbModel.dt_ems_day" />
+  </EntityContainer>
+  <EntityType Name="dt_ems_config">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="xuhao" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="zhibiao_sc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="zhibiao_cw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="danjia" Type="Double" />
+    <Property Name="diansun" Type="Double" />
+  </EntityType>
+  <EntityType Name="dt_ems_day">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="xuhao" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="zhibiao_sc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="zhibiao_cw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yongliang" Type="Double" />
+    <Property Name="danjia" Type="Double" />
+    <Property Name="logtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

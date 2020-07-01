@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="XGDBModelStoreContainer" CdmEntityContainer="XGDBEntities">
+    <EntitySetMapping Name="CCM5_GrossWeight">
+      <EntityTypeMapping TypeName="XGDBModel.CCM5_GrossWeight">
+        <MappingFragment StoreEntitySet="CCM5_GrossWeight">
+          <ScalarProperty Name="TareWeight" ColumnName="TareWeight" />
+          <ScalarProperty Name="aa_id" ColumnName="aa_id" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="MeasureTime" ColumnName="MeasureTime" />
+          <ScalarProperty Name="Permit_Delete_Flag" ColumnName="Permit_Delete_Flag" />
+          <ScalarProperty Name="GrossWeightB" ColumnName="GrossWeightB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

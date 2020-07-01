@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="M_MEASURE_T">
+    <Key>
+      <PropertyRef Name="MATCHID" />
+    </Key>
+    <Property Name="MATCHID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CARNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CARTYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RFIDID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ICID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OPERATYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PLANID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TASKCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIALCODE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIALNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIALSPECCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIALSPEC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SHIPCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SHIP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SOURCECODE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SOURCENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SOURCETIME" Type="DateTime" />
+    <Property Name="SOURCEPLACE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TARGETCODE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="TARGETNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TARGETTIME" Type="DateTime" />
+    <Property Name="TARGETPLACE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BASKET" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="PLANWEIGHT" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PLANMATERIALCOUNT" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="MATERIALCOUNT" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PLANCARCOUNT" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GROSS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GROSSTIME" Type="DateTime" />
+    <Property Name="GROSSWEIGHID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GROSSWEIGH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GROSSOPERACODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GROSSOPERANAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GROSSGROUPNO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GROSSSERIAL" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GROSSSPEED" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GROSSLOGID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TARE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARETIME" Type="DateTime" />
+    <Property Name="TAREWEIGHID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TAREWEIGH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TAREOPERACODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TAREOPERANAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TAREGROUPNO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARESERIAL" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARELOGID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TARESPEED" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="DEDUCTION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="DEDUCTIONTIME" Type="DateTime" />
+    <Property Name="DEDUCTIONCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DEDUCTIONNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DEDUCTIONOPERACODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DEDUCTIONOPERANAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SUTTLE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="SUTTLETIME" Type="DateTime" />
+    <Property Name="SUTTLEWEIGHID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SUTTLEWEIGH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SUTTLEOPERACODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SUTTLEOPERANAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MATCHIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SUTTLEB" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="GROSSB" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GROSSTIMEB" Type="DateTime" />
+    <Property Name="GROSSWEIGHIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GROSSWEIGHB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GROSSOPERACODEB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GROSSOPERANAMEB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GROSSGROUPNOB" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GROSSSERIALB" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GROSSSPEEDB" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GROSSLOGIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TAREB" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARETIMEB" Type="DateTime" />
+    <Property Name="TAREWEIGHIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TAREWEIGHB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TAREOPERACODEB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TAREOPERANAMEB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TAREGROUPNOB" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARESERIALB" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARELOGIDB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TARESPEEDB" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="BATCHCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BFLAG" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PRINTGROSSNUM" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PRINTSUTTLENUM" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="USERMEMO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SYSMEMO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="VALIDFLAG" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="VALIDFLAGTIME" Type="DateTime" />
+    <Property Name="VALIDFLAGOPERANAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="RECORDTYPE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CREATEDATE" Type="DateTime" />
+    <Property Name="UPTIME" Type="DateTime" />
+    <Property Name="UPTIMESTAMP" Type="DateTime" Precision="6" />
+    <Property Name="DECUTIONTYPEBAK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="MOTORCADENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MOTORCADECODE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DEDUCTIONTYPE" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="MEMO1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO6" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO7" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO8" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO9" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO10" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO11" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO12" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO13" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO14" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MEMO15" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DEDUCTION2" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="UPDATENCFLAG" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRINTCOUNT" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="UPDATENCDATE" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="M_MEASURE_T" EntityType="Self.M_MEASURE_T" />
+  </EntityContainer>
+</Schema>

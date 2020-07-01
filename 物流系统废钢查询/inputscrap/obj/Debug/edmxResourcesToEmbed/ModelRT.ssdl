@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XGDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CCM5_GrossWeight">
+    <Key>
+      <PropertyRef Name="aa_id" />
+    </Key>
+    <Property Name="aa_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GrossWeight" Type="float" />
+    <Property Name="AreaID" Type="char" MaxLength="512" />
+    <Property Name="MeasureTime" Type="datetime" />
+    <Property Name="Permit_Delete_Flag" Type="int" />
+    <Property Name="GrossWeightB" Type="float" />
+    <Property Name="TareWeight" Type="float" />
+  </EntityType>
+  <EntityContainer Name="XGDBModelStoreContainer">
+    <EntitySet Name="CCM5_GrossWeight" EntityType="Self.CCM5_GrossWeight" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
