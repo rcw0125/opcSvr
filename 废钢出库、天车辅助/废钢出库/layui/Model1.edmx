@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VehIcModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="QC_Qyxx">
+          <Key>
+            <PropertyRef Name="Qyxxid" />
+          </Key>
+          <Property Name="Qyxxid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cph" Type="varchar" MaxLength="400" />
+          <Property Name="matname" Type="varchar" MaxLength="400" />
+          <Property Name="custname" Type="varchar" MaxLength="400" />
+          <Property Name="chedao" Type="varchar" MaxLength="400" />
+          <Property Name="state" Type="int" Nullable="false" />
+          <Property Name="qyds" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“VehIc.dbo.QC_YCCX”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="QC_YCCX">
+          <Key>
+            <PropertyRef Name="SAMPLE_YCCX_ID" />
+          </Key>
+          <Property Name="SAMPLE_YCCX_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SJSL" Type="float" />
+          <Property Name="RIQI" Type="datetime" />
+          <Property Name="MATNAME" Type="varchar" MaxLength="400" />
+          <Property Name="CUSTNAME" Type="varchar" MaxLength="400" />
+          <Property Name="MATCODE" Type="varchar" MaxLength="400" />
+          <Property Name="CUSTCODE" Type="varchar" MaxLength="400" />
+          <Property Name="ITEMNAME" Type="varchar" MaxLength="400" />
+          <Property Name="ITEMCODE" Type="varchar" MaxLength="400" />
+          <Property Name="JYBZ" Type="varchar" MaxLength="400" />
+          <Property Name="CHECKVAL" Type="float" />
+          <Property Name="CHESHU" Type="int" />
+          <Property Name="ZYDANHAO" Type="varchar" MaxLength="400" />
+          <Property Name="leixing" Type="varchar" MaxLength="400" />
+          <Property Name="rq" Type="varchar" MaxLength="400" />
+        </EntityType>
+        <EntityContainer Name="VehIcModelStoreContainer">
+          <EntitySet Name="QC_Qyxx" EntityType="Self.QC_Qyxx" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QC_YCCX" EntityType="Self.QC_YCCX" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [QC_YCCX].[SAMPLE_YCCX_ID] AS [SAMPLE_YCCX_ID], 
+    [QC_YCCX].[SJSL] AS [SJSL], 
+    [QC_YCCX].[RIQI] AS [RIQI], 
+    [QC_YCCX].[MATNAME] AS [MATNAME], 
+    [QC_YCCX].[CUSTNAME] AS [CUSTNAME], 
+    [QC_YCCX].[MATCODE] AS [MATCODE], 
+    [QC_YCCX].[CUSTCODE] AS [CUSTCODE], 
+    [QC_YCCX].[ITEMNAME] AS [ITEMNAME], 
+    [QC_YCCX].[ITEMCODE] AS [ITEMCODE], 
+    [QC_YCCX].[JYBZ] AS [JYBZ], 
+    [QC_YCCX].[CHECKVAL] AS [CHECKVAL], 
+    [QC_YCCX].[CHESHU] AS [CHESHU], 
+    [QC_YCCX].[ZYDANHAO] AS [ZYDANHAO], 
+    [QC_YCCX].[leixing] AS [leixing], 
+    [QC_YCCX].[rq] AS [rq]
+    FROM [dbo].[QC_YCCX] AS [QC_YCCX]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VehIcModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="QC_Qyxx">
+          <Key>
+            <PropertyRef Name="Qyxxid" />
+          </Key>
+          <Property Name="Qyxxid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cph" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="matname" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="custname" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="chedao" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="state" Type="Int32" Nullable="false" />
+          <Property Name="qyds" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="VehIcEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="QC_Qyxx" EntityType="Self.QC_Qyxx" />
+          <EntitySet Name="QC_YCCX" EntityType="VehIcModel.QC_YCCX" />
+        </EntityContainer>
+        <EntityType Name="QC_YCCX">
+          <Key>
+            <PropertyRef Name="SAMPLE_YCCX_ID" />
+          </Key>
+          <Property Name="SAMPLE_YCCX_ID" Type="Int32" Nullable="false" />
+          <Property Name="SJSL" Type="Double" />
+          <Property Name="RIQI" Type="DateTime" Precision="3" />
+          <Property Name="MATNAME" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTNAME" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="MATCODE" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CUSTCODE" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="ITEMNAME" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="ITEMCODE" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="JYBZ" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CHECKVAL" Type="Double" />
+          <Property Name="CHESHU" Type="Int32" />
+          <Property Name="ZYDANHAO" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="leixing" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="rq" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VehIcModelStoreContainer" CdmEntityContainer="VehIcEntities">
+          <EntitySetMapping Name="QC_Qyxx">
+            <EntityTypeMapping TypeName="VehIcModel.QC_Qyxx">
+              <MappingFragment StoreEntitySet="QC_Qyxx">
+                <ScalarProperty Name="Qyxxid" ColumnName="Qyxxid" />
+                <ScalarProperty Name="cph" ColumnName="cph" />
+                <ScalarProperty Name="matname" ColumnName="matname" />
+                <ScalarProperty Name="custname" ColumnName="custname" />
+                <ScalarProperty Name="chedao" ColumnName="chedao" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="qyds" ColumnName="qyds" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QC_YCCX">
+            <EntityTypeMapping TypeName="VehIcModel.QC_YCCX">
+              <MappingFragment StoreEntitySet="QC_YCCX">
+                <ScalarProperty Name="rq" ColumnName="rq" />
+                <ScalarProperty Name="leixing" ColumnName="leixing" />
+                <ScalarProperty Name="ZYDANHAO" ColumnName="ZYDANHAO" />
+                <ScalarProperty Name="CHESHU" ColumnName="CHESHU" />
+                <ScalarProperty Name="CHECKVAL" ColumnName="CHECKVAL" />
+                <ScalarProperty Name="JYBZ" ColumnName="JYBZ" />
+                <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+                <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+                <ScalarProperty Name="CUSTCODE" ColumnName="CUSTCODE" />
+                <ScalarProperty Name="MATCODE" ColumnName="MATCODE" />
+                <ScalarProperty Name="CUSTNAME" ColumnName="CUSTNAME" />
+                <ScalarProperty Name="MATNAME" ColumnName="MATNAME" />
+                <ScalarProperty Name="RIQI" ColumnName="RIQI" />
+                <ScalarProperty Name="SJSL" ColumnName="SJSL" />
+                <ScalarProperty Name="SAMPLE_YCCX_ID" ColumnName="SAMPLE_YCCX_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

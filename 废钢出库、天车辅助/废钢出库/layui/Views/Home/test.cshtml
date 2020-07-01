@@ -1,0 +1,128 @@
+﻿
+@{
+    Layout = null;
+    var beginTime = System.DateTime.Now.ToString("yyyy-MM-dd") + @" 00:00:00";
+    var endTime = System.DateTime.Now.ToString("yyyy-MM-dd") + @" 23:59:59";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>yccx</title>
+    <link href="~/plugin/layui/css/layui.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/plugin/dtree/dtree.css">
+    <link rel="stylesheet" href="~/plugin/dtree/font/dtreefont.css">
+</head>
+<body>
+
+    <div class="layui-form" style="margin-top:10px">
+
+        <ul id="demoTree" class="dtree" data-id="0"></ul>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">单行输入框</label>
+            <div class="layui-input-block">
+                <input type="text" id="title" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">开始时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="BeginTime" name="begintime" placeholder="yyyy-MM-dd HH:mm:ss" value="@beginTime">
+                </div>
+
+                <label class="layui-form-label">结束时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="EndTime" name="endtime" placeholder="yyyy-MM-dd HH:mm:ss" value="@endTime">
+                </div>
+                <label class="layui-form-label">选择分类</label>
+                <div class="layui-input-inline">
+                    <select id="fenlei" name="fenlei">
+                        <option value="0" selected=""></option>
+                        <option value="1">煤和焦炭</option>
+                        <option value="2">精粉和外矿</option>
+                        <option value="3">熔剂和石子</option>
+                        <option value="4">合金</option>
+                    </select>
+                </div>
+                <button class="layui-btn" onclick="queryinfo()">查询</button>
+            </div>
+        </div>
+    </div>
+
+    <table class="layui-hide" id="test" lay-filter="demo"></table>
+    <script src="~/Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="~/plugin/layui/layui.all.js" type="text/javascript"></script>
+    <script src="~/plugin/dtree/dtree.js" type="text/javascript"></script>
+    <script>
+
+        layui.dtree.render({
+            elem: "#demoTree",
+            dataFormat: "list",  //配置data的风格为list
+
+            url: '/home/gettree',
+            initLevel: 1,
+            menubar: true,
+            checkbar: true,
+            menubarFun: {
+                remove: function (checkbarNodes) { // 必须将该方法实现了，节点才会真正的从后台删除哦
+
+                    return true;
+                }
+            }
+
+
+        });
+
+        layui.dtree.on("node('demoTree')", function (obj) {
+            //layer.msg(JSON.stringify(obj.param));
+          
+            $("#title").val(obj.param.nodeId);
+            layer.msg(JSON.stringify(obj.param.nodeId));
+        });
+
+        var laydate = layui.laydate;
+        //开始时间
+        laydate.render({
+            elem: '#BeginTime'
+            , type: 'datetime'
+        });
+        //开始时间
+        laydate.render({
+            elem: '#EndTime'
+            , type: 'datetime'
+        });
+        function queryinfo() {
+            layui.table.render({
+                elem: test,
+                height: 500,
+                url: '/home/getyccxtable',
+                page: true,
+                where: {
+                    begintime: document.getElementById("BeginTime").value,
+                    endtime: document.getElementById("EndTime").value,
+                    fenlei: document.getElementById("fenlei").value
+                },
+
+                cols: [[
+
+                    { field: 'rq', title: '日期' }
+                    , { field: 'MATNAME', title: '物料名称' }
+                    , { field: 'CUSTNAME', title: '供应商名称' }
+                    , { field: 'ITEMNAME', title: '检验项目' }
+                    , { field: 'JYBZ', title: '判定标准' }
+                    , { field: 'CHECKVAL', title: '检验值' }
+                    , { field: 'SJSL', title: '重量' }
+                    , { field: 'CHESHU', title: '车数' }
+                    , { field: 'ZYDANHAO', title: '样品单号' }
+                    , { field: 'leixing', title: '物料类型' }
+                ]]
+            });
+        }
+    </script>
+</body>
+</html>

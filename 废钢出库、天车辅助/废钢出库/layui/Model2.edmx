@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CCURRENTSHIFTINFO">
+          <Key>
+            <PropertyRef Name="L3INDEX" />
+          </Key>
+          <Property Name="GUID" Type="varchar2" MaxLength="250" />
+          <Property Name="NAME" Type="varchar2" MaxLength="250" />
+          <Property Name="L3INDEX" Type="varchar2" MaxLength="250" Nullable="false" />
+          <Property Name="SHIFTTYPE" Type="varchar2" MaxLength="250" />
+          <Property Name="SHIFTID" Type="number" Precision="5" Scale="0" />
+          <Property Name="TEAMID" Type="number" Precision="5" Scale="0" />
+          <Property Name="UNITTYPEID" Type="varchar2" MaxLength="250" />
+          <Property Name="UNITID" Type="varchar2" MaxLength="250" />
+          <Property Name="CURRENTID" Type="number" Precision="5" Scale="0" />
+          <Property Name="BEGINPROCESSTIME" Type="date" />
+          <Property Name="ENDPROCESSTIME" Type="date" />
+          <Property Name="SHIFTWARNING" Type="varchar2" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="CSCRAP_OUTPUT_LOG">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar2" MaxLength="250" Nullable="false" />
+          <Property Name="NAME" Type="varchar2" MaxLength="250" />
+          <Property Name="NO" Type="varchar2" MaxLength="250" />
+          <Property Name="MATERIALTYPE" Type="varchar2" MaxLength="250" />
+          <Property Name="MATERIALID" Type="varchar2" MaxLength="250" />
+          <Property Name="LOGDATE" Type="date" />
+          <Property Name="AMOUNT" Type="number" Precision="10" Scale="3" />
+          <Property Name="TYPE" Type="number" Precision="10" Scale="0" />
+          <Property Name="REASON" Type="varchar2" MaxLength="250" />
+          <Property Name="TARGET" Type="varchar2" MaxLength="250" />
+          <Property Name="STOREAREAID" Type="varchar2" MaxLength="250" />
+          <Property Name="OPERATOR" Type="varchar2" MaxLength="250" />
+          <Property Name="SHIFT" Type="varchar2" MaxLength="250" />
+          <Property Name="TEAM" Type="varchar2" MaxLength="250" />
+          <Property Name="SCRAP_SLOT_ID" Type="varchar2" MaxLength="250" />
+          <Property Name="CAR_ID" Type="varchar2" MaxLength="250" />
+          <Property Name="CAR_TYPE" Type="varchar2" MaxLength="250" />
+          <Property Name="NET_WEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="GROSS_WEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="TARE_WEIGHT" Type="number" Precision="10" Scale="3" />
+          <Property Name="IRON_FLAG" Type="number" Precision="10" Scale="0" />
+          <Property Name="HEATID" Type="varchar2" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="CSCRAPOUTSTOREDETAIL">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar2" MaxLength="250" Nullable="false" />
+          <Property Name="NAME" Type="varchar2" MaxLength="250" />
+          <Property Name="SCRAP_SLOT_ID" Type="varchar2" MaxLength="250" />
+          <Property Name="MATERIAL" Type="varchar2" MaxLength="250" />
+          <Property Name="MATERIAL_CODE" Type="varchar2" MaxLength="250" />
+          <Property Name="AMOUNT" Type="varchar2" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TS_USER">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="USERID" Type="varchar2" MaxLength="50" />
+          <Property Name="PASSWORD" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="CCURRENTSHIFTINFO" EntityType="Self.CCURRENTSHIFTINFO" Schema="XGMES" store:Type="Tables" />
+          <EntitySet Name="CSCRAP_OUTPUT_LOG" EntityType="Self.CSCRAP_OUTPUT_LOG" Schema="XGMES" store:Type="Tables" />
+          <EntitySet Name="CSCRAPOUTSTOREDETAIL" EntityType="Self.CSCRAPOUTSTOREDETAIL" Schema="XGMES" store:Type="Tables" />
+          <EntitySet Name="TS_USER" EntityType="Self.TS_USER" Schema="XGMES" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CCURRENTSHIFTINFO">
+          <Key>
+            <PropertyRef Name="L3INDEX" />
+          </Key>
+          <Property Name="GUID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="L3INDEX" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SHIFTTYPE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SHIFTID" Type="Int16" />
+          <Property Name="TEAMID" Type="Int16" />
+          <Property Name="UNITTYPEID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="UNITID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CURRENTID" Type="Int16" />
+          <Property Name="BEGINPROCESSTIME" Type="DateTime" />
+          <Property Name="ENDPROCESSTIME" Type="DateTime" />
+          <Property Name="SHIFTWARNING" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CSCRAP_OUTPUT_LOG">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIALTYPE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIALID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="LOGDATE" Type="DateTime" />
+          <Property Name="AMOUNT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="TYPE" Type="Int32" />
+          <Property Name="REASON" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TARGET" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="STOREAREAID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="OPERATOR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SHIFT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TEAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SCRAP_SLOT_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CAR_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CAR_TYPE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NET_WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="GROSS_WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="TARE_WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="IRON_FLAG" Type="Int32" />
+          <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CSCRAPOUTSTOREDETAIL">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SCRAP_SLOT_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIAL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIAL_CODE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CCURRENTSHIFTINFO" EntityType="Self.CCURRENTSHIFTINFO" />
+          <EntitySet Name="CSCRAP_OUTPUT_LOG" EntityType="Self.CSCRAP_OUTPUT_LOG" />
+          <EntitySet Name="CSCRAPOUTSTOREDETAIL" EntityType="Self.CSCRAPOUTSTOREDETAIL" />
+          <EntitySet Name="TS_USER" EntityType="Model.TS_USER" />
+        </EntityContainer>
+        <EntityType Name="TS_USER">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="CCURRENTSHIFTINFO">
+            <EntityTypeMapping TypeName="Model.CCURRENTSHIFTINFO">
+              <MappingFragment StoreEntitySet="CCURRENTSHIFTINFO">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="L3INDEX" ColumnName="L3INDEX" />
+                <ScalarProperty Name="SHIFTTYPE" ColumnName="SHIFTTYPE" />
+                <ScalarProperty Name="SHIFTID" ColumnName="SHIFTID" />
+                <ScalarProperty Name="TEAMID" ColumnName="TEAMID" />
+                <ScalarProperty Name="UNITTYPEID" ColumnName="UNITTYPEID" />
+                <ScalarProperty Name="UNITID" ColumnName="UNITID" />
+                <ScalarProperty Name="CURRENTID" ColumnName="CURRENTID" />
+                <ScalarProperty Name="BEGINPROCESSTIME" ColumnName="BEGINPROCESSTIME" />
+                <ScalarProperty Name="ENDPROCESSTIME" ColumnName="ENDPROCESSTIME" />
+                <ScalarProperty Name="SHIFTWARNING" ColumnName="SHIFTWARNING" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CSCRAP_OUTPUT_LOG">
+            <EntityTypeMapping TypeName="Model.CSCRAP_OUTPUT_LOG">
+              <MappingFragment StoreEntitySet="CSCRAP_OUTPUT_LOG">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="NO" ColumnName="NO" />
+                <ScalarProperty Name="MATERIALTYPE" ColumnName="MATERIALTYPE" />
+                <ScalarProperty Name="MATERIALID" ColumnName="MATERIALID" />
+                <ScalarProperty Name="LOGDATE" ColumnName="LOGDATE" />
+                <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="REASON" ColumnName="REASON" />
+                <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+                <ScalarProperty Name="STOREAREAID" ColumnName="STOREAREAID" />
+                <ScalarProperty Name="OPERATOR" ColumnName="OPERATOR" />
+                <ScalarProperty Name="SHIFT" ColumnName="SHIFT" />
+                <ScalarProperty Name="TEAM" ColumnName="TEAM" />
+                <ScalarProperty Name="SCRAP_SLOT_ID" ColumnName="SCRAP_SLOT_ID" />
+                <ScalarProperty Name="CAR_ID" ColumnName="CAR_ID" />
+                <ScalarProperty Name="CAR_TYPE" ColumnName="CAR_TYPE" />
+                <ScalarProperty Name="NET_WEIGHT" ColumnName="NET_WEIGHT" />
+                <ScalarProperty Name="GROSS_WEIGHT" ColumnName="GROSS_WEIGHT" />
+                <ScalarProperty Name="TARE_WEIGHT" ColumnName="TARE_WEIGHT" />
+                <ScalarProperty Name="IRON_FLAG" ColumnName="IRON_FLAG" />
+                <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CSCRAPOUTSTOREDETAIL">
+            <EntityTypeMapping TypeName="Model.CSCRAPOUTSTOREDETAIL">
+              <MappingFragment StoreEntitySet="CSCRAPOUTSTOREDETAIL">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="SCRAP_SLOT_ID" ColumnName="SCRAP_SLOT_ID" />
+                <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+                <ScalarProperty Name="MATERIAL_CODE" ColumnName="MATERIAL_CODE" />
+                <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TS_USER">
+            <EntityTypeMapping TypeName="Model.TS_USER">
+              <MappingFragment StoreEntitySet="TS_USER">
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

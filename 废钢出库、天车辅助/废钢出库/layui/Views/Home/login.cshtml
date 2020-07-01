@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "用户登录";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>用户登录</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="panel panel-default" style="font-size: 28px;">
+        <div class="panel-heading" style="background-color:aqua">废钢出库-用户登录</div>
+        <div class="panel-body">
+
+            <form id="queryform">
+
+
+                <div class="col-sm-2" style="margin-top:50px">
+                    <div class="form-group input-group input-group-lg">
+                        <span class="input-group-addon">用户名</span>
+                        <input type="text" class="form-control input-lg " placeholder="" name="userid" aria-describedby="sizing-addon3">
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="form-group input-group input-group-lg">
+                        <span class="input-group-addon">密&nbsp;&nbsp;&nbsp;码</span>
+                        <input type="password" class="form-control input-lg " placeholder="" name="password" aria-describedby="sizing-addon3">
+                    </div>
+                </div>
+                <label for="inputEmail3" class="col-sm-2 control-label">@ViewBag.Message</label>
+
+                <button type="submit" style="margin-top:50px;margin-left:80px;" class="btn btn-primary btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登陆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+
+            </form>
+          
+        </div>
+
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XMLConfig>
+  <filePath>d:</filePath>
+  <projectName>XGMesLogic</projectName>
+  <moudleName>BOFMag</moudleName>
+  <className>CBOF_BASE_DATA</className>
+  <funcInfoList>
+    <funcInfo>  <funcName>192.168.36.2</funcName>	   </funcInfo>
+    <funcInfo>  <funcName>192.168.36.3</funcName>  </funcInfo>
+    <funcInfo>  <funcName>192.168.36.4</funcName>  </funcInfo>
+     <funcInfo>  <funcName>192.168.36.5</funcName>  </funcInfo>
+
+
+  </funcInfoList>
+</XMLConfig>

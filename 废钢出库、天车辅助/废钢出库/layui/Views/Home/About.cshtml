@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "about";
+    var beginTime = System.DateTime.Now.ToString("yyyy-MM-dd") + @" 00:00:00";
+    var endTime = System.DateTime.Now.ToString("yyyy-MM-dd") + @" 23:59:59";
+
+}
+
+<div id="mainContent">
+    <h2>layui</h2>
+    <h1>@ViewBag.Message</h1>
+
+    <blockquote class="layui-elem-quote">
+        layDate 是目前 layui 独立维护的三大组件（即：layer、layim、layDate）之一。在 layui 2.0 的版本中，layDate 完成了一次巨大的逆袭。
+        <a class="layui-btn layui-btn-normal" href="http://www.layui.com/laydate/" target="_blank">layDate官网</a>
+    </blockquote>
+    <button class="layui-btn layui-btn-danger">layui按钮</button>
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">开始时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="txtBeginTime" placeholder="yyyy-MM-dd HH:mm:ss" value="@beginTime">
+                </div>
+
+                <label class="layui-form-label">结束时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="txtEndTime" placeholder="yyyy-MM-dd HH:mm:ss" value="@endTime">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+        //开始时间
+        laydate.render({
+            elem: '#txtBeginTime'
+            , type: 'datetime'
+        });
+        //开始时间
+        laydate.render({
+            elem: '#txtEndTime'
+            , type: 'datetime'
+        });
+    })
+</script>
+
+

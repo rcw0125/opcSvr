@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "test";
+}
+
+
+    <div id="mainContent">
+        <table class="layui-hide" id="test" lay-filter="demo"></table>
+    </div>
+    <script>
+        //模块化引用
+        //layui.use(['table'], function () {
+        //    var table = layui.table;
+        //    table.render({
+        //        elem: test,
+        //        height: 500,
+        //        url: '/home/gettable',
+        //        page: true,
+        //        cols: [[
+        //            { field: 'id', title: 'ID', sort: true, fixed: 'left' }
+        //            , { field: 'username', title: '用户名' }
+        //            , { field: 'city', title: '城市' }
+        //            , { field: 'sex', title: '性别', sort: true }
+        //        ]]
+        //    });
+
+        //});
+        
+            layui.table.render({
+                elem: test,
+                height: 500,
+                url: '/home/gettable',
+                page: true,
+                cols: [[
+                    { field: 'id', title: 'ID', sort: true, fixed: 'left' }
+                    , { field: 'username', title: '用户名' }
+                    , { field: 'city', title: '城市' }
+                    , { field: 'sex', title: '性别', sort: true }
+                ]]
+            });
+
+    </script>
