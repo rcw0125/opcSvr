@@ -1,0 +1,9 @@
+I:\opcSvr\L2通讯监控\NC上传通讯监控\WindowsFormsApp1\bin\Debug\NCL2Ctr.exe.config
+I:\opcSvr\L2通讯监控\NC上传通讯监控\WindowsFormsApp1\bin\Debug\NCL2Ctr.exe
+I:\opcSvr\L2通讯监控\NC上传通讯监控\WindowsFormsApp1\bin\Debug\NCL2Ctr.pdb
+I:\opcSvr\L2通讯监控\NC上传通讯监控\WindowsFormsApp1\obj\Debug\L2Ctr.Form1.resources
+I:\opcSvr\L2通讯监控\NC上传通讯监控\WindowsFormsApp1\obj\Debug\L2Ctr.Properties.Resources.resources
+I:\opcSvr\L2通讯监控\NC上传通讯监控\WindowsFormsApp1\obj\Debug\L2CtrNC.csproj.GenerateResource.cache
+I:\opcSvr\L2通讯监控\NC上传通讯监控\WindowsFormsApp1\obj\Debug\L2CtrNC.csproj.CoreCompileInputs.cache
+I:\opcSvr\L2通讯监控\NC上传通讯监控\WindowsFormsApp1\obj\Debug\NCL2Ctr.exe
+I:\opcSvr\L2通讯监控\NC上传通讯监控\WindowsFormsApp1\obj\Debug\NCL2Ctr.pdb
