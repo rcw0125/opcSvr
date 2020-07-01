@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejz", "历艳龙PLC小工�
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "历艳龙PLC小工具", "历艳龙PLC小工具", "{01D2C90A-59F8-4151-BC37-1F3078C38032}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleCommTools", "串口调试工具（源码）\MultipleCommTools-master\MultipleCommTools\MultipleCommTools.csproj", "{A4FEB93E-AF49-420B-8778-B425935F365D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "串口调试工具", "串口调试工具", "{BAE6B955-2FB6-44D2-99D4-192CD7D68DB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +175,18 @@ Global
 		{A6945EFA-84DA-40AC-9001-9FB4D91CD169}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A6945EFA-84DA-40AC-9001-9FB4D91CD169}.Release|x86.ActiveCfg = Release|Any CPU
 		{A6945EFA-84DA-40AC-9001-9FB4D91CD169}.Release|x86.Build.0 = Release|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Debug|x86.Build.0 = Debug|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Release|x86.ActiveCfg = Release|Any CPU
+		{A4FEB93E-AF49-420B-8778-B425935F365D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -187,6 +203,7 @@ Global
 		{514D850E-3856-47E1-8F4D-EA437E03DEBA} = {4F32FF9D-549C-440C-B462-AC2651A498B8}
 		{B1B3EC1E-40DB-4EFE-9BAC-E46A584C9F1A} = {1CCB52CB-DF0B-444A-B85B-5976396BAEDA}
 		{A6945EFA-84DA-40AC-9001-9FB4D91CD169} = {01D2C90A-59F8-4151-BC37-1F3078C38032}
+		{A4FEB93E-AF49-420B-8778-B425935F365D} = {BAE6B955-2FB6-44D2-99D4-192CD7D68DB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE205E7C-1072-4008-8FFB-68CAA25EAB23}
