@@ -795,19 +795,19 @@ namespace SBGL
                 yuelistGzdw.Add(addgzdw);
             }
 
-            if (listGzdw.Where(o => o.dw == "冶炼维修车间").FirstOrDefault() == null)
+            if (yuelistGzdw.Where(o => o.dw == "冶炼维修车间").FirstOrDefault() == null)
             {
                 sbgzdw addgzdw = new sbgzdw();
                 addgzdw.dw = "冶炼维修车间";
                 yuelistGzdw.Add(addgzdw);
             }
-            if (listGzdw.Where(o => o.dw == "连铸维修车间").FirstOrDefault() == null)
+            if (yuelistGzdw.Where(o => o.dw == "连铸维修车间").FirstOrDefault() == null)
             {
                 sbgzdw addgzdw = new sbgzdw();
                 addgzdw.dw = "连铸维修车间";
                 yuelistGzdw.Add(addgzdw);
             }
-            if (listGzdw.Where(o => o.dw == "运行车间").FirstOrDefault() == null)
+            if (yuelistGzdw.Where(o => o.dw == "运行车间").FirstOrDefault() == null)
             {
                 sbgzdw addgzdw = new sbgzdw();
                 addgzdw.dw = "运行车间";
@@ -1270,6 +1270,8 @@ namespace SBGL
             // calYueSbgzbx(dateTimePicker1.Value.ToString("yyyy-MM"));
             ////每天执行
             //exc_jx_expire();
+
+            calYueSbgzbx(DateTime.Now.AddDays(-7).ToString("yyyy-MM"));
             if (DateTime.Now.Day == 1)
             {
                 calYueSbgzbx(DateTime.Now.AddDays(-1).ToString("yyyy-MM"));
