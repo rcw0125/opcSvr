@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -606,6 +607,40 @@ namespace RestartApp
             {
                 e.Cancel = true;
             }       
+        }
+        /// <summary>
+        /// 一个小时同步一次账号
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer_usercopy_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                string user1path = @"D:\XGServer1\L3Users.dat";
+                FileInfo user1 = new FileInfo(user1path);
+                var lasttime = user1.LastWriteTime;
+
+                string user2path = @"D:\XGServer2\L3Users.dat";
+                FileInfo user2 = new FileInfo(user2path);
+                if (user1.LastWriteTime == user2.LastWriteTime)
+                {
+                    return;
+                }
+                else if (user1.LastWriteTime > user2.LastWriteTime)
+                {
+                    user1.CopyTo(user2path, true);
+                }
+                else if (user1.LastWriteTime < user2.LastWriteTime)
+                {
+                    user2.CopyTo(user1path, true);
+                }
+            }
+            catch
+            { 
+            
+            }
+           
         }
     }
 }

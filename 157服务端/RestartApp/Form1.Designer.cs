@@ -59,6 +59,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.版本号20190910ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer_suobiao = new System.Windows.Forms.Timer(this.components);
+            this.timer_usercopy = new System.Windows.Forms.Timer(this.components);
             this.dbsbBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -360,13 +361,19 @@
             this.版本号20190910ToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.版本号20190910ToolStripMenuItem.Name = "版本号20190910ToolStripMenuItem";
             this.版本号20190910ToolStripMenuItem.Size = new System.Drawing.Size(130, 21);
-            this.版本号20190910ToolStripMenuItem.Text = "版本号：2020.03.11";
+            this.版本号20190910ToolStripMenuItem.Text = "版本号：2020.07.10";
             // 
             // timer_suobiao
             // 
             this.timer_suobiao.Enabled = true;
             this.timer_suobiao.Interval = 30000;
             this.timer_suobiao.Tick += new System.EventHandler(this.timer_suobiao_Tick);
+            // 
+            // timer_usercopy
+            // 
+            this.timer_usercopy.Enabled = true;
+            this.timer_usercopy.Interval = 3600000;
+            this.timer_usercopy.Tick += new System.EventHandler(this.timer_usercopy_Tick);
             // 
             // dbsbBindingSource
             // 
@@ -438,6 +445,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer timer_usercopy;
     }
 }
 

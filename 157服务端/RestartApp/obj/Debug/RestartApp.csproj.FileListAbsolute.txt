@@ -34,3 +34,12 @@ D:\MES客户端后台报表\MES服务监控\关闭客户端\157服务端\Restart
 D:\MES客户端后台报表\MES服务监控\关闭客户端\157服务端\RestartApp\obj\Debug\RestartApp.csproj.CoreCompileInputs.cache
 D:\MES客户端后台报表\MES服务监控\关闭客户端\157服务端\RestartApp\obj\Debug\Mes辅助工具.exe
 D:\MES客户端后台报表\MES服务监控\关闭客户端\157服务端\RestartApp\obj\Debug\Mes辅助工具.pdb
+I:\opcSvr\157服务端\RestartApp\bin\Debug\Mes辅助工具.exe
+I:\opcSvr\157服务端\RestartApp\bin\Debug\Mes辅助工具.pdb
+I:\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.csprojAssemblyReference.cache
+I:\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.Form1.resources
+I:\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.Properties.Resources.resources
+I:\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.csproj.GenerateResource.cache
+I:\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.csproj.CoreCompileInputs.cache
+I:\opcSvr\157服务端\RestartApp\obj\Debug\Mes辅助工具.exe
+I:\opcSvr\157服务端\RestartApp\obj\Debug\Mes辅助工具.pdb
