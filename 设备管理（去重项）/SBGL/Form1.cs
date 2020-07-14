@@ -1143,7 +1143,7 @@ namespace SBGL
                     }
                     else if (djdw == "冶炼车间")
                     {
-                        ydjcishu = 210;
+                        ydjcishu = 170;
                     }
                     double djrate = Math.Round((djcishu * 100.0 / ydjcishu), 1);//点检率
                     if (djrate > 100)

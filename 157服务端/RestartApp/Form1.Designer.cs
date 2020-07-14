@@ -53,13 +53,14 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer_jiancha = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.版本号20190910ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer_suobiao = new System.Windows.Forms.Timer(this.components);
-            this.timer_usercopy = new System.Windows.Forms.Timer(this.components);
             this.dbsbBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbsbBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -202,6 +204,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 10);
             this.tabControl1.Name = "tabControl1";
@@ -323,6 +326,28 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 300;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(699, 304);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "手动同步用户";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(480, 25);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "手动同步";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LimeGreen;
@@ -361,19 +386,13 @@
             this.版本号20190910ToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.版本号20190910ToolStripMenuItem.Name = "版本号20190910ToolStripMenuItem";
             this.版本号20190910ToolStripMenuItem.Size = new System.Drawing.Size(130, 21);
-            this.版本号20190910ToolStripMenuItem.Text = "版本号：2020.07.10";
+            this.版本号20190910ToolStripMenuItem.Text = "版本号：2020.07.14";
             // 
             // timer_suobiao
             // 
             this.timer_suobiao.Enabled = true;
             this.timer_suobiao.Interval = 30000;
             this.timer_suobiao.Tick += new System.EventHandler(this.timer_suobiao_Tick);
-            // 
-            // timer_usercopy
-            // 
-            this.timer_usercopy.Enabled = true;
-            this.timer_usercopy.Interval = 3600000;
-            this.timer_usercopy.Tick += new System.EventHandler(this.timer_usercopy_Tick);
             // 
             // dbsbBindingSource
             // 
@@ -405,6 +424,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbsbBindingSource)).EndInit();
@@ -445,7 +465,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Timer timer_usercopy;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button button3;
     }
 }
 

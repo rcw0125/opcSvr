@@ -128,7 +128,7 @@ namespace RestartApp
         {
             Service service = new Service();
             string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            service.Update("insert into A_RESET_LOG(c_ip, c_type) values('192.168.36.157', '"+type+"') ");
+            service.Update("insert into A_RESET_LOG(c_ip, c_type,c_ts) values('192.168.36.157', '"+type+"','"+time+"') ");
             //insert into A_RESET_LOG(c_ts, c_ip, c_type) values('2019-02-20 14:00:43', '192.168.36.157', '关闭开始')
             //service.Update("update A_RESET set value=value+1 ");
         }
@@ -608,39 +608,38 @@ namespace RestartApp
                 e.Cancel = true;
             }       
         }
-        /// <summary>
-        /// 一个小时同步一次账号
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void timer_usercopy_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                string user1path = @"D:\XGServer1\L3Users.dat";
-                FileInfo user1 = new FileInfo(user1path);
-                var lasttime = user1.LastWriteTime;
+       
 
-                string user2path = @"D:\XGServer2\L3Users.dat";
-                FileInfo user2 = new FileInfo(user2path);
-                if (user1.LastWriteTime == user2.LastWriteTime)
-                {
-                    return;
-                }
-                else if (user1.LastWriteTime > user2.LastWriteTime)
-                {
-                    user1.CopyTo(user2path, true);
-                }
-                else if (user1.LastWriteTime < user2.LastWriteTime)
-                {
-                    user2.CopyTo(user1path, true);
-                }
-            }
-            catch
-            { 
-            
-            }
-           
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            //logQiehuan("测试切换成功！");
+
+            //try
+            //{
+            //    string user1path = @"D:\XGServer1\L3Users.dat";
+            //    FileInfo user1 = new FileInfo(user1path);
+            //    var lasttime = user1.LastWriteTime;
+
+            //    string user2path = @"D:\XGServer2\L3Users.dat";
+            //    FileInfo user2 = new FileInfo(user2path);
+            //    if (user1.LastWriteTime == user2.LastWriteTime)
+            //    {
+            //        return;
+            //    }
+            //    else if (user1.LastWriteTime > user2.LastWriteTime)
+            //    {
+            //        user1.CopyTo(user2path, true);
+            //    }
+            //    else if (user1.LastWriteTime < user2.LastWriteTime)
+            //    {
+            //        user2.CopyTo(user1path, true);
+            //    }
+            //}
+            //catch
+            //{
+
+            //}
         }
     }
 }

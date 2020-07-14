@@ -30,7 +30,6 @@ I:\opcSvr\设备管理（去重项）\SBGL\bin\Debug\SBGL.pdb
 I:\opcSvr\设备管理（去重项）\SBGL\bin\Debug\MySql.Data.dll
 I:\opcSvr\设备管理（去重项）\SBGL\bin\Debug\Rcw.Data.dll
 I:\opcSvr\设备管理（去重项）\SBGL\bin\Debug\Oracle.ManagedDataAccess.dll
-I:\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.csprojAssemblyReference.cache
 I:\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.Form1.resources
 I:\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.Properties.Resources.resources
 I:\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.csproj.GenerateResource.cache
