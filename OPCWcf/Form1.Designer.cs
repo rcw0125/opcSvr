@@ -94,6 +94,7 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label39 = new System.Windows.Forms.Label();
             this.textBox38 = new System.Windows.Forms.TextBox();
@@ -136,7 +137,18 @@
             this.timer_ladelweight = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer_dabaoshenggang = new System.Windows.Forms.Timer(this.components);
-            this.button3 = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.textBox40 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -152,6 +164,9 @@
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // timer_sll
@@ -173,6 +188,7 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 45);
             this.tabControl1.Name = "tabControl1";
@@ -819,6 +835,16 @@
             this.tabPage7.Text = "5#机大包剩钢";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(197, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "手动触发";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label39);
@@ -1194,7 +1220,7 @@
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Red;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(164, 20);
-            this.toolStripMenuItem1.Text = "版本号：2020.05.04";
+            this.toolStripMenuItem1.Text = "版本号：2020.07.22";
             // 
             // panel2
             // 
@@ -1223,15 +1249,121 @@
             this.timer_dabaoshenggang.Interval = 1000;
             this.timer_dabaoshenggang.Tick += new System.EventHandler(this.timer_dabaoshenggang_Tick);
             // 
-            // button3
+            // tabPage8
             // 
-            this.button3.Location = new System.Drawing.Point(197, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "手动触发";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.tabPage8.Controls.Add(this.dataGridView4);
+            this.tabPage8.Controls.Add(this.groupBox3);
+            this.tabPage8.Controls.Add(this.button4);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(672, 345);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "3#机切割";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(589, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox42);
+            this.groupBox3.Controls.Add(this.label47);
+            this.groupBox3.Controls.Add(this.textBox41);
+            this.groupBox3.Controls.Add(this.label46);
+            this.groupBox3.Controls.Add(this.textBox40);
+            this.groupBox3.Controls.Add(this.label45);
+            this.groupBox3.Controls.Add(this.textBox39);
+            this.groupBox3.Controls.Add(this.label44);
+            this.groupBox3.Font = new System.Drawing.Font("宋体", 12F);
+            this.groupBox3.Location = new System.Drawing.Point(8, 30);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(656, 69);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "状态";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(15, 32);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(56, 16);
+            this.label44.TabIndex = 0;
+            this.label44.Text = "到站：";
+            // 
+            // textBox39
+            // 
+            this.textBox39.Location = new System.Drawing.Point(60, 29);
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new System.Drawing.Size(54, 26);
+            this.textBox39.TabIndex = 1;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(138, 35);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(56, 16);
+            this.label45.TabIndex = 0;
+            this.label45.Text = "开浇：";
+            // 
+            // textBox40
+            // 
+            this.textBox40.Location = new System.Drawing.Point(187, 32);
+            this.textBox40.Name = "textBox40";
+            this.textBox40.Size = new System.Drawing.Size(54, 26);
+            this.textBox40.TabIndex = 1;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(258, 35);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(56, 16);
+            this.label46.TabIndex = 0;
+            this.label46.Text = "停浇：";
+            // 
+            // textBox41
+            // 
+            this.textBox41.Location = new System.Drawing.Point(303, 32);
+            this.textBox41.Name = "textBox41";
+            this.textBox41.Size = new System.Drawing.Size(54, 26);
+            this.textBox41.TabIndex = 1;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(426, 35);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(88, 16);
+            this.label47.TabIndex = 0;
+            this.label47.Text = "大包接缝：";
+            // 
+            // textBox42
+            // 
+            this.textBox42.Location = new System.Drawing.Point(502, 32);
+            this.textBox42.Name = "textBox42";
+            this.textBox42.Size = new System.Drawing.Size(54, 26);
+            this.textBox42.TabIndex = 1;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView4.Location = new System.Drawing.Point(3, 125);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowTemplate.Height = 23;
+            this.dataGridView4.Size = new System.Drawing.Size(666, 217);
+            this.dataGridView4.TabIndex = 2;
             // 
             // Form1
             // 
@@ -1269,6 +1401,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1383,6 +1519,18 @@
         private System.Windows.Forms.TextBox textBox38;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox39;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox textBox42;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox textBox40;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.DataGridView dataGridView4;
     }
 }
 

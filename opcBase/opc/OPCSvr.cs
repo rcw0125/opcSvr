@@ -178,22 +178,114 @@ namespace opcBase
         {
             try
             {
-
+                #region 5#机大包剩钢事件
                 if (i == "78")
                 {
                     if (Convert.ToInt32(val) == 1)
                     {
                         ccm5dabaoshenggang.GetInstance().calData(1);
-                    }                   
+                    }
+                    return;
                 }
-
                 if (i == "87")
                 {
                     if (Convert.ToInt32(val) == 1)
                     {
                         ccm5dabaoshenggang.GetInstance().calData(0);
                     }
+                    return;
                 }
+                #endregion
+
+                #region 3#机切割优化状态采集事件
+                //3#机大包到达
+                if (i == "88")
+                {
+                    if (Convert.ToInt32(val) == 1)
+                    {
+                        ccm3cut.GetInstance().acceptCasterStatus(1);
+                    }
+                    return;
+                }
+                //3#机大包开浇
+                if (i == "89")
+                {
+                    if (Convert.ToInt32(val) == 1)
+                    {
+                        ccm3cut.GetInstance().acceptCasterStatus(2);
+                    }
+                    return;
+                }
+                //3#机大包停浇
+                if (i == "90")
+                {
+                    if (Convert.ToInt32(val) == 1)
+                    {
+                        ccm3cut.GetInstance().acceptCasterStatus(3);
+                    }
+                    return;
+                }
+
+                //3#机大包接缝状态
+                if (i == "91")
+                {
+                    ccm3cut.GetInstance().acceptLadlefeng(Convert.ToInt32(val));
+                    return;
+                }
+
+                //3#机1流切割状态
+                if (i == "92")
+                {
+                    ccm3cut.GetInstance().ccmCutStrand_1.acceptCutStatus(Convert.ToInt32(val));
+                    return;
+                }
+                //3#机1流开浇状态
+                if (i == "93")
+                {
+                    ccm3cut.GetInstance().ccmCutStrand_1.acceptStrandStatus(Convert.ToInt32(val));
+                    return;
+                }
+
+                //3#机2流切割状态
+                if (i == "98")
+                {
+                    ccm3cut.GetInstance().ccmCutStrand_2.acceptCutStatus(Convert.ToInt32(val));
+                    return;
+                }
+                //3#机2流开浇状态
+                if (i == "99")
+                {
+                    ccm3cut.GetInstance().ccmCutStrand_2.acceptStrandStatus(Convert.ToInt32(val));
+                    return;
+                }
+
+                //3#机3流切割状态
+                if (i == "104")
+                {
+                    ccm3cut.GetInstance().ccmCutStrand_3.acceptCutStatus(Convert.ToInt32(val));
+                    return;
+                }
+                //3#机3流开浇状态
+                if (i == "105")
+                {
+                    ccm3cut.GetInstance().ccmCutStrand_3.acceptStrandStatus(Convert.ToInt32(val));
+                    return;
+                }
+
+                //3#机4流切割状态
+                if (i == "110")
+                {
+                    ccm3cut.GetInstance().ccmCutStrand_4.acceptCutStatus(Convert.ToInt32(val));
+                    return;
+                }
+                //3#机4流开浇状态
+                if (i == "111")
+                {
+                    ccm3cut.GetInstance().ccmCutStrand_4.acceptStrandStatus(Convert.ToInt32(val));
+                    return;
+                }
+                #endregion
+
 
                 if (val == null)
                 {

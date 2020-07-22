@@ -51,7 +51,10 @@
   <ItemGroup>
     <Compile Include="Db\oraDbHelp.cs" />
     <Compile Include="Db\sqlDbHelp.cs" />
+    <Compile Include="modle\ccm3cut.cs" />
     <Compile Include="modle\ccm5dabaoshenggang.cs" />
+    <Compile Include="modle\ccmCut.cs" />
+    <Compile Include="modle\ccmCutStrand.cs" />
     <Compile Include="modle\dabaoshenggang.cs" />
     <Compile Include="modle\L1tag.cs" />
     <Compile Include="OpcHelp.cs" />

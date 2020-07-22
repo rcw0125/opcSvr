@@ -120,4 +120,3 @@ I:\opcSvr\OPCWcf\obj\x86\Debug\OPCWcf.csproj.CoreCompileInputs.cache
 I:\opcSvr\OPCWcf\obj\x86\Debug\OPCWcf.csproj.CopyComplete
 I:\opcSvr\OPCWcf\obj\x86\Debug\OPCWcf.exe
 I:\opcSvr\OPCWcf\obj\x86\Debug\OPCWcf.pdb
-I:\opcSvr\OPCWcf\obj\x86\Debug\OPCWcf.csprojAssemblyReference.cache

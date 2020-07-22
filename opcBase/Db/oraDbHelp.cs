@@ -8,7 +8,7 @@ namespace opcBase
 {
     public class oraDbHelp
     {
-         public static string connectionString = "Data Source = 192.168.36.153/XGMES; User Id = XGMES; Password =XGMES;";
+         public  string connectionString = "Data Source = 192.168.36.153/XGMES; User Id = XGMES; Password =XGMES;";
         //public static string connectionString = "Data Source = 192.168.2.3/XGMES; User Id = XGMES; Password =xgmes;";
         //public static string connectionString = ConfigurationManager.ConnectionStrings["xgcap"].ConnectionString;
          public oraDbHelp()

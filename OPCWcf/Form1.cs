@@ -372,6 +372,9 @@ namespace OPCWcf
                 case "tabPage7":
                     getCaster5LadleInfo();
                     break;
+                case "tabPage8":
+                    getCaster3CutInfo();
+                    break;
                 default: break;
              }
          }
@@ -523,6 +526,24 @@ namespace OPCWcf
            
          }
 
+        public void getCaster3CutInfo()
+        {
+            ccm3cut.GetInstance();
+            ccm3cut.GetInstance().updateData();
+            textBox39.Text = ccm3cut.GetInstance().arrive.ToString();
+            textBox40.Text = ccm3cut.GetInstance().start.ToString();
+            textBox41.Text = ccm3cut.GetInstance().stop.ToString();
+            textBox42.Text = ccm3cut.GetInstance().ladlefeng.ToString();
+            List<ccmCutStrand> listcutstrand = new List<ccmCutStrand>();
+            listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_1);
+            listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_2);
+            listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_3);
+            listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_4);
+            dataGridView4.DataSource = null;
+            dataGridView4.DataSource = listcutstrand;
+
+        }
+
          private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
          {
              if (e.Button == MouseButtons.Left)
@@ -558,6 +579,16 @@ namespace OPCWcf
             {
                 ccm5dabaoshenggang.GetInstance().calData(1);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ccm3cut.GetInstance();
+            ccm3cut.GetInstance().ccmCutStrand_1.acceptCutStatus(4);
+            ccm3cut.GetInstance().getSpeedAndTrack();
+            ccm3cut.GetInstance().ccmCutStrand_2.acceptStrandStatus(1);
+            ccm3cut.GetInstance().acceptCasterStatus(2);
+            ccm3cut.GetInstance().acceptLadlefeng(3);
         }
     }
 }
