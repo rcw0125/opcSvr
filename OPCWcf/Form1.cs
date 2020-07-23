@@ -60,6 +60,7 @@ namespace OPCWcf
             timer_mqhs.Enabled = true;
             timer_sll.Enabled = true;
             //timer_dabaoshenggang.Enabled = true;
+            timer_cut.Enabled = true;
 
         }
 
@@ -584,11 +585,16 @@ namespace OPCWcf
         private void button4_Click(object sender, EventArgs e)
         {
             ccm3cut.GetInstance();
-            ccm3cut.GetInstance().ccmCutStrand_1.acceptCutStatus(4);
-            ccm3cut.GetInstance().getSpeedAndTrack();
-            ccm3cut.GetInstance().ccmCutStrand_2.acceptStrandStatus(1);
+            //ccm3cut.GetInstance().ccmCutStrand_1.acceptCutStatus(4);
+            //ccm3cut.GetInstance().getSpeedAndTrack();
+            //ccm3cut.GetInstance().ccmCutStrand_2.acceptStrandStatus(1);
             ccm3cut.GetInstance().acceptCasterStatus(2);
-            ccm3cut.GetInstance().acceptLadlefeng(3);
+            //ccm3cut.GetInstance().acceptLadlefeng(3);
+        }
+
+        private void timer_cut_Tick(object sender, EventArgs e)
+        {
+            ccm3cut.GetInstance().getSpeedAndTrack();
         }
     }
 }

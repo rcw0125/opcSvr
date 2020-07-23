@@ -229,7 +229,10 @@ namespace opcBase
                 //3#机大包接缝状态
                 if (i == "91")
                 {
-                    ccm3cut.GetInstance().acceptLadlefeng(Convert.ToInt32(val));
+                    if (Convert.ToInt32(val) == 1)
+                    {
+                        ccm3cut.GetInstance().acceptLadlefeng(Convert.ToInt32(val));
+                    }                    
                     return;
                 }
 

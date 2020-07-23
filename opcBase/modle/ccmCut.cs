@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace opcBase
 {
@@ -103,22 +105,30 @@ namespace opcBase
         /// </summary>
         public void getSpeedAndTrack()
         {
-            double L1S = ccmCutStrand_1.getSpeed();
-            double L2S = ccmCutStrand_2.getSpeed();
-            double L3S = ccmCutStrand_3.getSpeed();
-            double L4S = ccmCutStrand_4.getSpeed();
-            if (L1S > 0 || L2S > 0 || L3S > 0 || L4S > 0)
+            try
             {
-                double L1T = ccmCutStrand_1.getTrack();
-                double L2T = ccmCutStrand_2.getTrack();
-                double L3T = ccmCutStrand_3.getTrack();
-                double L4T = ccmCutStrand_4.getTrack();
-                oraDbHelp service = new oraDbHelp();
-                service.connectionString = "Data Source = 192.168.48.117/XGMES; User Id = XGMES; Password =XGMES;";        
-                string exeSql = " insert into CUT_Speed_DATA(CCMID,SPEED_1ST,TRACK_1ST,SPEED_2ST,TRACK_2ST,SPEED_3ST,TRACK_3ST,SPEED_4ST,TRACK_4ST) ";
-                exeSql += " values('" + CCMID + "', " + L1S + ", " + L1T + ", " + L2S + ", " + L2T + ", " + L3S + ", " + L3T + ", " + L4S + ", " + L4T + ") ";
-                service.Update(exeSql);
+                double L1S = ccmCutStrand_1.getSpeed();
+                double L2S = ccmCutStrand_2.getSpeed();
+                double L3S = ccmCutStrand_3.getSpeed();
+                double L4S = ccmCutStrand_4.getSpeed();
+                if (L1S > 0 || L2S > 0 || L3S > 0 || L4S > 0)
+                {
+                    double L1T = ccmCutStrand_1.getTrack();
+                    double L2T = ccmCutStrand_2.getTrack();
+                    double L3T = ccmCutStrand_3.getTrack();
+                    double L4T = ccmCutStrand_4.getTrack();
+                    oraDbHelp service = new oraDbHelp();
+                    service.connectionString = "Data Source = 192.168.48.117/XGMES; User Id = XGMES; Password =XGMES;";
+                    string exeSql = " insert into CUT_Speed_DATA(CCMID,SPEED_1ST,TRACK_1ST,SPEED_2ST,TRACK_2ST,SPEED_3ST,TRACK_3ST,SPEED_4ST,TRACK_4ST) ";
+                    exeSql += " values('" + CCMID + "', " + L1S + ", " + L1T + ", " + L2S + ", " + L2T + ", " + L3S + ", " + L3T + ", " + L4S + ", " + L4T + ") ";
+                    service.Update(exeSql);
+                }
             }
+            catch
+            { 
+            
+            }
+            
             
         }
         /// <summary>
@@ -127,11 +137,80 @@ namespace opcBase
         /// <param name="status"></param>
         public void acceptCasterStatus(int status)
         {
-            //保存到数据库
-            oraDbHelp service = new oraDbHelp();
-            service.connectionString = "Data Source = 192.168.48.117/XGMES; User Id = XGMES; Password =XGMES;";
-            string exeSql = " insert into CUT_CCMSTATUS_DATA(CCMID,CCMSTATUS) values('"+CCMID+"', "+status+") ";
-            service.Update(exeSql);
+            if (status == 2)
+            {
+                ////暂停5秒后
+                //Thread.Sleep(5000);
+                //保存到数据库
+                oraDbHelp service = new oraDbHelp();
+
+                #region 1、读取生产计划 2、传输给切割 3、删除
+                try
+                {
+                    string selectSql = " select a.guid,a.ccmid,a.heatid,b.steelgrade,b.length,c.weight,d.tundish_heatnum from cccm_download_heatid a ,cplan_tapping b , ";
+                    selectSql += " csteel_data c, cccm_process_data d where a.heatid = b.heatid and a.heatid = c.heatid and a.heatid = d.heatid(+) ";
+                    selectSql += " and a.ccmid = '" + CCMID + "'  order by a.c_ts desc";
+                    var steelGradeInfo = service.Query(selectSql);
+                    if (steelGradeInfo != null && steelGradeInfo.Tables.Count > 0 && steelGradeInfo.Tables[0].Rows.Count > 0)
+                    {
+                        int length = 0;
+                        try
+                        {
+                            length = Convert.ToInt32(steelGradeInfo.Tables[0].Rows[0]["length"]);
+                        }
+                        catch { }
+
+                        double weight = 0;
+                        try
+                        {
+                            weight = Convert.ToDouble(steelGradeInfo.Tables[0].Rows[0]["weight"]);
+                        }
+                        catch { }
+
+                        int heatnum = 0;
+                        try
+                        {
+                            heatnum = Convert.ToInt32(steelGradeInfo.Tables[0].Rows[0]["tundish_heatnum"]);
+                        }
+                        catch { }
+
+                        string insertSql = "insert into CUT_PRODUCTPLAN(heatid, ccmid, length, steelgrade, netweight, tundish_heatnum) values";
+                        insertSql += "('" + steelGradeInfo.Tables[0].Rows[0]["heatid"].ToString() + "', '" + steelGradeInfo.Tables[0].Rows[0]["ccmid"].ToString()
+                            + "', " + length + ", '" + steelGradeInfo.Tables[0].Rows[0]["steelgrade"].ToString() + "', " + weight + ", " + heatnum + ")";
+                        service.connectionString = "Data Source = 192.168.48.117/XGMES; User Id = XGMES; Password =XGMES;";
+                        service.Update(insertSql);
+
+                        foreach (DataRow item in steelGradeInfo.Tables[0].Rows)
+                        {
+                            service.connectionString = "Data Source = 192.168.36.153/XGMES; User Id = XGMES; Password =XGMES;";
+                            string deleteSql = "delete from cccm_download_heatid where guid='" + item["guid"].ToString() + "'";
+                            service.Update(deleteSql);
+                        }
+                    }
+                }
+                catch
+                { 
+                
+                }
+                
+                #endregion
+
+                #region 传输开浇信号
+                #endregion
+                service.connectionString = "Data Source = 192.168.48.117/XGMES; User Id = XGMES; Password =XGMES;";
+                string exeSql = " insert into CUT_CCMSTATUS_DATA(CCMID,CCMSTATUS) values('" + CCMID + "', " + status + ") ";
+                service.Update(exeSql);
+            
+            }
+            else
+            {
+                //保存到数据库
+                oraDbHelp service = new oraDbHelp();
+                service.connectionString = "Data Source = 192.168.48.117/XGMES; User Id = XGMES; Password =XGMES;";
+                string exeSql = " insert into CUT_CCMSTATUS_DATA(CCMID,CCMSTATUS) values('" + CCMID + "', " + status + ") ";
+                service.Update(exeSql);
+            }
+            
         }
 
         public void acceptLadlefeng(int status)
