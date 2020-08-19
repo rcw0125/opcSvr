@@ -596,5 +596,34 @@ namespace OPCWcf
         {
             ccm3cut.GetInstance().getSpeedAndTrack();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ucCaster1.setupConfig();
+            ucCaster1.strand1.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_1.zhupiStart;
+            ucCaster1.strand1.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_1.zhupiEnd;
+            ucCaster1.strand1.starttrack = ccm3cut.GetInstance().ccmCutStrand_1.pitouTrack;
+            ucCaster1.strand1.endtrack= ccm3cut.GetInstance().ccmCutStrand_1.track;
+            ucCaster1.strand1.listfeng= ccm3cut.GetInstance().ccmCutStrand_1.listLadleFeng;
+
+            ucCaster1.strand2.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_2.zhupiStart;
+            ucCaster1.strand2.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_2.zhupiEnd;
+            ucCaster1.strand2.starttrack = ccm3cut.GetInstance().ccmCutStrand_2.pitouTrack;
+            ucCaster1.strand2.endtrack = ccm3cut.GetInstance().ccmCutStrand_2.track;
+            ucCaster1.strand2.listfeng = ccm3cut.GetInstance().ccmCutStrand_2.listLadleFeng;
+
+            ucCaster1.strand3.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_3.zhupiStart;
+            ucCaster1.strand3.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_3.zhupiEnd;
+            ucCaster1.strand3.starttrack = ccm3cut.GetInstance().ccmCutStrand_3.pitouTrack;
+            ucCaster1.strand3.endtrack = ccm3cut.GetInstance().ccmCutStrand_3.track;
+            ucCaster1.strand3.listfeng = ccm3cut.GetInstance().ccmCutStrand_3.listLadleFeng;
+
+            ucCaster1.strand4.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_4.zhupiStart;
+            ucCaster1.strand4.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_4.zhupiEnd;
+            ucCaster1.strand4.starttrack = ccm3cut.GetInstance().ccmCutStrand_4.pitouTrack;
+            ucCaster1.strand4.endtrack = ccm3cut.GetInstance().ccmCutStrand_4.track;
+            ucCaster1.strand4.listfeng = ccm3cut.GetInstance().ccmCutStrand_4.listLadleFeng;
+            ucCaster1.Redraw();
+        }
     }
 }

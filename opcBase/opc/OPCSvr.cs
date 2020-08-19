@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using OPCAutomation;
 using System.Data;
+using Rcw.Method;
 
 namespace opcBase
 {
@@ -68,6 +69,7 @@ namespace opcBase
             }
             catch (Exception ex)
             {
+                SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "--loadValList方法加载变量列表时出错" + ex.ToString());
                 throw new Exception("加载变量列表时出错：" + ex.ToString());
             }
            
@@ -324,7 +326,8 @@ namespace opcBase
             }
             catch (Exception ex)
             {
-                throw new Exception("处理数据变化时出错：" + ex.ToString());
+                //throw new Exception("处理数据变化时出错：" + ex.ToString());
+                SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "--变量："+i+";值："+val.ToString()+"readval方法处理数据变化时出错" + ex.ToString());
             }
            
         }
@@ -394,6 +397,7 @@ namespace opcBase
             }
             catch (Exception ex)
             {
+                SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "--变量："+id+"；getVal方法获取值时出错" + ex.ToString());
                 return "获取值时出错："+ex.ToString();
             }
 

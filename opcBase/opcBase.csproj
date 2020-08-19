@@ -40,6 +40,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>dll\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
+    <Reference Include="Rcw.Method">
+      <HintPath>dll\Rcw.Method.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +58,7 @@
     <Compile Include="modle\ccm5dabaoshenggang.cs" />
     <Compile Include="modle\ccmCut.cs" />
     <Compile Include="modle\ccmCutStrand.cs" />
+    <Compile Include="modle\ladlefeng.cs" />
     <Compile Include="modle\dabaoshenggang.cs" />
     <Compile Include="modle\L1tag.cs" />
     <Compile Include="OpcHelp.cs" />
@@ -71,10 +75,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dll\Interop.OPCAutomation.dll" />
+    <None Include="dll\log4net.dll" />
     <Content Include="dll\OPCDAAuto.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="dll\Oracle.ManagedDataAccess.dll" />
+    <Content Include="dll\Rcw.Method.dll" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Db\cmsdb.bak" />

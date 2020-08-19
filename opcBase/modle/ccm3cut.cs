@@ -17,7 +17,7 @@ namespace opcBase
             if (instance == null)
             {
                 instance = new ccmCut();
-                instance.setupDateConfig("S63", 88);
+                instance.setupDateConfig("S63", 88,24.8);
             }
             return instance;
         }

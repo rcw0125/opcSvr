@@ -21,3 +21,15 @@ I:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CoreCompileInputs.cache
 I:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CopyComplete
 I:\opcSvr\opcBase\obj\Debug\opcBase.dll
 I:\opcSvr\opcBase\obj\Debug\opcBase.pdb
+I:\opcSvr\opcBase\obj\Debug\opcBase.csprojAssemblyReference.cache
+F:\opcSvr\opcBase\bin\Debug\dll\OPCDAAuto.dll
+F:\opcSvr\opcBase\bin\Debug\opcBase.dll
+F:\opcSvr\opcBase\bin\Debug\opcBase.pdb
+F:\opcSvr\opcBase\bin\Debug\Oracle.ManagedDataAccess.dll
+F:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CoreCompileInputs.cache
+F:\opcSvr\opcBase\obj\Debug\opcBase.csproj.CopyComplete
+F:\opcSvr\opcBase\obj\Debug\opcBase.dll
+F:\opcSvr\opcBase\obj\Debug\opcBase.pdb
+F:\opcSvr\opcBase\bin\Debug\Rcw.Method.dll
+F:\opcSvr\opcBase\bin\Debug\log4net.dll
+F:\opcSvr\opcBase\obj\Debug\opcBase.csprojAssemblyReference.cache
