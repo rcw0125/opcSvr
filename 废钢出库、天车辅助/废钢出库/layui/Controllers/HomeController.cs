@@ -157,9 +157,10 @@ namespace layui.Controllers
         public JsonResult ckjl(int page, int limit)
         {
             var sql = "select to_char(logdate,'hh24:MI') as logtime,operator as userid,scrap_slot_id as slot,heatid,( select sum(amount) from CSCRAPOUTSTOREDETAIL where scrap_slot_id=CSCRAP_OUTPUT_LOG.scrap_slot_id) as amount from CSCRAP_OUTPUT_LOG where logdate >sysdate-1 and materialid ='Scrap' order by logdate desc  ";     
-            var count = mes.Database.SqlQuery<scraptout>(sql).Count();
+            var count =Convert.ToInt32( mes.Database.SqlQuery<scraptout>(sql).Count());
             var list = mes.Database.SqlQuery<scraptout>(sql).Skip((page-1)*limit).Take(limit).ToList();
-            return Json(new { count = count, data = list, code = 0, msg = "" }, JsonRequestBehavior.AllowGet);
+            //var list = mes.Database.SqlQuery<scraptout>(sql).ToList();
+            return Json(new { count = 25, data = list, code = 0, msg = "" }, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult Gettable(int page,int limit,string begintime,string endtime,string fenlei)

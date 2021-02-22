@@ -37,3 +37,17 @@ I:\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.csproj.CoreCompileInpu
 I:\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.csproj.CopyComplete
 I:\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.exe
 I:\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.pdb
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\bin\Debug\SBGL.exe.config
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\bin\Debug\SBGL.exe
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\bin\Debug\SBGL.pdb
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\bin\Debug\MySql.Data.dll
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\bin\Debug\Rcw.Data.dll
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\bin\Debug\Oracle.ManagedDataAccess.dll
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.csprojAssemblyReference.cache
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.Form1.resources
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.Properties.Resources.resources
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.csproj.GenerateResource.cache
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.csproj.CoreCompileInputs.cache
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.csproj.CopyComplete
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.exe
+F:\2019归档\opcSvr\设备管理（去重项）\SBGL\obj\Debug\SBGL.pdb

@@ -427,8 +427,9 @@ namespace SBGL
                 {
                     calYueSbgzbx(DateTime.Now.AddDays(-1).ToString("yyyy-MM"));                     
                     yuecaljhjx();          
-                }            
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+                }     
+                //2021-02-22 更改为周日5点运行
+                if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
                 {                     
                     calSbgzbx();                
                     caljhjx();
@@ -482,30 +483,7 @@ namespace SBGL
             var data = DbContext.GetDataTable(strsql);
             zhouListSbgz = DT_To_List_gzbx(data);
 
-            #region 获取设置所有登记单位
-
-            //获取登记单位
-            //foreach (var gzitem in zhouListSbgz)
-            //{
-            //    //从登记人单位添加单位
-            //    if (listGzdw.Where(o => o.dw == gzitem.djrdw).FirstOrDefault() == null)
-            //    {
-            //        sbgzdw addgzdw = new sbgzdw();
-            //        addgzdw.dw = gzitem.djrdw;
-            //        listGzdw.Add(addgzdw);
-            //    }
-            //    //从接收人单位添加单位
-            //    if (gzitem.jsrdw != null && gzitem.jsrdw != "")
-            //    {
-            //        if (listGzdw.Where(o => o.dw == gzitem.jsrdw).FirstOrDefault() == null)
-            //        {
-            //            sbgzdw addgzdw = new sbgzdw();
-            //            addgzdw.dw = gzitem.djrdw;
-            //            listGzdw.Add(addgzdw);
-            //        }
-            //    }
-            //}
-            
+            #region 获取设置所有登记单位    
             listGzdw.Clear();
             if (listGzdw.Where(o => o.dw == "冶炼车间").FirstOrDefault() == null)
             {
