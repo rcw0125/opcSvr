@@ -123,16 +123,16 @@ namespace inputscrap
                 callScrapWeight();
             }
             //精炼炉电耗分档计算 不再计算
-            if (DateTime.Now.Hour == 1 || DateTime.Now.Hour == 5 || DateTime.Now.Hour == 9 || DateTime.Now.Hour == 13 || DateTime.Now.Hour == 17 || DateTime.Now.Hour == 21)
-            {
-               // calDianHao();
-            }
-            //大于7点10
-            if (DateTime.Now.Hour == 7 && DateTime.Now.Minute>10)
-            {
-                //计算能源数据
-                calXiaoHao(DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd"));
-            }
+            //if (DateTime.Now.Hour == 1 || DateTime.Now.Hour == 5 || DateTime.Now.Hour == 9 || DateTime.Now.Hour == 13 || DateTime.Now.Hour == 17 || DateTime.Now.Hour == 21)
+            //{
+            //   // calDianHao();
+            //}
+            ////大于7点10
+            //if (DateTime.Now.Hour == 7 && DateTime.Now.Minute>10)
+            //{
+            //    //计算能源数据
+            //    calXiaoHao(DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd"));
+            //}
            
         }
         List<CLF_HEAT_GEARS> listGears = new List<CLF_HEAT_GEARS>();
@@ -371,6 +371,7 @@ namespace inputscrap
         private void button2_Click(object sender, EventArgs e)
         {
             calDianHao();
+            calDianHao();
    
         }
 
@@ -499,7 +500,7 @@ namespace inputscrap
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            button3_Click(null, null);
+            //button3_Click(null, null);
         }
 
         cmsdbEntities cmsdb = new cmsdbEntities();

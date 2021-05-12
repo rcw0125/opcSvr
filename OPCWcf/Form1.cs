@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 //using OPCAutomation;
 using opcBase;
+using Rcw.Method;
 
 namespace OPCWcf
 {
@@ -57,10 +58,13 @@ namespace OPCWcf
             serviceList sl = new serviceList();
             sl.Open();
             //激活两个timer
-            timer_mqhs.Enabled = true;
-            timer_sll.Enabled = true;
-            //timer_dabaoshenggang.Enabled = true;
-            timer_cut.Enabled = true;
+            //timer_mqhs.Enabled = true;
+            //timer_sll.Enabled = true;
+
+            //2021-03-11 取消了大包剩钢的计算
+           // timer_dabaoshenggang.Enabled = true;
+
+
 
         }
 
@@ -95,6 +99,7 @@ namespace OPCWcf
          {
             try
             {
+
                 return Convert.ToDouble(PlcSvr.GetInstance().getVal(id));
             }
             catch
@@ -374,7 +379,7 @@ namespace OPCWcf
                     getCaster5LadleInfo();
                     break;
                 case "tabPage8":
-                    getCaster3CutInfo();
+                    //getCaster3CutInfo();
                     break;
                 default: break;
              }
@@ -442,21 +447,21 @@ namespace OPCWcf
         }
 
         private void button1_Click(object sender, EventArgs e)
-         {
-             tabControl1_SelectedIndexChanged(null, null);
-         }
+        {
+            tabControl1_SelectedIndexChanged(null, null);
+        }
 
          private void Form1_FormClosing(object sender, FormClosingEventArgs e)
          {
-             //if (MessageBox.Show("不要关闭,服务正在运行中,请点“取消”", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
-             //{
-             //    e.Cancel = true;
-             //}
-             e.Cancel = true; // 取消关闭窗体
-             this.Hide();
-             this.ShowInTaskbar = false;//取消窗体在任务栏的显示
-             this.notifyIcon1.Visible = true;//显示托盘图标
-         }
+            if (MessageBox.Show("不要关闭,服务正在运行中,请点“取消”", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+            //e.Cancel = true; // 取消关闭窗体
+            //this.Hide();
+            //this.ShowInTaskbar = false;//取消窗体在任务栏的显示
+            //this.notifyIcon1.Visible = true;//显示托盘图标
+        }
 
          private void button2_Click(object sender, EventArgs e)
          {
@@ -527,37 +532,21 @@ namespace OPCWcf
            
          }
 
-        public void getCaster3CutInfo()
+
+        #region 大包剩钢、托盘等
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            ccm3cut.GetInstance();
-            ccm3cut.GetInstance().updateData();
-            textBox39.Text = ccm3cut.GetInstance().arrive.ToString();
-            textBox40.Text = ccm3cut.GetInstance().start.ToString();
-            textBox41.Text = ccm3cut.GetInstance().stop.ToString();
-            textBox42.Text = ccm3cut.GetInstance().ladlefeng.ToString();
-            List<ccmCutStrand> listcutstrand = new List<ccmCutStrand>();
-            listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_1);
-            listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_2);
-            listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_3);
-            listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_4);
-            dataGridView4.DataSource = null;
-            dataGridView4.DataSource = listcutstrand;
-
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Show();
+                this.ShowInTaskbar = true;
+                this.notifyIcon1.Visible = false;
+            }
         }
-
-         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-         {
-             if (e.Button == MouseButtons.Left)
-             {
-                 this.Show();
-                 this.ShowInTaskbar = true;
-                 this.notifyIcon1.Visible = false;
-             }
-         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-           string s= KepServer.GetInstance().getVal(77);
+            string s = KepServer.GetInstance().getVal(76);
             MessageBox.Show(s);
         }
 
@@ -568,10 +557,10 @@ namespace OPCWcf
                 dabaoshenggang5.calData();
             }
             catch
-            { 
-            
+            {
+
             }
-           
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -581,49 +570,79 @@ namespace OPCWcf
                 ccm5dabaoshenggang.GetInstance().calData(1);
             }
         }
+        #endregion
+
+
+
+
+        #region 不用的 铸机切割优化等
+
+        public void getCaster3CutInfo()
+        {
+            //ccm3cut.GetInstance();
+            //ccm3cut.GetInstance().updateData();
+            //textBox39.Text = ccm3cut.GetInstance().arrive.ToString();
+            //textBox40.Text = ccm3cut.GetInstance().start.ToString();
+            //textBox41.Text = ccm3cut.GetInstance().stop.ToString();
+            //textBox42.Text = ccm3cut.GetInstance().ladlefeng.ToString();
+            //List<ccmCutStrand> listcutstrand = new List<ccmCutStrand>();
+            //listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_1);
+            //listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_2);
+            //listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_3);
+            //listcutstrand.Add(ccm3cut.GetInstance().ccmCutStrand_4);
+            //dataGridView4.DataSource = null;
+            //dataGridView4.DataSource = listcutstrand;
+
+        }
+
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ccm3cut.GetInstance();
+            //ccm3cut.GetInstance();
             //ccm3cut.GetInstance().ccmCutStrand_1.acceptCutStatus(4);
             //ccm3cut.GetInstance().getSpeedAndTrack();
             //ccm3cut.GetInstance().ccmCutStrand_2.acceptStrandStatus(1);
-            ccm3cut.GetInstance().acceptCasterStatus(2);
+            //ccm3cut.GetInstance().acceptCasterStatus(2);
             //ccm3cut.GetInstance().acceptLadlefeng(3);
         }
 
         private void timer_cut_Tick(object sender, EventArgs e)
         {
-            ccm3cut.GetInstance().getSpeedAndTrack();
+            //ccm3cut.GetInstance().getSpeedAndTrack();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ucCaster1.setupConfig();
-            ucCaster1.strand1.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_1.zhupiStart;
-            ucCaster1.strand1.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_1.zhupiEnd;
-            ucCaster1.strand1.starttrack = ccm3cut.GetInstance().ccmCutStrand_1.pitouTrack;
-            ucCaster1.strand1.endtrack= ccm3cut.GetInstance().ccmCutStrand_1.track;
-            ucCaster1.strand1.listfeng= ccm3cut.GetInstance().ccmCutStrand_1.listLadleFeng;
+            //ucCaster1.setupConfig();
+            //ucCaster1.strand1.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_1.zhupiStart;
+            //ucCaster1.strand1.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_1.zhupiEnd;
+            //ucCaster1.strand1.starttrack = ccm3cut.GetInstance().ccmCutStrand_1.pitouTrack;
+            //ucCaster1.strand1.endtrack= ccm3cut.GetInstance().ccmCutStrand_1.track;
+            //ucCaster1.strand1.listfeng= ccm3cut.GetInstance().ccmCutStrand_1.listLadleFeng;
 
-            ucCaster1.strand2.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_2.zhupiStart;
-            ucCaster1.strand2.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_2.zhupiEnd;
-            ucCaster1.strand2.starttrack = ccm3cut.GetInstance().ccmCutStrand_2.pitouTrack;
-            ucCaster1.strand2.endtrack = ccm3cut.GetInstance().ccmCutStrand_2.track;
-            ucCaster1.strand2.listfeng = ccm3cut.GetInstance().ccmCutStrand_2.listLadleFeng;
+            //ucCaster1.strand2.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_2.zhupiStart;
+            //ucCaster1.strand2.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_2.zhupiEnd;
+            //ucCaster1.strand2.starttrack = ccm3cut.GetInstance().ccmCutStrand_2.pitouTrack;
+            //ucCaster1.strand2.endtrack = ccm3cut.GetInstance().ccmCutStrand_2.track;
+            //ucCaster1.strand2.listfeng = ccm3cut.GetInstance().ccmCutStrand_2.listLadleFeng;
 
-            ucCaster1.strand3.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_3.zhupiStart;
-            ucCaster1.strand3.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_3.zhupiEnd;
-            ucCaster1.strand3.starttrack = ccm3cut.GetInstance().ccmCutStrand_3.pitouTrack;
-            ucCaster1.strand3.endtrack = ccm3cut.GetInstance().ccmCutStrand_3.track;
-            ucCaster1.strand3.listfeng = ccm3cut.GetInstance().ccmCutStrand_3.listLadleFeng;
+            //ucCaster1.strand3.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_3.zhupiStart;
+            //ucCaster1.strand3.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_3.zhupiEnd;
+            //ucCaster1.strand3.starttrack = ccm3cut.GetInstance().ccmCutStrand_3.pitouTrack;
+            //ucCaster1.strand3.endtrack = ccm3cut.GetInstance().ccmCutStrand_3.track;
+            //ucCaster1.strand3.listfeng = ccm3cut.GetInstance().ccmCutStrand_3.listLadleFeng;
 
-            ucCaster1.strand4.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_4.zhupiStart;
-            ucCaster1.strand4.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_4.zhupiEnd;
-            ucCaster1.strand4.starttrack = ccm3cut.GetInstance().ccmCutStrand_4.pitouTrack;
-            ucCaster1.strand4.endtrack = ccm3cut.GetInstance().ccmCutStrand_4.track;
-            ucCaster1.strand4.listfeng = ccm3cut.GetInstance().ccmCutStrand_4.listLadleFeng;
-            ucCaster1.Redraw();
+            //ucCaster1.strand4.zhupiStart = ccm3cut.GetInstance().ccmCutStrand_4.zhupiStart;
+            //ucCaster1.strand4.zhupiEnd = ccm3cut.GetInstance().ccmCutStrand_4.zhupiEnd;
+            //ucCaster1.strand4.starttrack = ccm3cut.GetInstance().ccmCutStrand_4.pitouTrack;
+            //ucCaster1.strand4.endtrack = ccm3cut.GetInstance().ccmCutStrand_4.track;
+            //ucCaster1.strand4.listfeng = ccm3cut.GetInstance().ccmCutStrand_4.listLadleFeng;
+            //ucCaster1.Redraw();
         }
+        #endregion
+
+
+
+     
     }
 }

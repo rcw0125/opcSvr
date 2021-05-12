@@ -128,8 +128,8 @@ namespace opcBase
                 }
                 else if (type == 5)
                 {
-                    //KepServer.Connect("KEPware.KEPServerEx.V5", "192.168.48.243");
-                    KepServer.Connect("KEPware.KEPServerEx.V6", "192.168.48.163");
+                    KepServer.Connect("KEPware.KEPServerEx.V5", "192.168.48.232");
+                   // KepServer.Connect("KEPware.KEPServerEx.V6", "192.168.48.6");
                 }
                 opc_connected = true;
                 KepGroups = KepServer.OPCGroups;
@@ -199,98 +199,125 @@ namespace opcBase
                 }
                 #endregion
 
-                #region 3#机切割优化状态采集事件
-                //3#机大包到达
-                if (i == "88")
+                #region 精炼炉电耗事件
+                if (i == "117")
                 {
-                    if (Convert.ToInt32(val) == 1)
-                    {
-                        ccm3cut.GetInstance().acceptCasterStatus(1);
-                    }
+                    lf1dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "1#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
-                //3#机大包开浇
-                if (i == "89")
+                if (i == "119")
                 {
-                    if (Convert.ToInt32(val) == 1)
-                    {
-                        ccm3cut.GetInstance().acceptCasterStatus(2);
-                    }
+                    lf2dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "2#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
-                //3#机大包停浇
-                if (i == "90")
+                if (i == "121")
                 {
-                    if (Convert.ToInt32(val) == 1)
-                    {
-                        ccm3cut.GetInstance().acceptCasterStatus(3);
-                    }
+                    lf3dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "3#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
-
-                //3#机大包接缝状态
-                if (i == "91")
+                if (i == "123")
                 {
-                    if (Convert.ToInt32(val) == 1)
-                    {
-                        ccm3cut.GetInstance().acceptLadlefeng(Convert.ToInt32(val));
-                    }                    
-                    return;
-                }
-
-                //3#机1流切割状态
-                if (i == "92")
-                {
-                    ccm3cut.GetInstance().ccmCutStrand_1.acceptCutStatus(Convert.ToInt32(val));
-                    return;
-                }
-                //3#机1流开浇状态
-                if (i == "93")
-                {
-                    ccm3cut.GetInstance().ccmCutStrand_1.acceptStrandStatus(Convert.ToInt32(val));
-                    return;
-                }
-
-                //3#机2流切割状态
-                if (i == "98")
-                {
-                    ccm3cut.GetInstance().ccmCutStrand_2.acceptCutStatus(Convert.ToInt32(val));
-                    return;
-                }
-                //3#机2流开浇状态
-                if (i == "99")
-                {
-                    ccm3cut.GetInstance().ccmCutStrand_2.acceptStrandStatus(Convert.ToInt32(val));
-                    return;
-                }
-
-                //3#机3流切割状态
-                if (i == "104")
-                {
-                    ccm3cut.GetInstance().ccmCutStrand_3.acceptCutStatus(Convert.ToInt32(val));
-                    return;
-                }
-                //3#机3流开浇状态
-                if (i == "105")
-                {
-                    ccm3cut.GetInstance().ccmCutStrand_3.acceptStrandStatus(Convert.ToInt32(val));
-                    return;
-                }
-
-                //3#机4流切割状态
-                if (i == "110")
-                {
-                    ccm3cut.GetInstance().ccmCutStrand_4.acceptCutStatus(Convert.ToInt32(val));
-                    return;
-                }
-                //3#机4流开浇状态
-                if (i == "111")
-                {
-                    ccm3cut.GetInstance().ccmCutStrand_4.acceptStrandStatus(Convert.ToInt32(val));
+                    lf5dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "5#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
                 #endregion
 
+
+                #region 3#机切割优化状态采集事件 （已不再使用）
+                //3#机大包到达
+                //if (i == "88")
+                //{
+                //    if (Convert.ToInt32(val) == 1)
+                //    {
+                //        ccm3cut.GetInstance().acceptCasterStatus(1);
+                //    }
+                //    return;
+                //}
+                ////3#机大包开浇
+                //if (i == "89")
+                //{
+                //    if (Convert.ToInt32(val) == 1)
+                //    {
+                //        ccm3cut.GetInstance().acceptCasterStatus(2);
+                //    }
+                //    return;
+                //}
+                ////3#机大包停浇
+                //if (i == "90")
+                //{
+                //    if (Convert.ToInt32(val) == 1)
+                //    {
+                //        ccm3cut.GetInstance().acceptCasterStatus(3);
+                //    }
+                //    return;
+                //}
+
+                ////3#机大包接缝状态
+                //if (i == "91")
+                //{
+                //    if (Convert.ToInt32(val) == 1)
+                //    {
+                //        ccm3cut.GetInstance().acceptLadlefeng(Convert.ToInt32(val));
+                //    }                    
+                //    return;
+                //}
+
+                ////3#机1流切割状态
+                //if (i == "92")
+                //{
+                //    ccm3cut.GetInstance().ccmCutStrand_1.acceptCutStatus(Convert.ToInt32(val));
+                //    return;
+                //}
+                ////3#机1流开浇状态
+                //if (i == "93")
+                //{
+                //    ccm3cut.GetInstance().ccmCutStrand_1.acceptStrandStatus(Convert.ToInt32(val));
+                //    return;
+                //}
+
+                ////3#机2流切割状态
+                //if (i == "98")
+                //{
+                //    ccm3cut.GetInstance().ccmCutStrand_2.acceptCutStatus(Convert.ToInt32(val));
+                //    return;
+                //}
+                ////3#机2流开浇状态
+                //if (i == "99")
+                //{
+                //    ccm3cut.GetInstance().ccmCutStrand_2.acceptStrandStatus(Convert.ToInt32(val));
+                //    return;
+                //}
+
+                ////3#机3流切割状态
+                //if (i == "104")
+                //{
+                //    ccm3cut.GetInstance().ccmCutStrand_3.acceptCutStatus(Convert.ToInt32(val));
+                //    return;
+                //}
+                ////3#机3流开浇状态
+                //if (i == "105")
+                //{
+                //    ccm3cut.GetInstance().ccmCutStrand_3.acceptStrandStatus(Convert.ToInt32(val));
+                //    return;
+                //}
+
+                ////3#机4流切割状态
+                //if (i == "110")
+                //{
+                //    ccm3cut.GetInstance().ccmCutStrand_4.acceptCutStatus(Convert.ToInt32(val));
+                //    return;
+                //}
+                ////3#机4流开浇状态
+                //if (i == "111")
+                //{
+                //    ccm3cut.GetInstance().ccmCutStrand_4.acceptStrandStatus(Convert.ToInt32(val));
+                //    return;
+                //}
+                #endregion
 
                 if (val == null)
                 {

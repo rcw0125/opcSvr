@@ -54,13 +54,16 @@
   <ItemGroup>
     <Compile Include="Db\oraDbHelp.cs" />
     <Compile Include="Db\sqlDbHelp.cs" />
-    <Compile Include="modle\ccm3cut.cs" />
     <Compile Include="modle\ccm5dabaoshenggang.cs" />
-    <Compile Include="modle\ccmCut.cs" />
-    <Compile Include="modle\ccmCutStrand.cs" />
     <Compile Include="modle\ladlefeng.cs" />
     <Compile Include="modle\dabaoshenggang.cs" />
     <Compile Include="modle\L1tag.cs" />
+    <Compile Include="modle\lf1dianhao.cs" />
+    <Compile Include="modle\lf2dianhao.cs" />
+    <Compile Include="modle\lf3dianhao.cs" />
+    <Compile Include="modle\lf4dianhao.cs" />
+    <Compile Include="modle\lf5dianhao.cs" />
+    <Compile Include="modle\lfdianhao.cs" />
     <Compile Include="OpcHelp.cs" />
     <Compile Include="opc\OPCSvr.cs" />
     <Compile Include="opc\PlcSvr.cs" />

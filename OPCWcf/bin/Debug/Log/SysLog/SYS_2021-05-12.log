@@ -1,0 +1,24 @@
+2021-05-12 11:04:34--变量：41；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:36--变量：42；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:37--变量：43；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:37--变量：44；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:38--变量：45；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:38--变量：46；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:40--变量：47；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:41--变量：48；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:42--变量：33；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:42--变量：34；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:42--变量：35；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-05-12 11:04:42--变量：36；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413

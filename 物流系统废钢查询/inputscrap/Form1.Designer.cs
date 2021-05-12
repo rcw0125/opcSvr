@@ -246,11 +246,10 @@
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(118, 22);
-            this.toolStripLabel1.Text = "版本号：2019.12.12";
+            this.toolStripLabel1.Text = "版本号：2021.04.29";
             // 
             // timer2
             // 
-            this.timer2.Enabled = true;
             this.timer2.Interval = 900000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 

@@ -33,3 +33,13 @@ F:\opcSvr\opcBase\obj\Debug\opcBase.pdb
 F:\opcSvr\opcBase\bin\Debug\Rcw.Method.dll
 F:\opcSvr\opcBase\bin\Debug\log4net.dll
 F:\opcSvr\opcBase\obj\Debug\opcBase.csprojAssemblyReference.cache
+F:\2019归档\opcSvr\opcBase\bin\Debug\dll\OPCDAAuto.dll
+F:\2019归档\opcSvr\opcBase\bin\Debug\opcBase.dll
+F:\2019归档\opcSvr\opcBase\bin\Debug\opcBase.pdb
+F:\2019归档\opcSvr\opcBase\bin\Debug\Oracle.ManagedDataAccess.dll
+F:\2019归档\opcSvr\opcBase\bin\Debug\Rcw.Method.dll
+F:\2019归档\opcSvr\opcBase\bin\Debug\log4net.dll
+F:\2019归档\opcSvr\opcBase\obj\Debug\opcBase.csproj.CoreCompileInputs.cache
+F:\2019归档\opcSvr\opcBase\obj\Debug\opcBase.csproj.CopyComplete
+F:\2019归档\opcSvr\opcBase\obj\Debug\opcBase.dll
+F:\2019归档\opcSvr\opcBase\obj\Debug\opcBase.pdb

@@ -25,8 +25,8 @@ namespace OPCWcf
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
         List<valRes> getval(List<valReq> listReq);
 
-        [OperationContract]
-        [WebGet(RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
-        List<ccmCutStrand> getCutInfoById(int  id);
+        //[OperationContract]
+        //[WebGet(RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
+        //List<ccmCutStrand> getCutInfoById(int  id);
     }
 }

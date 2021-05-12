@@ -129,21 +129,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.ucCaster1 = new OPCWcf.ucCaster();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -152,7 +137,6 @@
             this.timer_ladelweight = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer_dabaoshenggang = new System.Windows.Forms.Timer(this.components);
-            this.timer_cut = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -166,10 +150,6 @@
             this.tabPage7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.tabPage9.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -193,13 +173,11 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage9);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 45);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(996, 611);
+            this.tabControl1.Size = new System.Drawing.Size(996, 392);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -219,7 +197,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(874, 442);
+            this.tabPage1.Size = new System.Drawing.Size(988, 366);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "5#机水流量";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -368,7 +346,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(874, 442);
+            this.tabPage2.Size = new System.Drawing.Size(988, 366);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "4#机末端电磁搅拌";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -666,7 +644,7 @@
             this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(874, 442);
+            this.tabPage3.Size = new System.Drawing.Size(988, 366);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "煤气回收数据";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -682,7 +660,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(874, 442);
+            this.dataGridView1.Size = new System.Drawing.Size(988, 366);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage4
@@ -692,7 +670,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(874, 442);
+            this.tabPage4.Size = new System.Drawing.Size(988, 366);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "大包重量下传";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -704,11 +682,11 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 168);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 92);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(868, 271);
+            this.dataGridView2.Size = new System.Drawing.Size(982, 271);
             this.dataGridView2.TabIndex = 1;
             // 
             // checkBox1
@@ -736,7 +714,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(874, 442);
+            this.tabPage5.Size = new System.Drawing.Size(988, 366);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "WCF服务";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -813,7 +791,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(874, 442);
+            this.tabPage6.Size = new System.Drawing.Size(988, 366);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "KepServer测试";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -836,7 +814,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(874, 442);
+            this.tabPage7.Size = new System.Drawing.Size(988, 366);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "5#机大包剩钢";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1189,153 +1167,6 @@
             this.label31.TabIndex = 2;
             this.label31.Text = "4流追踪值：";
             // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.dataGridView4);
-            this.tabPage8.Controls.Add(this.groupBox3);
-            this.tabPage8.Controls.Add(this.button4);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(874, 442);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "3#机切割";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView4.Location = new System.Drawing.Point(3, 222);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowTemplate.Height = 23;
-            this.dataGridView4.Size = new System.Drawing.Size(868, 217);
-            this.dataGridView4.TabIndex = 2;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox42);
-            this.groupBox3.Controls.Add(this.label47);
-            this.groupBox3.Controls.Add(this.textBox41);
-            this.groupBox3.Controls.Add(this.label46);
-            this.groupBox3.Controls.Add(this.textBox40);
-            this.groupBox3.Controls.Add(this.label45);
-            this.groupBox3.Controls.Add(this.textBox39);
-            this.groupBox3.Controls.Add(this.label44);
-            this.groupBox3.Font = new System.Drawing.Font("宋体", 12F);
-            this.groupBox3.Location = new System.Drawing.Point(8, 30);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(656, 69);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "状态";
-            // 
-            // textBox42
-            // 
-            this.textBox42.Location = new System.Drawing.Point(502, 32);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(54, 26);
-            this.textBox42.TabIndex = 1;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(426, 35);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(88, 16);
-            this.label47.TabIndex = 0;
-            this.label47.Text = "大包接缝：";
-            // 
-            // textBox41
-            // 
-            this.textBox41.Location = new System.Drawing.Point(303, 32);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(54, 26);
-            this.textBox41.TabIndex = 1;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(258, 35);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(56, 16);
-            this.label46.TabIndex = 0;
-            this.label46.Text = "停浇：";
-            // 
-            // textBox40
-            // 
-            this.textBox40.Location = new System.Drawing.Point(187, 32);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(54, 26);
-            this.textBox40.TabIndex = 1;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(138, 35);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(56, 16);
-            this.label45.TabIndex = 0;
-            this.label45.Text = "开浇：";
-            // 
-            // textBox39
-            // 
-            this.textBox39.Location = new System.Drawing.Point(60, 29);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(54, 26);
-            this.textBox39.TabIndex = 1;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(15, 32);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(56, 16);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "到站：";
-            // 
-            // button4
-            // 
-            this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(589, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Controls.Add(this.button5);
-            this.tabPage9.Controls.Add(this.ucCaster1);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(988, 585);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "铸坯跟踪界面";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(683, 539);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // ucCaster1
-            // 
-            this.ucCaster1.BackColor = System.Drawing.SystemColors.Control;
-            this.ucCaster1.Location = new System.Drawing.Point(0, 3);
-            this.ucCaster1.Name = "ucCaster1";
-            this.ucCaster1.Size = new System.Drawing.Size(985, 530);
-            this.ucCaster1.TabIndex = 0;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Cyan;
@@ -1361,7 +1192,7 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 632);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 413);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(996, 24);
             this.menuStrip1.TabIndex = 3;
@@ -1373,7 +1204,7 @@
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Red;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(164, 20);
-            this.toolStripMenuItem1.Text = "版本号：2020.07.22";
+            this.toolStripMenuItem1.Text = "版本号：2021.03.10";
             // 
             // panel2
             // 
@@ -1402,17 +1233,12 @@
             this.timer_dabaoshenggang.Interval = 1000;
             this.timer_dabaoshenggang.Tick += new System.EventHandler(this.timer_dabaoshenggang_Tick);
             // 
-            // timer_cut
-            // 
-            this.timer_cut.Interval = 1000;
-            this.timer_cut.Tick += new System.EventHandler(this.timer_cut_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(996, 656);
+            this.ClientSize = new System.Drawing.Size(996, 437);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
@@ -1440,11 +1266,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1562,22 +1383,6 @@
         private System.Windows.Forms.TextBox textBox38;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Timer timer_cut;
-        private System.Windows.Forms.TabPage tabPage9;
-        private ucCaster ucCaster1;
-        private System.Windows.Forms.Button button5;
     }
 }
 

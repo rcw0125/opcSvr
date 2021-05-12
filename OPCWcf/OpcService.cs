@@ -25,20 +25,20 @@ namespace OPCWcf
         }
 
 
-        public List<ccmCutStrand> getCutInfoById(int id)
-        {
-            List<ccmCutStrand> listcut = new List<ccmCutStrand>();
-            if (id == 3)
-            {
-                listcut.Add(ccm3cut.GetInstance().ccmCutStrand_1);
-                listcut.Add(ccm3cut.GetInstance().ccmCutStrand_2);
-                listcut.Add(ccm3cut.GetInstance().ccmCutStrand_3);
-                listcut.Add(ccm3cut.GetInstance().ccmCutStrand_4);
+        //public List<ccmCutStrand> getCutInfoById(int id)
+        //{
+        //    List<ccmCutStrand> listcut = new List<ccmCutStrand>();
+        //    if (id == 3)
+        //    {
+        //        listcut.Add(ccm3cut.GetInstance().ccmCutStrand_1);
+        //        listcut.Add(ccm3cut.GetInstance().ccmCutStrand_2);
+        //        listcut.Add(ccm3cut.GetInstance().ccmCutStrand_3);
+        //        listcut.Add(ccm3cut.GetInstance().ccmCutStrand_4);
 
 
 
-            }
-            return listcut;
-        }
+        //    }
+        //    return listcut;
+        //}
     }
 }

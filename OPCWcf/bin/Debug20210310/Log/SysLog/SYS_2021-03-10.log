@@ -1,0 +1,7 @@
+2021-03-10 22:42:41--变量：52；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-03-10 22:42:45--变量：0；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 389
+2021-03-10 22:42:47--变量：52；getVal方法获取值时出错System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 opcBase.OPCSvr.getVal(Int32 id) 位置 F:\2019归档\opcSvr\opcBase\opc\OPCSvr.cs:行号 413
+2021-03-10 22:43:39--loadValList方法加载变量列表时出错
