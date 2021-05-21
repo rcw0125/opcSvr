@@ -17,7 +17,7 @@ namespace opcBase
             if (instance == null)
             {
                 instance = new OPCSvr();
-                instance.type = 5;
+                instance.type = 0;
                 instance.loadValList();
                 instance.connectOPC();
             }

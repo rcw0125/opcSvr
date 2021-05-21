@@ -4,3 +4,6 @@
 如果从网上下载的opcdaauto.dll 文件放到了Windows\system32中执行上面的命令后提示不兼容，
 那就放到systemwow64中，然后执行上述命令，尽可能用管理员权限运行CMD；如果你的系统已经更新到最新，
 64位系统的话在systemwow64中应该会有opcdaauto.dll文件，我的笔记本就是已经存在了。
+
+
+还是有问题 使用完整路径注册 regsvr32 C:\Windows\SysWOW64\opcdaauto.dll

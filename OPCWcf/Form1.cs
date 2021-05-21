@@ -21,19 +21,19 @@ namespace OPCWcf
         /// <summary>
         /// 水流量变量地址起始位置
         /// </summary>
-        int sllwz = 1;
+        int sllwz = 44;
         /// <summary>
         /// 末端电磁搅拌变量地址起始位置
         /// </summary>
-        int mdwz = 33;
+        int mdwz = 28;
         /// <summary>
         /// 煤气回收变量起始位置
         /// </summary>
-        int mqhswz = 49;
+        int mqhswz = 11;
         /// <summary>
-        /// 大包重量起始地址
+        /// 3#、4#CCM大包重量起始地址
         /// </summary>
-        int dbzlwz = 71;
+        int dbzlwz = 76;
         /// <summary>
         /// 大包剩钢起始位置
         /// </summary>
@@ -47,6 +47,13 @@ namespace OPCWcf
         dabaoshenggang dabaoshenggang5 = new dabaoshenggang();
          private void Form1_Load(object sender, EventArgs e)
         {
+
+
+            //string sql = "select xuhao as id,L1name as name,scanrate,datatype from  L1OPC_TAG where used=1 and type=" + 0 + " order by id ";
+            ////DbMySql.GetDataTable(sql);
+            ////var dt = new sqlDbHelp().Query(sql);
+            //var dtb = DbMySql.GetDataTable(sql);
+            //var count = dtb.Rows.Count;
             setupDbsg();
             setupMqhs();
             setCasterWeightInfo();
@@ -57,17 +64,22 @@ namespace OPCWcf
             //服务运行中
             serviceList sl = new serviceList();
             sl.Open();
+            KepServer.GetInstance();
+
+
+
             //激活两个timer
-            //timer_mqhs.Enabled = true;
-            //timer_sll.Enabled = true;
+            timer_mqhs.Enabled = true;
+            timer_sll.Enabled = true;
 
             //2021-03-11 取消了大包剩钢的计算
-           // timer_dabaoshenggang.Enabled = true;
-
-
+            // timer_dabaoshenggang.Enabled = true;
 
         }
 
+        /// <summary>
+        /// 设置5#机大包剩钢参数
+        /// </summary>
         public void setupDbsg()
         {
             ccm5dabaoshenggang.GetInstance().valid_status = ladleweightwz;
@@ -80,14 +92,16 @@ namespace OPCWcf
             //dabaoshenggang5.valid_genzongzhi2 = ladleweightwz + 6;
             //dabaoshenggang5.valid_genzongzhi3 = ladleweightwz + 7;
             //dabaoshenggang5.valid_genzongzhi4 = ladleweightwz + 8;
-            ccm5dabaoshenggang.GetInstance().valid_tundishweight = ladleweightwz + 1;
-            ccm5dabaoshenggang.GetInstance().valid_ladelweight = ladleweightwz + 2;
-            ccm5dabaoshenggang.GetInstance().valid_A_weight = ladleweightwz + 3;
-            ccm5dabaoshenggang.GetInstance().valid_B_weight = ladleweightwz + 4;
-            ccm5dabaoshenggang.GetInstance().valid_genzongzhi1 = ladleweightwz + 5;
-            ccm5dabaoshenggang.GetInstance().valid_genzongzhi2 = ladleweightwz + 6;
-            ccm5dabaoshenggang.GetInstance().valid_genzongzhi3 = ladleweightwz + 7;
-            ccm5dabaoshenggang.GetInstance().valid_genzongzhi4 = ladleweightwz + 8;
+            ccm5dabaoshenggang.GetInstance().valid_A_weight = ladleweightwz + 2;
+            ccm5dabaoshenggang.GetInstance().valid_B_weight = ladleweightwz + 3;
+            ccm5dabaoshenggang.GetInstance().valid_ladelweight = ladleweightwz + 4;
+            ccm5dabaoshenggang.GetInstance().valid_tundishweight = ladleweightwz + 5;
+            
+            
+            ccm5dabaoshenggang.GetInstance().valid_genzongzhi1 = ladleweightwz + 6;
+            ccm5dabaoshenggang.GetInstance().valid_genzongzhi2 = ladleweightwz + 7;
+            ccm5dabaoshenggang.GetInstance().valid_genzongzhi3 = ladleweightwz + 8;
+            ccm5dabaoshenggang.GetInstance().valid_genzongzhi4 = ladleweightwz + 9;
         }
 
         /// <summary>
@@ -100,7 +114,7 @@ namespace OPCWcf
             try
             {
 
-                return Convert.ToDouble(PlcSvr.GetInstance().getVal(id));
+                return Convert.ToDouble(KepServer.GetInstance().getVal(id));
             }
             catch
             {
@@ -237,67 +251,69 @@ namespace OPCWcf
              dataGridView3.DataSource = null;
              dataGridView3.DataSource = listCasterInfo;
          }
-         #endregion
-       
+        #endregion
 
+        #region 设置煤气回收参数
         /// <summary>
         /// 设置煤气回收参数
         /// </summary>
-         public void setupMqhs()
-         {
-             listMqhs.Add(bof1);
-             listMqhs.Add(bof2);
-             listMqhs.Add(bof3);
-             listMqhs.Add(bof4);       
-             bof1.bofid = "S22";
-             bof1.tqcount = 0;
-             bof1.tqsk = 0;
-             bof1.tqflag = 0;
-             bof1.tapid = mqhswz;
-             bof1.blowtimeid = mqhswz+1;
-             bof1.o_hangliangid = mqhswz + 2;
-             bof1.blowflagid = mqhswz + 3;
-             bof1.fjid = mqhswz + 4;
-             bof1.co5id = mqhswz + 20;
-             bof1.co8id = mqhswz + 21;
+        public void setupMqhs()
+        {
+            listMqhs.Add(bof1);
+            //listMqhs.Add(bof2);
+            listMqhs.Add(bof3);
+            listMqhs.Add(bof4);
+            bof1.bofid = "S22";
+            bof1.tqcount = 0;
+            bof1.tqsk = 0;
+            bof1.tqflag = 0;
+            bof1.tapid = mqhswz; //出钢信号地址
+            bof1.blowflagid = mqhswz + 1; //吹炼信号
+            bof1.blowtimeid = mqhswz + 2;     //吹氧时间
+            bof1.o_hangliangid = mqhswz + 3;  //煤气氧含量      
+            bof1.fjid = mqhswz + 4;           //风机回收
+            bof1.co5id = mqhswz + 15;
+            bof1.co8id = mqhswz + 16;
 
-             bof2.bofid = "S21";
-             bof2.tqcount = 0;
-             bof2.tqsk = 0;
-             bof2.tqflag = 0;
-             bof2.tapid = mqhswz + 5;
-             bof2.blowtimeid = mqhswz+6;
-             bof2.o_hangliangid = mqhswz + 7;
-             bof2.blowflagid = mqhswz + 8;
-             bof2.fjid = mqhswz + 9;
-             bof2.co5id = mqhswz + 20;
-             bof2.co8id = mqhswz + 21;
+            //bof2.bofid = "S21";
+            //bof2.tqcount = 0;
+            //bof2.tqsk = 0;
+            //bof2.tqflag = 0;
+            //bof2.tapid = mqhswz + 5;
+            //bof2.blowtimeid = mqhswz+6;
+            //bof2.o_hangliangid = mqhswz + 7;
+            //bof2.blowflagid = mqhswz + 8;
+            //bof2.fjid = mqhswz + 9;
+            //bof2.co5id = mqhswz + 20;
+            //bof2.co8id = mqhswz + 21;
 
-             bof3.bofid = "S23";
-             bof3.tqcount = 0;
-             bof3.tqsk = 0;
-             bof3.tqflag = 0;
-             bof3.tapid = mqhswz + 10;
-             bof3.blowtimeid = mqhswz + 11;
-             bof3.o_hangliangid = mqhswz + 12;
-             bof3.blowflagid = mqhswz + 13;
-             bof3.fjid = mqhswz + 14;
-             bof3.co5id = mqhswz + 20;
-             bof3.co8id = mqhswz + 21;
+            bof3.bofid = "S23";
+            bof3.tqcount = 0;
+            bof3.tqsk = 0;
+            bof3.tqflag = 0;
+            bof3.tapid = mqhswz + 5; //出钢信号地址
+            bof3.blowflagid = mqhswz + 6; //吹炼信号
+            bof3.blowtimeid = mqhswz + 7;     //吹氧时间
+            bof3.o_hangliangid = mqhswz + 8;  //煤气氧含量      
+            bof3.fjid = mqhswz + 9;           //风机回收
+            bof3.co5id = mqhswz + 15;
+            bof3.co8id = mqhswz + 16;
 
-             bof4.bofid = "S24";
-             bof4.tqcount = 0;
-             bof4.tqsk = 0;
-             bof4.tqflag = 0;
-             bof4.tapid = mqhswz + 15;
-             bof4.blowtimeid = mqhswz + 16;
-             bof4.o_hangliangid = mqhswz + 17;
-             bof4.blowflagid = mqhswz + 18;
-             bof4.fjid = mqhswz + 19;
-             bof4.co5id = mqhswz + 20;
-             bof4.co8id = mqhswz + 21;
-         }
+            bof4.bofid = "S24";
+            bof4.tqcount = 0;
+            bof4.tqsk = 0;
+            bof4.tqflag = 0;
+            bof4.tapid = mqhswz + 10; //出钢信号地址
+            bof4.blowflagid = mqhswz + 11; //吹炼信号
+            bof4.blowtimeid = mqhswz + 12;     //吹氧时间
+            bof4.o_hangliangid = mqhswz + 13;  //煤气氧含量      
+            bof4.fjid = mqhswz + 14;           //风机回收
+            bof4.co5id = mqhswz + 15;
+            bof4.co8id = mqhswz + 16;
+        }
 
+
+        #endregion
 
         public void getCaster5LadleInfo()
         {
@@ -312,15 +328,15 @@ namespace OPCWcf
             }
 
 
-            textBox28.Text = getVal(ladleweightwz + 1).ToString();
-            textBox29.Text = getVal(ladleweightwz + 2).ToString();
-            textBox30.Text = getVal(ladleweightwz + 3).ToString();
-            textBox31.Text = getVal(ladleweightwz + 4).ToString();
+            textBox28.Text = getVal(ladleweightwz + 5).ToString();
+            textBox29.Text = getVal(ladleweightwz + 4).ToString();
+            textBox30.Text = getVal(ladleweightwz + 2).ToString();
+            textBox31.Text = getVal(ladleweightwz + 3).ToString();
 
-            textBox23.Text = getVal(ladleweightwz + 5).ToString();
-            textBox24.Text = getVal(ladleweightwz + 6).ToString();
-            textBox25.Text = getVal(ladleweightwz + 7).ToString();
-            textBox26.Text = getVal(ladleweightwz + 8).ToString();
+            textBox23.Text = getVal(ladleweightwz + 6).ToString();
+            textBox24.Text = getVal(ladleweightwz + 7).ToString();
+            textBox25.Text = getVal(ladleweightwz + 8).ToString();
+            textBox26.Text = getVal(ladleweightwz + 9).ToString();
 
             textBox27.Text = ccm5dabaoshenggang.GetInstance().status;
             textBox32.Text = ccm5dabaoshenggang.GetInstance().tundishweight.ToString();
@@ -339,7 +355,7 @@ namespace OPCWcf
             try
             {
                 bof1.calHssk();
-                bof2.calHssk();
+                //bof2.calHssk();
                 bof3.calHssk();
                 bof4.calHssk();
             }
@@ -372,9 +388,9 @@ namespace OPCWcf
                  case "tabPage4":
                      getCasterWeightData();
                      break;
-                case "tabPage5":
-                    getWcfStatus();
-                    break;
+                //case "tabPage5":
+                //    getWcfStatus();
+                //    break;
                 case "tabPage7":
                     getCaster5LadleInfo();
                     break;
@@ -522,6 +538,7 @@ namespace OPCWcf
          }
          public void getCasterWeightData()
          {
+             loadLadleWeight();
              dataGridView2.DataSource = null;
              casterweight3.L1weight = getVal(casterweight3.L1ValId).ToString();
              casterweight4.L1weight = getVal(casterweight4.L1ValId).ToString();
@@ -546,7 +563,7 @@ namespace OPCWcf
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            string s = KepServer.GetInstance().getVal(76);
+            string s = KepServer.GetInstance().getVal(124);
             MessageBox.Show(s);
         }
 

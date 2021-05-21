@@ -17,7 +17,7 @@ namespace opcBase
             if (instance == null)
             {
                 instance = new lfdianhao();             
-                instance.setupDateConfig("1", 116);
+                instance.setupDateConfig("1", 2);
             }
             return instance;
         }

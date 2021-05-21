@@ -36,6 +36,7 @@ F:\opcSvr\opcBase\obj\Debug\opcBase.csprojAssemblyReference.cache
 F:\2019归档\opcSvr\opcBase\bin\Debug\dll\OPCDAAuto.dll
 F:\2019归档\opcSvr\opcBase\bin\Debug\opcBase.dll
 F:\2019归档\opcSvr\opcBase\bin\Debug\opcBase.pdb
+F:\2019归档\opcSvr\opcBase\bin\Debug\MySql.Data.dll
 F:\2019归档\opcSvr\opcBase\bin\Debug\Oracle.ManagedDataAccess.dll
 F:\2019归档\opcSvr\opcBase\bin\Debug\Rcw.Method.dll
 F:\2019归档\opcSvr\opcBase\bin\Debug\log4net.dll

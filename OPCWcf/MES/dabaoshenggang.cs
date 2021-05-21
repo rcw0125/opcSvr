@@ -136,11 +136,11 @@ namespace OPCWcf
 
         public double getValue(int id)
         {
-            return Convert.ToDouble(PlcSvr.GetInstance().getVal(id));
+            return Convert.ToDouble(KepServer.GetInstance().getVal(id));
         }
         public int getValueInt(int id)
         {
-            return Convert.ToInt16(PlcSvr.GetInstance().getVal(id));
+            return Convert.ToInt16(KepServer.GetInstance().getVal(id));
         }
     }
 }

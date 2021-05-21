@@ -24,7 +24,7 @@ namespace OPCWcf
                 }
                 else
                 {
-                    if (PlcSvr.GetInstance().setVal(L1ValId, curweight) == true)
+                    if (KepServer.GetInstance().setVal(L1ValId, curweight) == true)
                     {
                         xiachuanFlag = 1;
                     }
@@ -34,7 +34,7 @@ namespace OPCWcf
             {
                 xiachuanFlag = 0;
                 lastweight = curweight.ToString();
-                if (PlcSvr.GetInstance().setVal(L1ValId, curweight) == true)
+                if (KepServer.GetInstance().setVal(L1ValId, curweight) == true)
                 {
                     xiachuanFlag = 1;
                 }

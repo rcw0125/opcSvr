@@ -23,8 +23,6 @@ namespace OPCWcf
         {          
             return OpcHelp.GetOpcVal(listReq);
         }
-
-
         //public List<ccmCutStrand> getCutInfoById(int id)
         //{
         //    List<ccmCutStrand> listcut = new List<ccmCutStrand>();

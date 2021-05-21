@@ -63,8 +63,10 @@ namespace opcBase
         {
             try
             {
-                string sql = "select id,L1name as name,scanrate,datatype from  L1OPC_TAG where used=1 and type=" + type + " order by id ";
-                var dt = new sqlDbHelp().Query(sql);
+                string sql = "select xuhao as id,L1name as name,scanrate,datatype from  L1OPC_TAG where used=1 and type=" + type + " order by id ";
+                //DbMySql.GetDataTable(sql);
+                //var dt = new sqlDbHelp().Query(sql);
+                var dt = DbMySql.GetDataTable(sql);
                 listTag = dt_to_list(dt);
             }
             catch (Exception ex)
@@ -108,7 +110,8 @@ namespace opcBase
             {
                 if (type == 0)
                 {
-                    KepServer.Connect("OPC.SimaticNET", "192.168.48.232");
+                    // KepServer.Connect("OPC.SimaticNET", "192.168.48.232");
+                    KepServer.Connect("KEPware.KEPServerEx.V6", "192.168.48.233");
                 }
                 else if (type == 1)
                 {
@@ -128,8 +131,8 @@ namespace opcBase
                 }
                 else if (type == 5)
                 {
-                    KepServer.Connect("KEPware.KEPServerEx.V5", "192.168.48.232");
-                   // KepServer.Connect("KEPware.KEPServerEx.V6", "192.168.48.6");
+                    //KepServer.Connect("KEPware.KEPServerEx.V5", "192.168.48.232");
+                    KepServer.Connect("KEPware.KEPServerEx.V6", "192.168.48.233");
                 }
                 opc_connected = true;
                 KepGroups = KepServer.OPCGroups;
@@ -189,7 +192,7 @@ namespace opcBase
                     }
                     return;
                 }
-                if (i == "87")
+                if (i == "79")
                 {
                     if (Convert.ToInt32(val) == 1)
                     {
@@ -200,30 +203,38 @@ namespace opcBase
                 #endregion
 
                 #region 精炼炉电耗事件
-                if (i == "117")
+                if (i == "1")
                 {
                     lf1dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
-                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "1#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "----1#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
-                if (i == "119")
+                if (i == "3")
                 {
                     lf2dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
-                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "2#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "----2#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
-                if (i == "121")
+                if (i == "5")
                 {
                     lf3dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
-                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "3#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "----3#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
-                if (i == "123")
+                if (i == "7")
                 {
                     lf5dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
-                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "5#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "----5#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
+
+                if (i == "9")
+                {
+                    lf4dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "----4#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
+                    return;
+                }
+
                 #endregion
 
 
@@ -323,15 +334,15 @@ namespace opcBase
                 {
                     return;
                 }
-                L1tag curitem = listTag.Find(o => o.id == Convert.ToInt16(i));
-                if (curitem.datatype == 0)
-                {
-                    savedata(Convert.ToInt16(i), Convert.ToInt32(val));
-                }
-                else
-                {
-                    savedata(Convert.ToInt16(i), Math.Round(Convert.ToDouble(val), 3));
-                }
+                //L1tag curitem = listTag.Find(o => o.id == Convert.ToInt16(i));
+                //if (curitem.datatype == 0)
+                //{
+                //    savedata(Convert.ToInt16(i), Convert.ToInt32(val));
+                //}
+                //else
+                //{
+                //    savedata(Convert.ToInt16(i), Math.Round(Convert.ToDouble(val), 3));
+                //}
                 ////如果扫描周期小于1，按事件采集的，则不向数据库插入数据
                 //if (curitem.scanrate < 1)
                 //{
@@ -392,11 +403,11 @@ namespace opcBase
                 //根据扫描周期、数据类型，返回变量的值
                 if (curitem.scanrate >= 1)
                 {
-                    if (curitem.datatype==1)
+                    if (curitem.datatype==0)
                     {                
                         return (Math.Round(Convert.ToDouble(KepGroup.OPCItems.GetOPCItem(curitem.itmHandleServer).Value), 2)).ToString();
                     }
-                    else if (curitem.datatype == 0)
+                    else if (curitem.datatype == 1)
                     {                       
                         return (Convert.ToInt32(KepGroup.OPCItems.GetOPCItem(curitem.itmHandleServer).Value)).ToString();
                     }
@@ -408,11 +419,11 @@ namespace opcBase
                 }
                 else
                 {
-                    if (curitem.datatype == 1)
+                    if (curitem.datatype == 0)
                     {                                        
                         return (Math.Round(Convert.ToDouble(KepEventGroup.OPCItems.GetOPCItem(curitem.itmHandleServer).Value), 2)).ToString().ToString();
                     }
-                    else if (curitem.datatype == 0)
+                    else if (curitem.datatype == 1)
                     {                    
                         return (Convert.ToInt32(KepEventGroup.OPCItems.GetOPCItem(curitem.itmHandleServer).Value)).ToString();
                     }

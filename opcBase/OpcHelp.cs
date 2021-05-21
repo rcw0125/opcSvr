@@ -22,7 +22,7 @@ namespace opcBase
                 curRes.id = item.id;
                 if (item.type == 0)
                 {
-                    curRes.val=PlcSvr.GetInstance().getVal(item.id);
+                    curRes.val=KepServer.GetInstance().getVal(item.id);
                 }
                 else if (item.type == 1)
                 {
@@ -51,8 +51,14 @@ namespace opcBase
             if (listTag == null)
             {
                 listTag = new List<L1tag>();
-                string sql = "select id,type from  L1OPC_TAG where used=1  order by id ";
-                var dt = new sqlDbHelp().Query(sql);
+                //string sql = "select id,type from  L1OPC_TAG where used=1  order by id ";
+                //var dt = new sqlDbHelp().Query(sql);
+
+                string sql = "select xuhao as id,type  L1OPC_TAG where used=1  order by id ";
+                //DbMySql.GetDataTable(sql);
+                //var dt = new sqlDbHelp().Query(sql);
+                var dt = DbMySql.GetDataTable(sql);
+
                 if (dt != null && dt.Rows.Count > 0)
                 {
                     foreach (DataRow item in dt.Rows)
@@ -87,7 +93,7 @@ namespace opcBase
             {
                 if (item.type == 0)
                 {
-                    val = PlcSvr.GetInstance().getVal(id);
+                    val = KepServer.GetInstance().getVal(id);
                 }
                 else if (item.type == 1)
                 {

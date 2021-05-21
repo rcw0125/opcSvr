@@ -72,7 +72,7 @@ namespace opcBase
 
         public double getValue(int id)
         {
-            return Convert.ToDouble(PlcSvr.GetInstance().getVal(id));
+            return Convert.ToDouble(KepServer.GetInstance().getVal(id));
         }
     }
 }

@@ -154,3 +154,4 @@ F:\2019归档\opcSvr\OPCWcf\obj\x86\Debug\OPCWcf.exe
 F:\2019归档\opcSvr\OPCWcf\obj\x86\Debug\OPCWcf.pdb
 F:\2019归档\opcSvr\OPCWcf\bin\Debug\log4net.dll
 F:\2019归档\opcSvr\OPCWcf\obj\x86\Debug\OPCWcf.csprojAssemblyReference.cache
+F:\2019归档\opcSvr\OPCWcf\bin\Debug\MySql.Data.dll

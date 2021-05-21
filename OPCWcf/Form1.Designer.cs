@@ -1204,7 +1204,7 @@
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Red;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(164, 20);
-            this.toolStripMenuItem1.Text = "版本号：2021.03.10";
+            this.toolStripMenuItem1.Text = "版本号：2021.05.13";
             // 
             // panel2
             // 
