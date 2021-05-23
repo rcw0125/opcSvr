@@ -9,7 +9,7 @@ namespace opcBase
 {
     public class DbMySql
     {
-        static string ConnectionString = string.Format("Data Source={0};Initial Catalog={1};Persist Security Info=True;User ID={2};Password={3};Allow User Variables=True", "192.168.36.113", "lgdb", "root", "root");
+        static string ConnectionString = string.Format("Data Source={0};Initial Catalog={1};Persist Security Info=True;User ID={2};Password={3};Allow User Variables=True", "192.168.36.9", "lgdb", "root", "root");
 
         public  static System.Data.IDbConnection GetDbConnection()
         {
