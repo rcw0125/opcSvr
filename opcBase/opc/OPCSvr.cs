@@ -223,15 +223,15 @@ namespace opcBase
                 }
                 if (i == "7")
                 {
-                    lf5dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
-                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "----5#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
+                    lf4dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "----4#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
 
                 if (i == "9")
                 {
-                    lf4dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
-                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "----4#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
+                    lf5dianhao.GetInstance().calDianhao(Convert.ToInt32(val));
+                    SysLog.Log(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "----5#精炼炉电耗--变量：" + i + ";值：" + val.ToString());
                     return;
                 }
 
