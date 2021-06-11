@@ -238,9 +238,9 @@ namespace opcBase
                 #endregion
 
                 #region 废钢场称重事件
-                if (i == "88")
+                if (i == "89")
                 {
-                    fg5weight.GetInstance().calWeight(Convert.ToInt32(val));
+                    fg5weight.GetInstance().calWeight(Convert.ToDouble(val));
                     return;
                 }
                

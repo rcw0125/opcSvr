@@ -26,25 +26,25 @@ namespace opcBase
             val_tareweight = tareweightid;
         }
 
-        public Int32 caijishijian = 0;
-        public void calWeight(Int32  shijian)
+        public double preweight = 0;
+        public void calWeight(double netweight)
         {
-            if (shijian == 0)
+            if (netweight == 0)
             {
                 return;
             }
-            if (shijian == caijishijian)
+            if (netweight == preweight)
             {
                 return;
             }
             else
             {
 
-                caijishijian = shijian;
+                preweight = netweight;
                 //暂停2秒钟
-                Thread.Sleep(2000);
+                //Thread.Sleep(2000);
                 #region 查询电耗数据，查询当前精炼炉炉号，将电量保存到数据库
-                double netweight =Math.Round( getValue(val_netweight),2);
+                //double netweight =Math.Round( getValue(val_netweight),2);
                 double tareweight = Math.Round(getValue(val_tareweight), 2);
                 try
                 {               
