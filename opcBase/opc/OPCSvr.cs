@@ -111,7 +111,7 @@ namespace opcBase
                 if (type == 0)
                 {
                     // KepServer.Connect("OPC.SimaticNET", "192.168.48.232");
-                    KepServer.Connect("KEPware.KEPServerEx.V6", "192.168.48.233");
+                    KepServer.Connect("KEPware.KEPServerEx.V6", "192.168.36.113");
                 }
                 else if (type == 1)
                 {
@@ -237,6 +237,14 @@ namespace opcBase
 
                 #endregion
 
+                #region 废钢场称重事件
+                if (i == "88")
+                {
+                    fg5weight.GetInstance().calWeight(Convert.ToInt32(val));
+                    return;
+                }
+               
+                #endregion
 
                 #region 3#机切割优化状态采集事件 （已不再使用）
                 //3#机大包到达
