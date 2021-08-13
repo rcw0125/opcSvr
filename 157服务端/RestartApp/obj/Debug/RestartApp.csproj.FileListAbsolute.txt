@@ -43,3 +43,12 @@ I:\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.csproj.GenerateResource.c
 I:\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.csproj.CoreCompileInputs.cache
 I:\opcSvr\157服务端\RestartApp\obj\Debug\Mes辅助工具.exe
 I:\opcSvr\157服务端\RestartApp\obj\Debug\Mes辅助工具.pdb
+F:\2019归档\opcSvr\157服务端\RestartApp\bin\Debug\Mes辅助工具.exe
+F:\2019归档\opcSvr\157服务端\RestartApp\bin\Debug\Mes辅助工具.pdb
+F:\2019归档\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.csprojAssemblyReference.cache
+F:\2019归档\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.Form1.resources
+F:\2019归档\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.Properties.Resources.resources
+F:\2019归档\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.csproj.GenerateResource.cache
+F:\2019归档\opcSvr\157服务端\RestartApp\obj\Debug\RestartApp.csproj.CoreCompileInputs.cache
+F:\2019归档\opcSvr\157服务端\RestartApp\obj\Debug\Mes辅助工具.exe
+F:\2019归档\opcSvr\157服务端\RestartApp\obj\Debug\Mes辅助工具.pdb

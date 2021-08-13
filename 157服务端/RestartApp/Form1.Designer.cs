@@ -386,7 +386,7 @@
             this.版本号20190910ToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.版本号20190910ToolStripMenuItem.Name = "版本号20190910ToolStripMenuItem";
             this.版本号20190910ToolStripMenuItem.Size = new System.Drawing.Size(130, 21);
-            this.版本号20190910ToolStripMenuItem.Text = "版本号：2020.07.14";
+            this.版本号20190910ToolStripMenuItem.Text = "版本号：2021.08.13";
             // 
             // timer_suobiao
             // 

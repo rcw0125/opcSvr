@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -52,6 +53,16 @@ namespace RestartApp
         /// </summary>
         public void AutoCloseClient()
         {
+            //更改36.9监测值
+            try
+            {
+                WebClient wc1 = new WebClient();
+                Stream stream = wc1.OpenRead("http://192.168.36.9:90/mesHandler.ashx?type=mes");
+            }
+            catch
+            { 
+            }
+            //更改数据库值
             Service service = new Service();
             string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             service.Update("insert into A_RESET_LOG( c_ip, c_type) values('192.168.36.157', '关闭开始') ");
