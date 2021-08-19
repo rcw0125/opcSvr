@@ -80,7 +80,7 @@
             this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.Red;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(111, 17);
-            this.toolStripStatusLabel1.Text = "版本号：2021.2.22";
+            this.toolStripStatusLabel1.Text = "版本号：2021.8.19";
             // 
             // tabPage4
             // 
