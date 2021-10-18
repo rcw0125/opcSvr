@@ -1,0 +1,11 @@
+F:\2019归档\opcSvr\MESRTrans\bin\Debug\MESRTrans.exe
+F:\2019归档\opcSvr\MESRTrans\bin\Debug\MESRTrans.pdb
+F:\2019归档\opcSvr\MESRTrans\obj\Debug\MESRTrans.csprojAssemblyReference.cache
+F:\2019归档\opcSvr\MESRTrans\obj\Debug\MESRTrans.Properties.Resources.resources
+F:\2019归档\opcSvr\MESRTrans\obj\Debug\MESRTrans.csproj.GenerateResource.cache
+F:\2019归档\opcSvr\MESRTrans\obj\Debug\MESRTrans.csproj.CoreCompileInputs.cache
+F:\2019归档\opcSvr\MESRTrans\obj\Debug\MESRTrans.exe
+F:\2019归档\opcSvr\MESRTrans\obj\Debug\MESRTrans.pdb
+F:\2019归档\opcSvr\MESRTrans\obj\Debug\MESRTrans.Form1.resources
+F:\2019归档\opcSvr\MESRTrans\bin\Debug\MESRTrans.exe.config
+F:\2019归档\opcSvr\MESRTrans\obj\Debug\MESRTrans.csproj.CopyComplete

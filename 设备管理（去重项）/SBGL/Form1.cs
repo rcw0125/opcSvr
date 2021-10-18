@@ -1245,22 +1245,26 @@ namespace SBGL
         #endregion
         private void button7_Click(object sender, EventArgs e)
         {
-            // calYueSbgzbx(dateTimePicker1.Value.ToString("yyyy-MM"));
-            ////每天执行
-            //exc_jx_expire();
-
-            calYueSbgzbx(DateTime.Now.AddDays(-7).ToString("yyyy-MM"));
+            curday = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
+            string preday = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
+            //计划检修超期计算
+            exc_jx_expire();
             if (DateTime.Now.Day == 1)
             {
                 calYueSbgzbx(DateTime.Now.AddDays(-1).ToString("yyyy-MM"));
-                //yuecaljhjx();
+                yuecaljhjx();
             }
-            //if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
-            //{
-            //    calSbgzbx();
-            //    caljhjx();
-            //    caldjzb();
-            //}
+            //2021-02-22 更改为周日5点运行
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+            {
+                calSbgzbx();
+                caljhjx();
+                caldjzb();
+                // 计算设备点检周报
+                //int zhou = (DateTime.Now.Day - 1) / 7 + 1;                
+                //string insql = "call xgmes.jisuan_sbzb('" + DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd") + "','" + DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd") + "'," + zhou + ") ";
+                //DbContext.ExeSql("xgmesweb", insql);
+            }
         }
 
 
