@@ -14,13 +14,13 @@ namespace MESRTrans
         {
             InitializeComponent();
 
-            gongxuConfig("2#转炉");
-            gongxuConfig("3#转炉");
-            gongxuConfig("4#转炉");
-            gongxuConfig("3#铸机");
-            gongxuConfig("4#铸机");
-            gongxuConfig("5#铸机");
-            gongxuConfig("6#铸机");
+            gongxuConfig("2号转炉");
+            gongxuConfig("3号转炉");
+            gongxuConfig("4号转炉");
+            gongxuConfig("3号铸机");
+            gongxuConfig("4号铸机");
+            gongxuConfig("5号铸机");
+            gongxuConfig("6号铸机");
             try
             {
                 getBofHeatid();

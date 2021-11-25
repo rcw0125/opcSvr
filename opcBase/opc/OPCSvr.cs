@@ -386,6 +386,7 @@ namespace opcBase
         #endregion
 
 
+
         #region 4、根据变量ID获取OPC变量的值
         /// <summary>
         /// 根据变量id获取服务端句柄
@@ -510,7 +511,37 @@ namespace opcBase
         }
         #endregion
 
+        #region 1、设备状态变化时，更新设备的状态、时间。查询设备的最后一条记录，记录设备变化日志，关联到此记录上。
+        public void saveEquipStatus(string tagid,double val)
+        {
+            //
+            string status="";
+            if (val > 0)
+            {
+                status = "启动";
+            }
+            else
+            {
 
+                status = "停止";
+            }
+            string exeSql = "update ems_equip_cfg set changetime= DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s'),status='"+status+"' where opctagid='" + tagid + "'";
+            DbMySql.ExeSql(exeSql);
+
+            int id = 0;
+
+            //查询设备最新的停送记录id
+            string strSql = "select id from ems_jizhi where sbname=( select sbname from ems_equip_cfg where opctagid='11') order by id desc LIMIT 1";
+            var dt=DbMySql.GetDataTable(strSql);
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                id = Convert.ToInt32(dt.Rows[0]["id"]);
+                
+            }
+            string updateSql = "update ems_jizhi set dongzuonote=CONCAT(dongzuonote,DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s'),':','"+status+"',';') where id=" + id;
+            DbMySql.ExeSql(updateSql);
+        }
+        #endregion
 
 
     }

@@ -45,5 +45,25 @@ namespace opcBase
             }
 
         }
+        public static void ExeSql(string sql)
+        {
+            try
+            {
+                MySqlConnection conn = GetDbConnection() as MySqlConnection;
+                MySqlCommand cmd = conn.CreateCommand();
+                conn.Open();
+                MySqlTransaction trans = conn.BeginTransaction();
+                cmd.Transaction = trans;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                trans.Commit();
+                conn.Close();
+            }
+            catch
+            {
+
+            }
+
+        }
     }
 }
