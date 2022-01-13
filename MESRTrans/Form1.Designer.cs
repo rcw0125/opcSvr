@@ -35,6 +35,7 @@ namespace MESRTrans
             this.版本号20190910ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +87,12 @@ namespace MESRTrans
             this.dataGridView1.Size = new System.Drawing.Size(565, 310);
             this.dataGridView1.TabIndex = 4;
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 3600000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -113,6 +120,7 @@ namespace MESRTrans
         private System.Windows.Forms.ToolStripMenuItem 版本号20190910ToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

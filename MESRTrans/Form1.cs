@@ -116,6 +116,8 @@ namespace MESRTrans
         }
 
 
+
+
         public void getLfHeatid()
         {
 
@@ -184,6 +186,45 @@ namespace MESRTrans
             }
         }
 
+        int day = 0;
+        public void getdianliangAndchanliang()
+        {
+            int curday = DateTime.Now.Day;
+            if (curday != day)
+            {
+                int hour = DateTime.Now.Hour;
+                if (hour == 7 || hour == 8)
+                {
+                    try
+                    {
+                        oraDbHelp service = new oraDbHelp();
+                        var ds = service.Query(" select * from nengyuan_day where logtime='" + DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd") + "'");
+                        if (ds.Tables[0].Rows.Count > 0 && ds.Tables.Count > 0 && ds != null)
+                        {
+                            foreach (DataRow item in ds.Tables[0].Rows)
+                            {
+                                Decimal chanliang = Convert.ToDecimal(item["tg"]);
+                                Decimal dianhao = Convert.ToDecimal(item["dianhao"]);
+                                string exeSql = "update dianliang_cfg set note='" + curday + "日数据已更新',val=" + chanliang + "where name='炼钢总产量'";
+                                DbMySql.ExeSql(exeSql);
+                                exeSql = "update dianliang_cfg set note='" + curday + "日数据已更新',val=" + dianhao + "where name='炼钢总电量'";
+                                DbMySql.ExeSql(exeSql);
+                                day = curday;
+                            }
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                
+               
+            }
+            
+        }
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
@@ -211,6 +252,11 @@ namespace MESRTrans
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = listHeatInfo;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            getdianliangAndchanliang();
         }
     }
 }
