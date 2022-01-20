@@ -36,6 +36,7 @@ namespace MESRTrans
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -62,14 +63,14 @@ namespace MESRTrans
             this.版本号20190910ToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.版本号20190910ToolStripMenuItem.Name = "版本号20190910ToolStripMenuItem";
             this.版本号20190910ToolStripMenuItem.Size = new System.Drawing.Size(130, 21);
-            this.版本号20190910ToolStripMenuItem.Text = "版本号：2021.10.18";
+            this.版本号20190910ToolStripMenuItem.Text = "版本号：2022.01.20";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkRed;
             this.button1.Font = new System.Drawing.Font("宋体", 14F);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(309, 12);
+            this.button1.Location = new System.Drawing.Point(205, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 33);
             this.button1.TabIndex = 3;
@@ -93,12 +94,26 @@ namespace MESRTrans
             this.timer2.Interval = 3600000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkRed;
+            this.button2.Font = new System.Drawing.Font("宋体", 14F);
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(374, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 33);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "手动传输电耗";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 386);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
@@ -121,6 +136,7 @@ namespace MESRTrans
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button button2;
     }
 }
 

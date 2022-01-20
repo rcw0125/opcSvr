@@ -205,9 +205,9 @@ namespace MESRTrans
                             {
                                 Decimal chanliang = Convert.ToDecimal(item["tg"]);
                                 Decimal dianhao = Convert.ToDecimal(item["dianhao"]);
-                                string exeSql = "update dianliang_cfg set note='" + curday + "日数据已更新',val=" + chanliang + "where name='炼钢总产量'";
+                                string exeSql = "update dianliang_cfg set note='" + curday + "日数据已更新',val=" + chanliang + " where name='炼钢总产量'";
                                 DbMySql.ExeSql(exeSql);
-                                exeSql = "update dianliang_cfg set note='" + curday + "日数据已更新',val=" + dianhao + "where name='炼钢总电量'";
+                                exeSql = "update dianliang_cfg set note='" + curday + "日数据已更新',val=" + dianhao + " where name='炼钢总电量'";
                                 DbMySql.ExeSql(exeSql);
                                 day = curday;
                             }
@@ -255,6 +255,11 @@ namespace MESRTrans
         }
 
         private void timer2_Tick(object sender, EventArgs e)
+        {
+            getdianliangAndchanliang();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             getdianliangAndchanliang();
         }
