@@ -240,7 +240,11 @@ namespace opcBase
                 #region 废钢场称重事件
                 if (i == "89")
                 {
-                    fg5weight.GetInstance().calWeight(Convert.ToDouble(val));
+                    //通过委托开启一个线程
+                    Action<double> weituo = fg5weight.GetInstance().calWeight;
+                    // 开启一个新的线程去执行委托所引用的方法
+                    weituo.BeginInvoke(Convert.ToDouble(val),null,null);
+                   //fg5weight.GetInstance().calWeight(Convert.ToDouble(val));
                     return;
                 }
                

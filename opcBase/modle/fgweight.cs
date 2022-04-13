@@ -42,7 +42,7 @@ namespace opcBase
 
                 preweight = netweight;
                 //暂停2秒钟
-                //Thread.Sleep(2000);
+                Thread.Sleep(2000);
                 #region 查询电耗数据，查询当前精炼炉炉号，将电量保存到数据库
                 //double netweight =Math.Round( getValue(val_netweight),2);
                 double tareweight = Math.Round(getValue(val_tareweight), 2);
